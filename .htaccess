@@ -1,0 +1,43 @@
+Options -Indexes
+RewriteEngine On
+
+# ── PDF downloads ─────────────────────────────────────────────
+RewriteRule ^dl/pdf/fr/?$  https://sandy.page/assets/pdf/stella_et_yakob_fr.pdf  [R=302,L]
+RewriteRule ^dl/pdf/en/?$  https://sandy.page/assets/pdf/stella_and_yakob_en.pdf [R=302,L]
+RewriteRule ^dl/pdf/es/?$  https://sandy.page/assets/pdf/stella_and_yakob_es.pdf [R=302,L]
+RewriteRule ^dl/pdf/pt/?$  https://sandy.page/assets/pdf/stella_and_yakob_pt.pdf [R=302,L]
+RewriteRule ^dl/pdf/de/?$  https://sandy.page/assets/pdf/stella_and_yakob_de.pdf [R=302,L]
+RewriteRule ^dl/pdf/ar/?$  https://sandy.page/assets/pdf/stella_and_yakob_ar.pdf [R=302,L]
+RewriteRule ^dl/pdf/he/?$  https://sandy.page/assets/pdf/stella_and_yakob_he.pdf [R=302,L]
+RewriteRule ^dl/pdf/zh/?$  https://sandy.page/assets/pdf/stella_and_yakob_zh.pdf [R=302,L]
+RewriteRule ^dl/pdf/ja/?$  https://sandy.page/assets/pdf/stella_and_yakob_ja.pdf [R=302,L]
+RewriteRule ^dl/pdf/hi/?$  https://sandy.page/assets/pdf/stella_and_yakob_hi.pdf [R=302,L]
+RewriteRule ^dl/pdf/ru/?$  https://sandy.page/assets/pdf/stella_and_yakob_ru.pdf [R=302,L]
+RewriteRule ^dl/pdf/tr/?$  https://sandy.page/assets/pdf/stella_and_yakob_tr.pdf [R=302,L]
+RewriteRule ^dl/pdf/wo/?$  https://sandy.page/assets/pdf/stella_and_yakob_wo.pdf [R=302,L]
+RewriteRule ^dl/pdf/da/?$  https://sandy.page/assets/pdf/stella_and_yakob_da.pdf [R=302,L]
+RewriteRule ^dl/pdf/sv/?$  https://sandy.page/assets/pdf/stella_and_yakob_sv.pdf [R=302,L]
+RewriteRule ^dl/pdf/no/?$  https://sandy.page/assets/pdf/stella_and_yakob_no.pdf [R=302,L]
+RewriteRule ^dl/pdf/pl/?$  https://sandy.page/assets/pdf/stella_and_yakob_pl.pdf [R=302,L]
+
+# ── ZIP downloads ─────────────────────────────────────────────
+RewriteRule ^dl/zip/fr/?$  https://sandy.page/assets/zip/stella-and-yakob-fr.zip  [R=302,L]
+RewriteRule ^dl/zip/en/?$  https://sandy.page/assets/zip/stella-and-yakob-en.zip  [R=302,L]
+RewriteRule ^dl/zip/es/?$  https://sandy.page/assets/zip/stella-and-yakob-es.zip  [R=302,L]
+RewriteRule ^dl/zip/pt/?$  https://sandy.page/assets/zip/stella-and-yakob-pt.zip  [R=302,L]
+RewriteRule ^dl/zip/de/?$  https://sandy.page/assets/zip/stella-and-yakob-de.zip  [R=302,L]
+RewriteRule ^dl/zip/ar/?$  https://sandy.page/assets/zip/stella-and-yakob-ar.zip  [R=302,L]
+RewriteRule ^dl/zip/he/?$  https://sandy.page/assets/zip/stella-and-yakob-he.zip  [R=302,L]
+RewriteRule ^dl/zip/zh/?$  https://sandy.page/assets/zip/stella-and-yakob-zh.zip  [R=302,L]
+RewriteRule ^dl/zip/ja/?$  https://sandy.page/assets/zip/stella-and-yakob-ja.zip  [R=302,L]
+RewriteRule ^dl/zip/hi/?$  https://sandy.page/assets/zip/stella-and-yakob-hi.zip  [R=302,L]
+RewriteRule ^dl/zip/ru/?$  https://sandy.page/assets/zip/stella-and-yakob-ru.zip  [R=302,L]
+RewriteRule ^dl/zip/tr/?$  https://sandy.page/assets/zip/stella-and-yakob-tr.zip  [R=302,L]
+RewriteRule ^dl/zip/wo/?$  https://sandy.page/assets/zip/stella-and-yakob-wo.zip  [R=302,L]
+RewriteRule ^dl/zip/da/?$  https://sandy.page/assets/zip/stella-and-yakob-da.zip  [R=302,L]
+RewriteRule ^dl/zip/sv/?$  https://sandy.page/assets/zip/stella-and-yakob-sv.zip  [R=302,L]
+RewriteRule ^dl/zip/no/?$  https://sandy.page/assets/zip/stella-and-yakob-no.zip  [R=302,L]
+RewriteRule ^dl/zip/pl/?$  https://sandy.page/assets/zip/stella-and-yakob-pl.zip  [R=302,L]
+
+# ── Catch-all: any unmatched /dl/* path → back to homepage ────
+RewriteRule ^dl(/.*)?$  https://sandy.page/  [R=302,L]
