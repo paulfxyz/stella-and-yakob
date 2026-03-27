@@ -7,6 +7,34 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [4.0.0] — 2026-03-27
+
+### 🚀 v4 — 13 languages, RTL support, clean illustrations
+
+#### Languages
+- **8 new languages:** Arabic (RTL), Hebrew (RTL), Chinese, Japanese, Hindi, Russian, Turkish, Wolof
+- **13 total:** FR · EN · ES · PT · DE · AR · HE · ZH · JA · HI · RU · TR · WO
+- Translation pipeline: GPT-4o → Claude 3.5 Sonnet refinement (Mistral Large for Wolof)
+- All 13 languages: 46-page PDFs, download shortlinks, inline PDF reader
+
+#### Illustrations
+- **Page 12 fixed** — user-provided clean illustration (no "stella" label)
+- Applied across all 13 language editions
+
+#### Technical
+- RTL support: Arabic & Hebrew — `arabic-reshaper` + `python-bidi` + CSS `direction: rtl`
+- Font stack: Amiri (Arabic), Noto Serif Hebrew, Noto Serif CJK, Noto Serif Devanagari
+- Website: 13-language i18n, language detection (OS browser + cookie persistence)
+- PDFs served from sandy.page (no CORS) — website deploy is 3.2MB
+- Catch-all redirect: unknown `/dl/*` paths → `sandy.page/`
+- README: 9 philosophical references, full AI toolchain, 10 bottlenecks + solutions
+
+#### Download shortcuts
+All 26 shortlinks live: `sandy.page/dl/pdf/{lang}` and `sandy.page/dl/zip/{lang}`
+for all 13 languages.
+
+---
+
 ## [3.0.0] — 2026-03-27
 
 ### 🚀 v3 — Full 45-page edition, multi-model pipeline, open source release
