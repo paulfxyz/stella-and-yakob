@@ -835,12 +835,7 @@ button { cursor: pointer; background: none; border: none; }
   border-color: var(--color-primary);
 }
 
-.edition-card img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  display: block;
-}
+.edition-card img { display: none; }
 
 .edition-info {
   padding: var(--space-4) var(--space-5) var(--space-5);
@@ -1265,4 +1260,12 @@ html[lang="ar"] .nav-links, html[lang="he"] .nav-links {
 html[lang="ar"] .lang-dropdown, html[lang="he"] .lang-dropdown {
   left: 0;
   right: auto;
+}
+
+/* Edition cards — text-only layout */
+.edition-info {
+  padding: var(--space-5) var(--space-4) var(--space-4);
+}
+.edition-card {
+  min-height: 0;
 }
