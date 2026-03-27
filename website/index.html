@@ -31,6 +31,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+<!-- PDF.js for inline viewer -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body>
 
@@ -312,7 +314,7 @@
         </div>
         <div class="editions-grid">
 
-          <a class="edition-card" href="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/fr/pdf/stella_et_yakob_fr.pdf" target="_blank" rel="noopener">
+          <a class="edition-card" href="#" data-pdf="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/fr/pdf/stella_et_yakob_fr.pdf" data-lang="Français" data-dl="stella_et_yakob_fr.pdf">
             <img src="assets/covers/cover-fr.jpg" alt="French edition cover" loading="lazy" width="280" height="280">
             <div class="edition-info">
               <span class="edition-flag">🇫🇷</span>
@@ -322,7 +324,7 @@
             </div>
           </a>
 
-          <a class="edition-card" href="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/en/pdf/stella_and_yakob_en.pdf" target="_blank" rel="noopener">
+          <a class="edition-card" href="#" data-pdf="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/en/pdf/stella_and_yakob_en.pdf" data-lang="English" data-dl="stella_and_yakob_en.pdf">
             <img src="assets/covers/cover-en.jpg" alt="English edition cover" loading="lazy" width="280" height="280">
             <div class="edition-info">
               <span class="edition-flag">🇬🇧</span>
@@ -332,7 +334,7 @@
             </div>
           </a>
 
-          <a class="edition-card" href="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/es/pdf/stella_and_yakob_es.pdf" target="_blank" rel="noopener">
+          <a class="edition-card" href="#" data-pdf="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/es/pdf/stella_and_yakob_es.pdf" data-lang="Español" data-dl="stella_and_yakob_es.pdf">
             <img src="assets/covers/cover-es.jpg" alt="Spanish edition cover" loading="lazy" width="280" height="280">
             <div class="edition-info">
               <span class="edition-flag">🇪🇸</span>
@@ -342,7 +344,7 @@
             </div>
           </a>
 
-          <a class="edition-card" href="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/pt/pdf/stella_and_yakob_pt.pdf" target="_blank" rel="noopener">
+          <a class="edition-card" href="#" data-pdf="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/pt/pdf/stella_and_yakob_pt.pdf" data-lang="Português" data-dl="stella_and_yakob_pt.pdf">
             <img src="assets/covers/cover-pt.jpg" alt="Portuguese edition cover" loading="lazy" width="280" height="280">
             <div class="edition-info">
               <span class="edition-flag">🇵🇹</span>
@@ -352,7 +354,7 @@
             </div>
           </a>
 
-          <a class="edition-card" href="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/de/pdf/stella_and_yakob_de.pdf" target="_blank" rel="noopener">
+          <a class="edition-card" href="#" data-pdf="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/de/pdf/stella_and_yakob_de.pdf" data-lang="Deutsch" data-dl="stella_and_yakob_de.pdf">
             <img src="assets/covers/cover-de.jpg" alt="German edition cover" loading="lazy" width="280" height="280">
             <div class="edition-info">
               <span class="edition-flag">🇩🇪</span>
@@ -398,6 +400,44 @@
     </section>
 
   </main>
+
+  <!-- ── PDF MODAL ────────────────────────────────────────────── -->
+  <div class="pdf-modal" id="pdf-modal" role="dialog" aria-modal="true" aria-label="Book reader" hidden>
+    <div class="pdf-modal-backdrop" id="pdf-modal-backdrop"></div>
+    <div class="pdf-modal-panel">
+      <div class="pdf-modal-header">
+        <span class="pdf-modal-title" id="pdf-modal-title">Stella &amp; Yakob</span>
+        <div class="pdf-modal-actions">
+          <a class="btn btn-primary pdf-dl-btn" id="pdf-dl-btn" href="#" download>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download PDF
+          </a>
+          <button class="pdf-close-btn" id="pdf-close-btn" aria-label="Close reader">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="pdf-viewer-wrap">
+        <button class="pdf-nav-btn pdf-nav-prev" id="pdf-nav-prev" aria-label="Previous page">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="pdf-canvas-wrap">
+          <canvas id="pdf-canvas"></canvas>
+          <div class="pdf-loading" id="pdf-loading">
+            <div class="pdf-spinner"></div>
+            <span>Loading book…</span>
+          </div>
+        </div>
+        <button class="pdf-nav-btn pdf-nav-next" id="pdf-nav-next" aria-label="Next page">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+      <div class="pdf-footer">
+        <span class="pdf-page-info" id="pdf-page-info">Page 1 of 31</span>
+        <input type="range" class="pdf-scrubber" id="pdf-scrubber" min="1" max="31" value="1" aria-label="Page scrubber">
+      </div>
+    </div>
+  </div>
 
   <!-- ── FOOTER ─────────────────────────────────────────────────── -->
   <footer class="site-footer">
@@ -497,6 +537,101 @@
       track.addEventListener('touchend', e => {
         const dx = e.changedTouches[0].clientX - tx;
         if (Math.abs(dx) > 50) goTo(dx < 0 ? current + 1 : current - 1);
+      });
+    })();
+
+    // ── PDF Modal ──────────────────────────────────────────────
+    (function(){
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+      const modal    = document.getElementById('pdf-modal');
+      const backdrop = document.getElementById('pdf-modal-backdrop');
+      const canvas   = document.getElementById('pdf-canvas');
+      const loading  = document.getElementById('pdf-loading');
+      const prevBtn  = document.getElementById('pdf-nav-prev');
+      const nextBtn  = document.getElementById('pdf-nav-next');
+      const closeBtn = document.getElementById('pdf-close-btn');
+      const dlBtn    = document.getElementById('pdf-dl-btn');
+      const titleEl  = document.getElementById('pdf-modal-title');
+      const pageInfo = document.getElementById('pdf-page-info');
+      const scrubber = document.getElementById('pdf-scrubber');
+      const ctx      = canvas.getContext('2d');
+
+      let pdfDoc = null, currentPage = 1, totalPages = 1, rendering = false;
+
+      async function renderPage(num) {
+        if (rendering) return;
+        rendering = true;
+        loading.style.display = 'flex';
+        const page = await pdfDoc.getPage(num);
+        const wrap = canvas.parentElement;
+        const scale = Math.min(wrap.clientWidth / page.getViewport({scale:1}).width,
+                               wrap.clientHeight / page.getViewport({scale:1}).height) * 0.95;
+        const vp = page.getViewport({scale});
+        canvas.width  = vp.width;
+        canvas.height = vp.height;
+        await page.render({canvasContext: ctx, viewport: vp}).promise;
+        loading.style.display = 'none';
+        rendering = false;
+        pageInfo.textContent = `Page ${num} of ${totalPages}`;
+        scrubber.value = num;
+        prevBtn.disabled = num <= 1;
+        nextBtn.disabled = num >= totalPages;
+      }
+
+      async function openModal(pdfUrl, lang, dlName) {
+        titleEl.textContent = 'Stella & Yakob — ' + lang;
+        dlBtn.href = pdfUrl;
+        dlBtn.download = dlName;
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        loading.style.display = 'flex';
+        canvas.width = 0; canvas.height = 0;
+        try {
+          // Use a CORS proxy for GitHub raw files
+          const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(pdfUrl);
+          pdfDoc = await pdfjsLib.getDocument(proxyUrl).promise;
+          totalPages = pdfDoc.numPages;
+          scrubber.max = totalPages;
+          currentPage = 1;
+          await renderPage(currentPage);
+        } catch(e) {
+          loading.innerHTML = '<p style="color:var(--color-text-muted);text-align:center;padding:2rem">Unable to load preview inline.<br><a href="'+pdfUrl+'" target="_blank" style="color:var(--color-primary)">Open PDF directly ↗</a></p>';
+        }
+      }
+
+      function closeModal() {
+        modal.hidden = true;
+        document.body.style.overflow = '';
+        pdfDoc = null;
+      }
+
+      // Wire edition cards
+      document.querySelectorAll('.edition-card[data-pdf]').forEach(card => {
+        card.addEventListener('click', e => {
+          e.preventDefault();
+          openModal(card.dataset.pdf, card.dataset.lang, card.dataset.dl);
+        });
+      });
+
+      prevBtn.addEventListener('click', () => { if (currentPage > 1) { currentPage--; renderPage(currentPage); }});
+      nextBtn.addEventListener('click', () => { if (currentPage < totalPages) { currentPage++; renderPage(currentPage); }});
+      closeBtn.addEventListener('click', closeModal);
+      backdrop.addEventListener('click', closeModal);
+      scrubber.addEventListener('input', () => { currentPage = +scrubber.value; renderPage(currentPage); });
+      document.addEventListener('keydown', e => {
+        if (modal.hidden) return;
+        if (e.key === 'Escape')     closeModal();
+        if (e.key === 'ArrowRight') { if (currentPage < totalPages) { currentPage++; renderPage(currentPage); }}
+        if (e.key === 'ArrowLeft')  { if (currentPage > 1) { currentPage--; renderPage(currentPage); }}
+      });
+
+      // Touch swipe inside modal
+      let touchX = 0;
+      canvas.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, {passive:true});
+      canvas.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 50) { if (dx < 0 && currentPage < totalPages) { currentPage++; renderPage(currentPage); } else if (dx > 0 && currentPage > 1) { currentPage--; renderPage(currentPage); }}
       });
     })();
 
