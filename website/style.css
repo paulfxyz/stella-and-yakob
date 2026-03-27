@@ -813,7 +813,7 @@ button { cursor: pointer; background: none; border: none; }
 
 .editions-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: var(--space-4);
 }
 
@@ -1248,4 +1248,21 @@ button { cursor: pointer; background: none; border: none; }
   #pdf-canvas-area { padding: 8px 2px; gap: 4px; }
   .pdf-arrow { width: 36px; height: 36px; }
   #pdf-canvas-wrap { max-width: 100vw; }
+}
+
+/* RTL Support for Arabic & Hebrew */
+[dir="rtl"], html[lang="ar"], html[lang="he"] {
+  direction: rtl;
+  text-align: right;
+}
+html[lang="ar"] body, html[lang="he"] body {
+  direction: rtl;
+}
+/* RTL nav fixes */
+html[lang="ar"] .nav-links, html[lang="he"] .nav-links { 
+  direction: rtl; 
+}
+html[lang="ar"] .lang-dropdown, html[lang="he"] .lang-dropdown {
+  left: 0;
+  right: auto;
 }
