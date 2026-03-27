@@ -7,6 +7,40 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [3.0.0] — 2026-03-27
+
+### 🚀 v3 — Full 45-page edition, multi-model pipeline, open source release
+
+#### Story
+- **45 story pages** (up from 30) — complete Act 2 added
+- Act 2 new scenes: The Dream Question, Mirror Villain (Stella-Prime), Consciousness arc, Gift of Imperfection, The Promise
+- New philosophical references: Descartes (cogito), Sartre (existence/essence), expanded Searle, Arendt, Montessori
+- 15 new watercolor illustrations (pages 31–45)
+
+#### Production
+- Illustration zone fixed: 1904px (fill-width, zero cropping, zero side margins)
+- Page compositor updated: 72pt body text, 646px text zone
+- All 5 language editions rebuilt: 46 pages each (~48 MB per PDF)
+- PDF cache-busted to `?v=6`
+
+#### Repository
+- Restructured: `languages/*/pdf/` → `releases/`  
+- Removed outdated top-level `/pdf` and `/pages` folders
+- Cover cleaned: v6 only retained
+- README massively expanded: all 8 philosophical references, full AI toolchain, 10 technical bottlenecks
+
+#### Attribution
+- "Created with Perplexity Computer" → **"Made with ❤️ + AI"** everywhere
+- AI toolchain documented: Perplexity Computer, Claude, GPT-4o, Gemini, Mistral, OpenRouter
+- Illustration process clarified: hand-sketched by Paul Fleury, AI-refined
+
+#### Website
+- v3 branding throughout (EN/FR/ES/PT/DE)
+- Language switcher: 5 languages, flag + code button
+- PDF viewer: full-screen modal, PDF.js 3.11, same-origin delivery
+
+---
+
 ## [1.1.0] — 2026-03-27
 
 ### 🚀 Act 2 — 45-page expansion

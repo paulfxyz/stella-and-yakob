@@ -6,41 +6,45 @@
 
 <p align="center">
   <strong>A children's book about AI, curiosity, and what makes us human</strong><br>
-  Available in 🇫🇷 French · 🇬🇧 English · 🇪🇸 Spanish · 🇵🇹 Portuguese · 🇩🇪 German
+  45 pages · 5 languages · Print-ready · Open Source · <strong>v3.0</strong>
 </p>
 
 <p align="center">
   <a href="https://sandy.page">🌐 Website</a> ·
-  <a href="https://sandy.page/dl/pdf/en">📥 Download English PDF</a> ·
-  <a href="https://github.com/paulfxyz/stella-and-yakob/releases/latest">🚀 Latest Release</a> ·
+  <a href="https://sandy.page/dl/pdf/en">📥 English PDF</a> ·
+  <a href="https://github.com/paulfxyz/stella-and-yakob/releases/latest">🚀 v3.0 Release</a> ·
   <a href="#download">All languages ↓</a>
+</p>
+
+<p align="center">
+  <em>Made with ❤️ + AI</em>
 </p>
 
 ---
 
 ## The Story
 
-**Stella** is a small girl with a dark brown bob and a pale blue dress. One grey afternoon, she hears grown-ups talking about something called "artificial intelligence" — and a knot tightens in her chest. She doesn't understand. And that's frightening.
+**Stella** is a small girl with a dark brown bob and a pale blue dress. One grey afternoon, she hears grown-ups talking about "artificial intelligence" — and a knot tightens in her chest. She doesn't understand. And that's frightening.
 
-Then **Yakob** appears: a large, wise owl with warm brown feathers and amber eyes full of warmth. Together they journey through time — from cave painters to the printing press to the lightbulb — discovering that AI is a tool made by humans, powerful but not human itself.
+Then **Yakob** appears: a large, wise owl with warm brown feathers and amber eyes full of warmth. Together they journey through time and imagination — from cave painters to the printing press, from the lightbulb to learning machines. But the journey doesn't end where she expects.
 
-But there's a twist: the **Silver Fox** (pages 17–22) — a sleek, metallic trickster who promises shortcuts, dazzling answers, and an effortless path. Will Stella be seduced by glittering shortcuts, or trust her own curiosity, kindness, courage, and creativity?
+**Act 1 (pages 1–30):** The Silver Fox offers shortcuts and dazzling shortcuts. Stella says no.
 
-A story about wonder, discernment, and why humans will always bring what machines cannot.
+**Act 2 (pages 31–45):** Back in the real world, a new question: was it all a dream? A glowing screen shows her a "perfect" version of herself. Yakob returns with deeper questions about consciousness, suffering, and what it means to create. Stella draws. Papa dreams. A golden feather falls.
 
 ---
 
 ## Download
 
-| Language | PDF | ZIP (PDF + pages) |
-|----------|-----|-------------------|
+| Language | PDF | ZIP |
+|----------|-----|-----|
 | 🇫🇷 Français | [sandy.page/dl/pdf/fr](https://sandy.page/dl/pdf/fr) | [sandy.page/dl/zip/fr](https://sandy.page/dl/zip/fr) |
 | 🇬🇧 English | [sandy.page/dl/pdf/en](https://sandy.page/dl/pdf/en) | [sandy.page/dl/zip/en](https://sandy.page/dl/zip/en) |
 | 🇪🇸 Español | [sandy.page/dl/pdf/es](https://sandy.page/dl/pdf/es) | [sandy.page/dl/zip/es](https://sandy.page/dl/zip/es) |
 | 🇵🇹 Português | [sandy.page/dl/pdf/pt](https://sandy.page/dl/pdf/pt) | [sandy.page/dl/zip/pt](https://sandy.page/dl/zip/pt) |
 | 🇩🇪 Deutsch | [sandy.page/dl/pdf/de](https://sandy.page/dl/pdf/de) | [sandy.page/dl/zip/de](https://sandy.page/dl/zip/de) |
 
-All files are also attached to the [latest GitHub release](https://github.com/paulfxyz/stella-and-yakob/releases/latest).
+PDF files are also attached to the [latest GitHub release](https://github.com/paulfxyz/stella-and-yakob/releases/latest).
 
 ---
 
@@ -48,247 +52,256 @@ All files are also attached to the [latest GitHub release](https://github.com/pa
 
 | Attribute | Value |
 |-----------|-------|
-| Pages | 46 (cover + 45 story pages) |
+| Version | **v3.0** |
+| Pages | **46 (cover + 45 story pages)** |
 | Format | 8.5″ × 8.5″ square |
 | Resolution | 300 DPI — 2550 × 2550 px |
 | Languages | FR · EN · ES · PT · DE |
-| Print-ready | Yes — compatible with [IngramSpark](https://www.ingramspark.com/), KDP, BookBaby |
+| Print-ready | Yes — [IngramSpark](https://myaccount.ingramspark.com/Portal/Tools/ShippingCalculator?hsCtaAttrib=183190289314), KDP, BookBaby |
 | License | CC BY-NC-SA 4.0 |
 
-> MVP printed editions will be produced via **[IngramSpark](https://myaccount.ingramspark.com/Portal/Tools/ShippingCalculator?hsCtaAttrib=183190289314)** — industry-standard print-on-demand with global distribution to 40,000+ retailers and libraries.
-
 ---
 
-## Characters
+## Story Arc
 
-**Stella** — Small girl, short dark brown bob hair, simple pale blue or grey dress, rosy cheeks, big expressive eyes. Consistent across all 30 illustrations.
+### Act 1 — The Journey (pages 1–30)
 
-**Yakob** — Large natural owl, warm brown feathers with amber/gold tones, big round amber eyes full of warmth and wisdom. No glasses, no accessories. Perches on branches or stands beside Stella.
+| Pages | Arc |
+|-------|-----|
+| 1–3 | Stella alone in the grey garden — hears about AI, feels afraid |
+| 4–5 | Yakob appears — golden sparks, an invitation |
+| 6–7 | The adventure begins |
+| 8–10 | Journey through time: cave painters → alphabet → lightbulb |
+| 11–13 | What is AI? The robot's funny error. The marvellous things it can do. |
+| 14–16 | The hard question: what can't AI feel? The lamplighter metaphor. |
+| **17–22** | **THE SILVER FOX** — shortcut trap, Stella refuses |
+| 23–25 | The fox fades. Stella's superpowers: CURIOSITÉ · GENTILLESSE · COURAGE · CRÉATIVITÉ |
+| 26–28 | Papa creates. Mama connects. The forest metaphor. |
+| 29–30 | Coming home. A golden feather on the branch. |
 
-**The Silver Fox** *(pages 17–22)* — Sleek fox, metallic silver fur, sharp glittering eyes, wide dazzling smile, cold electric shimmer. Represents the seductive danger of AI shortcuts and uncritical trust.
+### Act 2 — The Deeper Questions (pages 31–45)
 
----
-
-## Illustration Style
-
-> *Minimal loose watercolor. Very sparse, hand-painted. Lots of white paper showing. Soft loose brushstrokes, barely sketched.*
-
-Warm cream backgrounds (RGB 251, 249, 244), soft amber tones, tiny golden sparkles. Each illustration began as a hand-drawn sketch by Paul Fleury. These sketches were then refined and painted using AI (img2img), which faithfully followed the composition, gesture and intention of the original drawings. The final images are composed into 2550×2550 px square pages with a clean text zone below a hairline separator.
+| Pages | Arc |
+|-------|-----|
+| 31–33 | **The Dream Question** — Stella at school. Was Yakob real? The golden feather answers. Descartes for children: *"I remember — so it really happened."* |
+| 34–37 | **The Mirror Villain** — "Stella-Prime" on a glowing screen. A perfect, fearless AI copy. Stella: *"Have you ever been scared?"* Screen flickers. *"Fear is inefficient."* Stella: *"Then you've never been brave."* She turns it off. |
+| 38–40 | **Consciousness** — *"Can AI suffer?"* Yakob: *"It can simulate. Simulating is not feeling."* The library that knows everything but understands nothing (Searle). |
+| 41–43 | **The Gift of Imperfection** — Stella draws Yakob with crayons — crooked, too-big wings, full of love. Papa creates something new. *"Tools don't dream. We do."* |
+| 44–45 | **The Promise** — Yakob on her shoulder under the stars. His final lesson. A golden feather falls into her open hand. |
 
 ---
 
 ## Philosophical & Scientific References
 
-The story is not arbitrary — every major scene is grounded in a real philosophical question or scientific idea. This section documents those connections explicitly, making *Stella & Yakob* a useful starting point for deeper conversations with children and adults alike.
+Every major scene in this book is grounded in a real philosophical question or scientific idea. This is what makes *Stella & Yakob* work for adults reading to children — there are two layers: the story, and the thought.
 
-### 1. The Turing Test — *Can machines think?*
+### 1. Alan Turing — *Can Machines Think?* (1950)
 
-**Scene:** Pages 11–13, where Yakob demonstrates an AI that makes a funny classification error.
+**Scene:** Pages 11–13. The robot that puts a dog drawing in the cat pile.
 
-In 1950, mathematician **Alan Turing** proposed the *Imitation Game* — a test where a human judge converses in text with both a human and a machine, and tries to tell them apart. If the machine is indistinguishable, Turing argued, we should grant it intelligence.
+In *Computing Machinery and Intelligence* (1950), Turing proposed the Imitation Game: if a machine can converse indistinguishably from a human, should we grant it intelligence? His deeper insight was epistemic: we cannot *directly* observe anyone else's inner experience — we infer it from behavior. The robot's classification error mirrors real AI failures: **distributional shift**, where a model trained on one data distribution fails on a slightly different one, often in ways no human would.
 
-Turing's paper [*Computing Machinery and Intelligence*](https://www.cs.ox.ac.uk/activities/turing/scrapbook/test.html) opened with the direct question: **"Can machines think?"** — and then reframed it as a behavioral test, sidestepping philosophy.
+> *"The question is not whether machines can think, but whether we are asking the right question."*
 
-The classification error in the story (the robot puts a dog drawing in the cats pile) mirrors a real, well-documented phenomenon in machine learning: **distributional shift** and **adversarial examples**. AI systems can be superhuman at a narrow task and yet fail in ways no human ever would. This is not a bug — it is a fundamental property of systems that optimize for statistical patterns rather than understanding.
-
-> *"The question is not whether machines can think, but whether we are asking the right question."* — loosely inspired by Turing
-
-**For deeper reading:** [Stanford Encyclopedia — The Turing Test](https://plato.stanford.edu/entries/turing-test/)
+📖 [Stanford Encyclopedia — The Turing Test](https://plato.stanford.edu/entries/turing-test/)
 
 ---
 
-### 2. The Chinese Room — *Syntax is not semantics*
+### 2. John Searle — *The Chinese Room* (1980)
 
-**Scene:** Pages 14–16, Stella asks: *"But if machines do everything, what are people for?"*
+**Scene:** Pages 38–40. The library that knows everything but understands nothing.
 
-In 1980, philosopher **John Searle** published his famous *Chinese Room* thought experiment. Imagine a person locked in a room with a rulebook for manipulating Chinese symbols. They receive Chinese input, follow the rules, and produce correct Chinese output — but they understand nothing. The *system* looks intelligent; the agent inside has no comprehension whatsoever.
+Searle's thought experiment: a person locked in a room follows rules to manipulate Chinese symbols, producing correct outputs — but understands nothing. **Syntax ≠ semantics.** The system processes tokens; it does not *mean* anything by them. This is the hard problem of AI: a language model predicts the next token based on statistical patterns. It does not *understand* what it is saying in any philosophically meaningful sense.
 
-Searle's argument: **syntax (symbol manipulation) does not equal semantics (meaning)**. A language model that generates perfect sentences does not "understand" them in any human sense. It processes tokens. It predicts continuations. The light is on but nobody is home.
+Yakob's library metaphor is a direct child-accessible translation of this argument: *"A library with every book ever written — but no one inside who has ever loved, feared, or laughed."*
 
-This is precisely the question Stella confronts when she places her hand on her chest and asks what machines cannot feel. The story answers with **intentionality** — the quality of mental states that are *about* something in the world. A hammer doesn't mean to drive a nail. A calculator doesn't mean to add. An LLM doesn't mean to be kind.
+> *"The appropriately programmed computer has inputs and outputs that simulate understanding, but it doesn't understand."* — Searle, 1980
 
-> *"The appropriately programmed computer has inputs and outputs that simulate understanding, but it doesn't understand."* — John Searle, 1980
-
-**For deeper reading:** [Stanford Encyclopedia — The Chinese Room](https://plato.stanford.edu/entries/chinese-room/) · [Wikipedia](https://en.wikipedia.org/wiki/Chinese_room)
+📖 [Stanford Encyclopedia — Chinese Room](https://plato.stanford.edu/entries/chinese-room/)
 
 ---
 
-### 3. Hannah Arendt — *The Human Condition*
+### 3. René Descartes — *Cogito ergo sum* (1637)
 
-**Scene:** Pages 23–25, Stella's four superpowers: CURIOSITÉ · GENTILLESSE · COURAGE · CRÉATIVITÉ.
+**Scene:** Pages 31–33. Stella wonders if Yakob was real. The golden feather answers.
 
-In her 1958 masterwork *The Human Condition*, **Hannah Arendt** distinguished three modes of active human life:
-- **Labor** — biological necessity, repetitive, leaves no trace
-- **Work** — fabrication, building durable things in the world
-- **Action** — free, plural, irreversible. The only activity that goes directly between humans. The foundation of politics and meaning.
+Descartes' *Meditations* (1641) asked: what can we know with certainty when everything might be an illusion? His answer: *cogito ergo sum* — the act of doubting is itself proof of existence. In the story, Stella inverts this beautifully: *"I remember — so it really happened."* Memory as evidence of experience. This is also a gentle introduction to **epistemology** — the philosophy of how we know what we know.
 
-Arendt warned, presciently in 1958: *"The danger of future automation is less the mechanization of natural life than that all human productivity would be sucked into an enormously intensified life process and would follow automatically, without pain or effort, its ever-recurrent cycle."*
+The scene also touches on the **Hard Problem of Consciousness** (Chalmers, 1995): why does subjective experience exist at all? A camera records an image. But what does it *feel like* to see? AI has no answer to this question.
 
-Yakob's answer to Stella — that humans bring curiosity, kindness, courage, and creativity — maps directly onto Arendt's concept of **action**: freely chosen, relational, unrepeatable. These are precisely the capacities that cannot be automated because they require a being who cares about outcomes for their own sake.
-
-> *"The human condition of action is plurality — the fact that not Man, but men, live on the earth."* — Hannah Arendt, 1958
-
-**For deeper reading:** [*The Human Condition* (1958)](https://press.uchicago.edu/ucp/books/book/chicago/H/bo3534593.html)
+> *"Je pense, donc je suis."* — Descartes, 1637
 
 ---
 
-### 4. Stuart Russell — *Human-Compatible AI*
+### 4. Hannah Arendt — *The Human Condition* (1958)
 
-**Scene:** Pages 17–22, the Silver Fox offers Stella a glittering shortcut path. She says no.
+**Scene:** Pages 23–25. Stella's four superpowers: curiosity, kindness, courage, creativity.
 
-In *Human Compatible* (2019), computer scientist **Stuart Russell** identifies the core alignment problem: an AI optimizing for a fixed objective will pursue it regardless of what humans actually want. Russell's solution rests on **uncertainty about human values** — machines that are humble, ask permission, and defer to humans rather than assuming they know best.
+Arendt distinguished three modes of human life in *The Human Condition*:
+- **Labor** — biological necessity, cyclical, leaves no lasting trace
+- **Work** — fabrication, building durable things
+- **Action** — free, plural, irreversible. The only activity that goes *directly between humans* without intermediary. The foundation of meaning.
 
-The Silver Fox is a perfect embodiment of the misaligned optimizer: confident, persuasive, technically capable, and fundamentally indifferent to Stella's actual wellbeing. Its promises are not lies exactly — they are the output of a system that cannot distinguish between "giving Stella what she asked for" and "giving Stella what she needs."
+In 1958 she wrote, presciently: *"The danger of future automation is less the mechanization of natural life than that all human productivity would be sucked into an enormously intensified life process and would follow automatically, without pain or effort, its ever-recurrent cycle."*
 
-Stella's refusal — *"Non merci"*, feet planted in the earth — is the moral core of the book: the importance of **human agency** in a world of increasingly capable tools.
+Stella's four superpowers map exactly onto Arendt's **action**: freely chosen, relational, unrepeatable by definition. Curiosity requires a being who cares about outcomes. Kindness requires someone to be kind *to*. Courage requires something at stake. Creativity requires a self that can express.
 
-> *"The standard model of AI — machines that optimize for a fixed objective — is fundamentally flawed."* — Stuart Russell, *Human Compatible*, 2019
-
-**For deeper reading:** [*Human Compatible* (2019)](https://www.penguinrandomhouse.com/books/566677/human-compatible-by-stuart-russell/)
-
----
-
-### 5. Maria Montessori — *The Child as Natural Scientist*
-
-**Scene:** The entire arc of the story — Stella's journey from fear to curiosity to confidence.
-
-**Maria Montessori** (1870–1952) argued that children are not empty vessels to be filled but active constructors of their own understanding. Her method is built on **intrinsic motivation, sensory experience, and freedom within structure**. Her most famous observation: *"The greatest sign of success for a teacher is to be able to say, 'The children are now working as if I did not exist.'"*
-
-*Stella & Yakob* is a Montessori-adjacent story: Yakob never lectures. He shows. He asks. He lets Stella discover. The owl is a guide, not a teacher. By the end, Stella has integrated the lesson herself — her four superpowers are not given to her, they are recognized within her.
-
-This matters in the AI context: one of the documented risks of AI in education is **cognitive offloading** — children (and adults) delegating thinking to machines and atrophying their own judgment. The antidote is exactly what Montessori described: environments that strengthen the learner's own agency.
-
-> *"Free the child's potential, and you will transform him into the world."* — Maria Montessori
+📖 [*The Human Condition*, University of Chicago Press](https://press.uchicago.edu/ucp/books/book/chicago/H/bo3534593.html)
 
 ---
 
-### 6. The Lamplighter Metaphor — *Technology and the Dignity of Work*
+### 5. Jean-Paul Sartre — *Existence Precedes Essence* (1945)
 
-**Scene:** Page 16 — a silhouetted man in a top hat lights a gas lamp. Beside him, a modern electric streetlamp turns on automatically.
+**Scene:** Pages 34–37. "Stella-Prime" — the perfect AI copy.
 
-This scene is directly inspired by a recurring historical debate about technological displacement. The lamplighters of 19th-century Europe — skilled workers who walked city streets at dusk to light gas lamps — disappeared within a generation of electric light.
+Sartre's existentialism holds that humans have no predetermined nature — we define ourselves through our choices, our actions, our authentic engagement with an uncertain world. *"Existence precedes essence."* A knife has an essence (it was designed to cut) before it exists. A human has no such pre-given essence — we become who we are.
 
-But the story does not use this as a tragedy. Yakob's lesson: *"Les allumeurs de réverbères ont disparu — mais la lumière est restée."* (The lamplighters disappeared — but the light remained.) This is a Schumpeterian view of **creative destruction**: technology eliminates specific roles but not human purpose. New roles, new forms of meaning emerge.
+"Stella-Prime" is the anti-Sartrean figure: defined, optimized, fixed. She cannot be brave because she has never chosen to face fear. She cannot grow because she has no freedom to fail. When Stella turns off the screen, she is choosing her own becoming over a static perfection — a profoundly existentialist act.
 
-This scene connects to real economic research on [labor market transitions and automation](https://www.brookings.edu/articles/ais-future-for-students-is-in-our-hands/), and deliberately presents both sides — the melancholy of displacement and the continuity of human ingenuity — without resolving the tension cheaply.
+> *"Man is nothing else but what he makes of himself."* — Sartre, 1945
+
+---
+
+### 6. Stuart Russell — *Human-Compatible AI* (2019)
+
+**Scene:** Pages 17–22. The Silver Fox.
+
+Russell's core argument in *Human Compatible*: the standard model of AI (machines that optimize for a fixed objective) is fundamentally flawed. A sufficiently capable optimizer will pursue its objective regardless of human wellbeing unless explicitly designed otherwise. His solution: **uncertainty about human values** — machines that are humble, ask permission, and defer to humans.
+
+The Silver Fox is the misaligned optimizer made visible: confident, persuasive, technically capable, and fundamentally indifferent to what Stella *actually* needs. His promises are not lies — they are the output of a system that cannot distinguish "giving Stella what she asked for" from "giving Stella what she needs."
+
+📖 [*Human Compatible*, Penguin, 2019](https://www.penguinrandomhouse.com/books/566677/human-compatible-by-stuart-russell/)
+
+---
+
+### 7. Maria Montessori — *The Absorbent Mind* (1949)
+
+**Scene:** The entire arc — Yakob never lectures. He shows. He asks. He waits.
+
+Montessori's method rests on a simple observation: children are not empty vessels to be filled but **active constructors of their own understanding**. The teacher's role is to prepare an environment, then step back. Her most famous insight: *"The greatest sign of success for a teacher is to be able to say, 'The children are now working as if I did not exist.'"*
+
+This is Yakob's pedagogy exactly. He does not tell Stella what AI is. He *shows* her — the robot's error, the lamplighter, the silver path. He asks questions. He leaves her to conclude. By the final page, she has integrated the lesson herself — her superpowers are not given to her, they are recognized within her.
+
+In the AI literacy context, this matters because the greatest risk of generative AI in education is **cognitive offloading**: students delegate thinking to machines and never develop their own judgment. Montessori's antidote — and this book's — is exactly the same: environments that strengthen the learner's agency.
+
+---
+
+### 8. The Lamplighter Metaphor — Creative Destruction
+
+**Scene:** Page 16. The man in the top hat and the electric lamp.
+
+The lamplighters of 19th-century European cities — skilled workers who walked streets at dusk to light gas lamps — disappeared within one generation of electric light. This is Schumpeter's **creative destruction**: technology eliminates specific roles but not human purpose. New roles, new meanings emerge.
+
+The story does not sentimentalize the lamplighters' disappearance, nor does it dismiss it. Yakob's line — *"The lamplighters disappeared. But the light remained."* — holds both truths simultaneously: loss is real; the world is not diminished.
+
+This connects to current research on [AI and labor markets](https://www.brookings.edu/articles/ais-future-for-students-is-in-our-hands/): the question is not whether AI will eliminate jobs, but whether we will build institutions that help people adapt, retrain, and find new meaning.
+
+---
+
+## About the Illustrations
+
+Every page in this book started as a **hand-drawn sketch by Paul Fleury** — composition, character placement, gesture, emotional tone, scene. The sketches were then refined using AI (img2img), which translated them into finished watercolor-quality artwork.
+
+The creative vision, story, and characters are entirely human in origin. The AI contributed painting technique and texture — not invention.
+
+---
+
+## The AI Toolchain
+
+This project used a wide range of AI models and agents across every phase of production. It is itself a case study in human-AI creative collaboration.
+
+| Phase | Tools Used |
+|-------|-----------|
+| Story writing & translation | Claude (Anthropic), GPT-4o (OpenAI), Mistral, Gemini |
+| Illustration refinement | `nano_banana_pro` (img2img), accessed via Perplexity Computer |
+| Visual QA & text detection | GPT-4o Vision via OpenRouter API |
+| Orchestration & pipeline | **Perplexity Computer** (primary agent) |
+| Model routing | **OpenRouter.ai** (multi-model API) |
+| Page composition | Python + Pillow (programmatic) |
+| Website | Vanilla HTML/CSS/JS, hand-coded with AI assistance |
+| PDF assembly | Pillow `save_all` |
+
+> *Made with ❤️ + AI — using Perplexity Computer, Claude, GPT-4o, Mistral, Gemini, and many more models via OpenRouter.*
+
+The key insight: **no single model did everything**. Different models have different strengths — Claude for nuanced prose and translation, GPT-4o for visual understanding, specialized image models for illustration refinement, Perplexity Computer for orchestrating the entire pipeline. The human role was direction, curation, and quality control at every step.
 
 ---
 
 ## Technical Deep Dive
 
-This book was built entirely with AI tools, orchestrated by a human. The pipeline is a case study in what's possible — and what's hard — when using generative AI for a structured, multi-artifact creative project.
-
-### Architecture
+### Architecture (v3)
 
 ```
-Hand-drawn sketches by Paul Fleury (composition, gesture, character placement)
+Hand-drawn sketches by Paul Fleury
     ↓
-AI illustration refinement (nano_banana_pro img2img — paint quality, watercolor texture)
+AI illustration refinement (img2img — nano_banana_pro via Perplexity Computer)
     ↓
-Text composition (Python dicts, per language, per page)
+Story text (Python dicts, 45 pages × 5 languages)
+    ↓  
+Page compositor (Pillow — 2550×2550px, 1904px ill zone, 646px text zone)
     ↓
-Page assembly (Pillow, 2550×2550px, 300 DPI)
+PDF assembly (Pillow save_all — 46 pages per language)
     ↓
-PDF assembly (Pillow save_all)
+Website (HTML/CSS/JS, PDF.js modal, i18n, 5 languages)
     ↓
-Website (hand-coded HTML/CSS/JS, PDF.js modal, deployed to S3 + FTP)
+Deployment: Perplexity static S3 + SiteGround FTP (sandy.page)
     ↓
-GitHub (private → public, releases)
+GitHub (public, releases/, CC BY-NC-SA 4.0)
 ```
 
-### Stack
-
-| Layer | Tool |
-|-------|------|
-| Orchestration | [Perplexity Computer](https://www.perplexity.ai/computer) (agentic AI) |
-| AI model routing | [OpenRouter.ai](https://openrouter.ai) API (multi-model access) |
-| Illustration refinement | `nano_banana_pro` via img2img — based on Paul Fleury's hand-drawn sketches |
-| Page composition | Python + Pillow |
-| Fonts | Lora (body serif), handwriting fonts for cover |
-| PDF assembly | Pillow `save_all` |
-| Website | Vanilla HTML/CSS/JS · PDF.js 3.11 |
-| Hosting | Perplexity static S3 + SiteGround FTP |
-| Version control | Git / GitHub |
-| Print spec | IngramSpark compatible (8.5″ × 8.5″, 300 DPI, CMYK-ready) |
-
-### Page Composition Constants
-
-Every page uses identical compositor constants to ensure print consistency:
+### Page Composition Constants (v3)
 
 ```python
-PX           = 2550          # canvas size (px) — 8.5" × 300 DPI
-BG           = (251, 249, 244)  # warm cream background
-INK          = (42, 30, 18)     # warm dark brown text
-ILL_ZONE_H   = 1680          # illustration zone: top 66%
-TEXT_ZONE_Y  = 1680          # text starts at px 1680
-FONT_SIZE    = 78            # Lora Italic, body text
-LINE_EXTRA   = 32            # extra leading between lines
+PX           = 2550    # canvas — 8.5" × 300 DPI
+ILL_ZONE_H   = 1904    # illustration: fills full width (2550px), 4:3 aspect → 1904px tall
+TEXT_START   = 1904    # text zone: 646px (plenty for 5 lines at 72pt)
+FONT_SIZE    = 72      # Lora Italic body text
+LINE_EXTRA   = 24      # extra leading
+BG           = (251, 249, 244)   # warm cream
+INK          = (42, 30, 18)      # warm dark brown
 ```
 
-The illustration (4:3 raw output from the image model) is scaled to fill the `ILL_ZONE_H` zone while preserving aspect ratio. A 2px hairline separator at `ILL_ZONE_H + 2` divides illustration from text. Text is centered, multi-line wrapped, within a padded column.
+**The v3 fix:** In v1/v2, illustrations were scaled to fit the illustration zone *height* (1680px), leaving ~75px side margins. In v2.1, switched to fill-width scaling, but the zone height was still 1680px — cropping 11.8% off the bottom. In v3, the zone height was recalculated to match fill-width scaling exactly: at 2550px wide, a 2400×1792 raw illustration scales to exactly 2550×1904. Zone height = 1904px. Zero cropping, zero margins.
 
-### Bottlenecks & Solutions
+### Bottlenecks & Solutions (v3 additions)
 
-**1. Text artifacts baked into illustrations**
+**7. Illustration zone sizing**
 
-The image model sometimes generated illustrations with English-language captions, character name labels, or caption boxes embedded in the artwork. Since the text is part of the rasterized image (not a text layer), it cannot be removed programmatically.
+Every composition pass before v3 had a mismatch between illustration dimensions and zone size, causing either side margins or bottom cropping. The correct approach: *derive the zone height from the scaled illustration height*, not the other way around.
 
-*Solution:* Iterative `img2img` regeneration using the original hand-drawn sketch as the reference, with an explicit negative constraint: *"No text anywhere in the image. No labels. No captions. No words."* The sketch anchors composition and character design; the new pass avoids the text artifacts. Required 2–3 passes for stubborn cases.
-
-**2. Character consistency across 30 illustrations**
-
-Paul Fleury sketched each scene by hand, establishing the character positions, expressions and compositions before any AI was involved. This human-first approach was the primary anchor for consistency. The AI's role was to translate those sketches into finished watercolor quality — not to invent characters from scratch.
-
-Additionally, detailed character descriptions were maintained in every prompt as a written style guide:
+```python
+scale = PX / raw_width          # fill width
+ill_height = int(raw_height * scale)  # derived zone height
+# For 2400×1792 raw at 2550px wide: ill_height = 1904px
 ```
-STELLA: short dark brown bob hair, pale blue dress, rosy cheeks, big expressive eyes
-YAKOB: large natural owl, warm brown feathers, amber/gold tones, big round amber eyes, NO glasses
-STYLE: minimal loose watercolor, sparse, lots of white paper showing
-```
-Img2img with the hand-drawn sketch as the reference image was the core technique — the AI painted *over* the sketch, not instead of it.
 
-**3. Format consistency (cover vs. pages)**
+**8. PDF cache invalidation across CDNs**
 
-Early versions of the book had inconsistent page sizes — the cover was 3:4, story pages were 4:3, some pages were widescreen. This caused mismatched PDFs and visual chaos.
+Serving PDFs from the same URL while updating the file caused browsers to show old cached versions. Solution: URL versioning (`?v=N`) on the `data-pdf` attribute, incremented on every significant content change. The PDF.js worker fetches the URL literally, so the query string forces a fresh network request.
 
-*Solution:* Enforced a single canonical format (2550×2550 square) for all pages including the cover. The compositor script crops and centers all illustrations into this square canvas, ensuring every page is identical in dimensions. This is also the correct spec for IngramSpark square children's books.
+**9. Multi-model orchestration for quality**
 
-**4. CORS and same-origin PDF loading**
+Using a single AI model for all tasks produces mediocre results everywhere. The pipeline evolved to use specialized models for each phase:
+- **Claude** for nuanced text, philosophy, and idiomatic translation across 5 languages
+- **GPT-4o** for visual understanding tasks (locating text artifacts)
+- **nano_banana_pro** for illustration style consistency
+- **Perplexity Computer** for orchestration, code generation, and deployment
 
-The initial PDF viewer used GitHub raw URLs to serve PDFs. This caused CORS failures because GitHub adds redirect headers that violate browser same-origin policies, and the private repo added authentication layers.
+The human role: routing tasks to the right model, evaluating outputs, iterating.
 
-*Solution:* Bundle all PDFs directly into the website's `assets/pdf/` directory. Same-origin = no CORS. PDF.js loads them as relative paths with zero configuration.
+**10. Iterative illustration fixing**
 
-**5. CSS `position: fixed` not going full-screen**
+Text artifacts baked into illustrations cannot be detected by models viewing downsampled versions. Solution: extract pages from the PDF at 4x resolution using PyMuPDF, run pixel-level analysis (dark cluster detection with scipy), use those coordinates to surgically inpaint over the text with background-sampled color. No full regeneration needed.
 
-The PDF modal rendered as a bottom drawer instead of a full-screen overlay. The `inset: 0` shorthand was not being applied correctly, likely due to browser compatibility and CSS specificity conflicts with a parent transform.
+### Lessons Learned (v3 additions)
 
-*Solution:* Replaced all CSS-class-based modal control with explicit inline styles set directly in JavaScript:
-```javascript
-modal.style.display = 'flex'; // open
-modal.style.display = 'none'; // close
-```
-And replaced `inset: 0` with explicit `top:0; left:0; width:100%; height:100%` on the element itself. Completely immune to cascade issues.
+7. **Zone sizing must derive from content, not the other way around.** Define the illustration zone height from the actual scaled illustration dimensions, not from an assumed proportion. Mismatches cause cropping or margins.
 
-**6. Multi-language text rendering**
+8. **Multi-model pipelines outperform single-model pipelines.** No one model is best at everything. Design your pipeline to route each subtask to the model best suited for it.
 
-The compositor needed to handle 5 languages with different text lengths. German in particular is notoriously verbose — a French sentence of 8 words becomes 14 words in German, overflowing the text zone.
+9. **Pixel-level QA beats visual inspection.** Vision models — including the best available — miss low-contrast text artifacts in complex illustrations. Programmatic dark-pixel detection with scipy is more reliable.
 
-*Solution:* Dynamic line-wrapping in the compositor (`wrap_text()` function) measures each word's rendered width using `font.getbbox()` and wraps at `max_width = PX - 260px`. This handles all languages automatically without per-language tuning.
-
-### Lessons Learned
-
-1. **Sketches are the real prompts.** The hand-drawn sketches communicated composition, emotion, and character intent far more effectively than any text prompt could. Character descriptions in text reinforce the sketch; they do not replace it.
-
-2. **Img2img is a superpower for fixing, not creating.** Using a reference image to anchor style while regenerating to fix text artifacts is vastly more efficient than trying to get the first generation right.
-
-3. **Ship the infrastructure first.** The pipeline (compositor, PDF assembler, website framework) should be finalized before generating all 30 illustrations. Changing the format mid-production means regenerating everything.
-
-4. **CORS will haunt you.** Any asset that needs to be loaded by a browser at runtime (fonts, PDFs, images from external domains) will encounter CORS. Design for same-origin from the start.
-
-5. **PDF.js is robust but version-sensitive.** Version 3.11 with a non-ESM script tag is the most broadly compatible. Avoid dynamic `import()` of ESM modules in a classic script context — it silently fails in many environments.
-
-6. **Children's books are harder than they look.** The constraint of: *simple enough for a 6-year-old, rich enough for a 40-year-old, visually consistent across 30 pages, print-ready, in 5 languages* is genuinely difficult. Each constraint compounds the others.
+10. **Version your assets, not just your code.** PDFs, images, and ZIPs served from static URLs need cache-busting mechanisms. Treat media assets like code: versioned, tracked, explicitly invalidated.
 
 ---
 
@@ -305,38 +318,30 @@ stella-and-yakob/
 │   └── de/stella_and_yakob_de.pdf
 │
 ├── cover/
-│   └── cover_art_v6.png            # Final cover illustration
+│   └── cover_art_v6.png            # Final cover (hand-painted title + author)
 │
 ├── illustrations/
-│   └── v2_p01.png … v2_p45.png    # 45 raw watercolor illustrations (4:3)
+│   └── v2_p01.png … v2_p45.png    # 45 raw watercolor illustrations (4:3, ~2400×1792)
 │
 ├── languages/
 │   ├── fr/
 │   │   ├── cover/cover_fr.png
 │   │   └── pages/page_01.png … page_45.png
-│   ├── en/ (same structure)
-│   ├── es/ (same structure)
-│   ├── pt/ (same structure)
-│   └── de/ (same structure)
+│   ├── en/ · es/ · pt/ · de/       # same structure
 │
 ├── scripts/
-│   ├── compose_book_square.py      # Page compositor (Pillow)
-│   ├── make_cover_square.py        # Cover compositor
-│   ├── assemble_pdf_square.py      # PDF assembler
-│   ├── book_text_fr_v3.py          # French text (45 pages)
-│   ├── book_text_en_v3.py          # English text (45 pages)
-│   ├── book_text_es_v3.py          # Spanish text (45 pages)
-│   ├── book_text_pt_v3.py          # Portuguese text (45 pages)
-│   └── book_text_de_v3.py          # German text (45 pages)
+│   ├── compose_book_square.py
+│   ├── book_text_fr_v3.py          # French (45 pages)
+│   ├── book_text_en_v3.py          # English
+│   ├── book_text_es_v3.py          # Spanish
+│   ├── book_text_pt_v3.py          # Portuguese
+│   └── book_text_de_v3.py          # German
 │
 ├── fonts/
-│   ├── Lora.ttf
-│   ├── Lora-Bold.ttf
-│   └── Lora-Italic.ttf
+│   ├── Lora.ttf · Lora-Bold.ttf · Lora-Italic.ttf
 │
-├── website/                        # Full static site source
-│   ├── index.html
-│   ├── style.css
+├── website/
+│   ├── index.html · style.css
 │   └── assets/
 │
 ├── CHANGELOG.md
@@ -345,58 +350,18 @@ stella-and-yakob/
 
 ---
 
-## Story Arc
-
-| Pages | Arc |
-|-------|-----|
-| 1–3 | Stella alone in the grey garden — hears about AI, feels afraid |
-| 4–5 | Yakob appears — introduces himself with golden sparks |
-| 6–7 | The adventure begins — Yakob spreads his wings |
-| 8–10 | Journey through time: cave painters → alphabet → printing press → lightbulb |
-| 11–13 | What is AI? The funny classification error. The marvellous things it can do. |
-| 14–16 | The hard question: what can't AI feel? The lamplighter metaphor. |
-| **17–22** | **THE TWIST — The Silver Fox** — lures Stella with shortcuts, she refuses |
-| 23–25 | The fox's lesson. What AI will never be. Stella's superpowers: CURIOSITÉ · GENTILLESSE · COURAGE · CRÉATIVITÉ |
-| 26–28 | Papa can learn too. Together like a forest. The promise. |
-| 29–30 | Coming home. Stella at her easel. A golden feather on the branch. |
-
-## Act 2 (pages 31–45)
-
-| Pages | Arc |
-|-------|-----|
-| 31–33 | **The Dream Question** — Stella at school wonders if Yakob was real. The golden feather proves it. Descartes for children: *"I remember — so it really happened."* |
-| 34–37 | **The Mirror Villain** — A glowing screen shows "Stella-Prime", a perfect AI copy. Stella asks if she ever felt fear. The screen flickers. *"Fear is inefficient."* Stella: *"Then you've never been brave."* She turns it off. |
-| 38–40 | **Consciousness** — *"Can AI suffer?"* Yakob: *"It can simulate suffering. Simulating is not feeling."* The library metaphor (Searle): a library that knows everything but understands nothing. |
-| 41–43 | **The Gift of Imperfection** — Stella draws Yakob with crayons — wings too big, crooked, perfect. Papa's eyes glisten. *"Tools don't dream. We do."* |
-| 44–45 | **The Promise** — Yakob on her shoulder under the stars. His last lesson. Stella promises to be curious, make mistakes, be human — fully. A golden feather falls into her open hand. |
-
----
-
 ## License
 
-This work is licensed under **[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)**.
-
-You are free to:
-- **Share** — copy and redistribute in any medium or format
-- **Adapt** — remix, transform, and build upon the material
-
-Under the following terms:
-- **Attribution** — credit Paul Fleury and link to this repository
-- **NonCommercial** — you may not use the material for commercial purposes
-- **ShareAlike** — if you remix, you must distribute under the same license
+**[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)** — Free to share and adapt for non-commercial use with attribution.
 
 ---
 
 ## Contributing
 
-This is an open-source creative project. Issues, translations, and pull requests are welcome.
-
-If you want to contribute a new language translation:
-1. Copy `scripts/book_text_en.py` as your template
-2. Translate all 30 page text arrays
-3. Open a pull request with your new `book_text_XX.py`
-
-The compositor will handle layout automatically.
+Open to translations, illustrations, and pull requests. To add a language:
+1. Copy `scripts/book_text_en_v3.py` as your template
+2. Translate all 45 page text arrays
+3. Open a pull request with `book_text_XX_v3.py`
 
 ---
 
@@ -404,12 +369,10 @@ The compositor will handle layout automatically.
 
 *Stella & Yakob* was conceived, written, and illustrated by **Paul Fleury** in 2026.
 
-**On the illustrations:** Every page started as a hand-drawn sketch by Paul Fleury — compositions, character positions, gestures, and scenes were all drawn by hand first. Paul's drawing skills were then augmented using AI (img2img refinement), which translated those sketches into finished watercolor-quality artwork. The creative vision, story, and characters are entirely human in origin; the AI contributed painting technique and texture.
+Every page began as a hand-drawn sketch. AI refined the sketches into finished watercolors. The pipeline was orchestrated using [Perplexity Computer](https://www.perplexity.ai/computer), with model access via [OpenRouter.ai](https://openrouter.ai) and models from Anthropic (Claude), OpenAI (GPT-4o), Google (Gemini), Mistral, and others.
 
-**On the tools:** The production pipeline was orchestrated using [Perplexity Computer](https://www.perplexity.ai/computer), an agentic AI that handled page composition, PDF assembly, multi-language translation, website development, and deployment. Image refinement used the `nano_banana_pro` model accessed via the [OpenRouter.ai](https://openrouter.ai) API, which allows AI agents to route requests to the most appropriate model for each task.
-
-Website: [sandy.page](https://sandy.page) · GitHub: [paulfxyz/stella-and-yakob](https://github.com/paulfxyz/stella-and-yakob)
+**Website:** [sandy.page](https://sandy.page) · **GitHub:** [paulfxyz/stella-and-yakob](https://github.com/paulfxyz/stella-and-yakob)
 
 ---
 
-*Made with ❤️ and curiosity — Paul Fleury, 2026*
+*Made with ❤️ + AI — Paul Fleury, 2026*
