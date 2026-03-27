@@ -70,16 +70,15 @@
             <span id="lang-btn-code">EN</span>
             <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
+          <div class="lang-dropdown" id="lang-dropdown" role="listbox" aria-label="Language options">
+            <button class="lang-option active" data-lang="en" role="option">🇬🇧 <span>English</span></button>
+            <button class="lang-option" data-lang="fr" role="option">🇫🇷 <span>Français</span></button>
+            <button class="lang-option" data-lang="es" role="option">🇪🇸 <span>Español</span></button>
+            <button class="lang-option" data-lang="pt" role="option">🇵🇹 <span>Português</span></button>
+            <button class="lang-option" data-lang="de" role="option">🇩🇪 <span>Deutsch</span></button>
+          </div>
         </div>
-        <!-- Language dropdown rendered as fixed overlay — avoids stacking context traps -->
-        <div class="lang-dropdown" id="lang-dropdown" role="listbox" aria-label="Language options" hidden>
-          <button class="lang-option active" data-lang="en" role="option">🇬🇧 <span>English</span></button>
-          <button class="lang-option" data-lang="fr" role="option">🇫🇷 <span>Français</span></button>
-          <button class="lang-option" data-lang="es" role="option">🇪🇸 <span>Español</span></button>
-          <button class="lang-option" data-lang="pt" role="option">🇵🇹 <span>Português</span></button>
-          <button class="lang-option" data-lang="de" role="option">🇩🇪 <span>Deutsch</span></button>
-        </div>
-        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+<button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
       </div>
@@ -840,63 +839,37 @@
 
     // ── Language switcher dropdown ──────────────────────────────
     (function(){
-      const btn      = document.getElementById('lang-btn');
-      const dropdown = document.getElementById('lang-dropdown');
-      let isOpen = false;
+      var switcher = document.getElementById('lang-switcher');
+      var btn      = document.getElementById('lang-btn');
+      var dropdown = document.getElementById('lang-dropdown');
 
-      function openDropdown() {
-        // Position dropdown below the button using fixed coords — escapes all stacking contexts
-        const rect = btn.getBoundingClientRect();
-        dropdown.style.top    = (rect.bottom + 6) + 'px';
-        dropdown.style.right  = (window.innerWidth - rect.right) + 'px';
-        dropdown.style.left   = 'auto';
-        // On narrow screens, anchor left instead
-        if (rect.right > window.innerWidth - 10) {
-          dropdown.style.right = '8px';
-        }
-        dropdown.hidden = false;
-        dropdown.style.display = 'block';
-        // Trigger animation
-        requestAnimationFrame(() => dropdown.classList.add('open'));
+      function openMenu() {
+        switcher.classList.add('open');
         btn.setAttribute('aria-expanded', 'true');
-        isOpen = true;
       }
-
-      function closeDropdown() {
-        dropdown.classList.remove('open');
-        dropdown.hidden = true;
-        dropdown.style.display = 'none';
+      function closeMenu() {
+        switcher.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
-        isOpen = false;
       }
 
       btn.addEventListener('click', function(e) {
         e.stopPropagation();
-        isOpen ? closeDropdown() : openDropdown();
+        switcher.classList.contains('open') ? closeMenu() : openMenu();
       });
 
-      // Close on click outside
       document.addEventListener('click', function(e) {
-        if (isOpen && !btn.contains(e.target) && !dropdown.contains(e.target)) {
-          closeDropdown();
-        }
+        if (!switcher.contains(e.target)) closeMenu();
       });
 
-      // Close on scroll or resize
-      window.addEventListener('scroll', function() { if (isOpen) closeDropdown(); }, { passive: true });
-      window.addEventListener('resize', function() { if (isOpen) closeDropdown(); }, { passive: true });
-
-      // Close on Escape
       document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && isOpen) { closeDropdown(); btn.focus(); }
+        if (e.key === 'Escape') { closeMenu(); btn.focus(); }
       });
 
-      // Language option clicks
       dropdown.addEventListener('click', function(e) {
-        const option = e.target.closest('.lang-option');
-        if (!option) return;
-        setLang(option.dataset.lang);
-        closeDropdown();
+        var opt = e.target.closest('.lang-option');
+        if (!opt) return;
+        setLang(opt.dataset.lang);
+        closeMenu();
       });
     })();
 

@@ -285,9 +285,12 @@ button { cursor: pointer; background: none; border: none; }
   .nav-links { display: none; }
 }
 
-/* ── Language Switcher ──────────────────────────────────────────── */
-/* ── Language Switcher ──────────────────────────────────────────── */
-.lang-switcher { position: relative; display: flex; align-items: center; }
+/* ── Language Switcher ─────────────────────────────────────────── */
+.lang-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
 
 .lang-btn {
   display: flex; align-items: center; gap: 5px;
@@ -298,28 +301,35 @@ button { cursor: pointer; background: none; border: none; }
   white-space: nowrap; line-height: 1;
 }
 .lang-btn:hover { background: var(--color-surface-offset); }
+
 .lang-chevron { transition: transform 0.2s ease; flex-shrink: 0; }
 .lang-btn[aria-expanded="true"] .lang-chevron { transform: rotate(180deg); }
 
-/* Dropdown: fixed positioning so it escapes all stacking contexts (header backdrop-filter etc.) */
+/* Dropdown: hidden by default, shown when parent has .open */
 .lang-dropdown {
-  position: fixed;
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 160px;
+  padding: 6px;
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
-  min-width: 160px;
-  padding: 6px;
-  opacity: 0;
-  transform: scale(0.95) translateY(-4px);
-  transition: opacity 0.15s ease, transform 0.15s ease;
-  transform-origin: top right;
-  z-index: 9000;  /* above everything including header (z-index:50) and pdf modal (z-index:99999 only when open) */
-  display: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06);
+  z-index: 9999;
+  animation: langDropIn 0.15s ease forwards;
 }
-.lang-dropdown.open {
-  opacity: 1;
-  transform: scale(1) translateY(0);
+.lang-switcher.open .lang-dropdown { display: block; }
+
+/* The header uses backdrop-filter which creates a stacking context.
+   z-index: 9999 on the dropdown + z-index: 100 on the header ensures
+   the dropdown always appears above page content. */
+.site-header { z-index: 100 !important; }
+
+@keyframes langDropIn {
+  from { opacity: 0; transform: translateY(-4px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)  scale(1); }
 }
 
 .lang-option {
@@ -332,15 +342,16 @@ button { cursor: pointer; background: none; border: none; }
 }
 .lang-option:hover { background: var(--color-surface-2); }
 .lang-option.active { color: var(--color-primary); font-weight: 600; }
-.lang-option.active::after { content: "✓"; margin-left: auto; font-size: 0.75rem; opacity: 0.7; }
+.lang-option.active::after {
+  content: "✓"; margin-left: auto;
+  font-size: 0.75rem; opacity: 0.7;
+}
 
-/* Mobile: full-width bottom sheet feel */
-@media (max-width: 600px) {
+/* Mobile */
+@media (max-width: 640px) {
   .lang-dropdown {
-    right: 8px !important;
-    left: 8px !important;
-    min-width: 0;
-    transform-origin: top center;
+    right: -8px;
+    min-width: 150px;
   }
 }
 
