@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stella & Yakob — A Children's Book About AI, Curiosity & Wisdom</title>
+<meta name="description" content="A beautifully illustrated children's book about a girl named Stella, a wise owl named Yakob, and what it means to be human in an age of artificial intelligence. Available in 5 languages.">
+<meta property="og:title" content="Stella & Yakob">
+<meta property="og:description" content="A children's book about AI, curiosity, and wisdom. Available in French, English, Spanish, Portuguese and German.">
+<meta property="og:image" content="assets/cover-hero.jpg">
+<meta property="og:type" content="book">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────────── -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Stella & Yakob home">
+        <svg viewBox="0 0 48 48" width="36" height="36" fill="none" aria-hidden="true">
+          <!-- Owl mark: two amber circles (eyes) + wing arc -->
+          <ellipse cx="24" cy="26" rx="14" ry="13" fill="currentColor" opacity="0.12"/>
+          <ellipse cx="24" cy="26" rx="14" ry="13" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="19.5" cy="25" r="3.5" fill="currentColor"/>
+          <circle cx="28.5" cy="25" r="3.5" fill="currentColor"/>
+          <circle cx="19.5" cy="25" r="1.5" fill="var(--color-bg)"/>
+          <circle cx="28.5" cy="25" r="1.5" fill="var(--color-bg)"/>
+          <!-- ear tufts -->
+          <path d="M17 14 L14 8 L20 12" fill="currentColor" opacity="0.7"/>
+          <path d="M31 14 L34 8 L28 12" fill="currentColor" opacity="0.7"/>
+          <!-- beak -->
+          <path d="M22 28.5 L24 31 L26 28.5" fill="currentColor" opacity="0.6"/>
+        </svg>
+        <span>Stella & Yakob</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#story">The Story</a></li>
+        <li><a href="#pages">Preview</a></li>
+        <li><a href="#editions">Editions</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="hero" aria-label="Book hero">
+      <div class="hero-bg-wash"></div>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-kicker">A children's book</p>
+          <h1 class="hero-title">Stella<br><em>&amp; Yakob</em></h1>
+          <p class="hero-subtitle">A small girl. A wise owl. And a question that matters more than ever.</p>
+          <p class="hero-body">When Stella hears grown-ups talking about "artificial intelligence", a knot tightens in her chest. She doesn't understand — and that's frightening. Then Yakob appears, a warm brown owl with amber eyes full of wisdom, and together they go on a journey through time, wonder, and a few dazzling traps along the way.</p>
+          <div class="hero-ctas">
+            <a href="#pages" class="btn btn-primary">Read a preview</a>
+            <a href="#editions" class="btn btn-ghost">Download free ↓</a>
+          </div>
+          <div class="hero-languages">
+            <span class="lang-label">Available in</span>
+            <span class="lang-flag" title="Français">🇫🇷</span>
+            <span class="lang-flag" title="English">🇬🇧</span>
+            <span class="lang-flag" title="Español">🇪🇸</span>
+            <span class="lang-flag" title="Português">🇵🇹</span>
+            <span class="lang-flag" title="Deutsch">🇩🇪</span>
+          </div>
+        </div>
+        <div class="hero-cover">
+          <div class="cover-float">
+            <img src="assets/cover-hero.jpg" alt="Stella & Yakob book cover — a small girl and a warm owl facing each other in a watercolour garden" width="480" height="480" loading="eager">
+            <div class="cover-shadow"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ── STORY ─────────────────────────────────────────────────── -->
+    <section class="story-section" id="story">
+      <div class="section-inner">
+        <div class="story-grid">
+          <div class="story-text">
+            <span class="section-kicker">The Story</span>
+            <h2>What is AI?<br>And why does it matter?</h2>
+            <p>One grey evening, Stella overhears her parents speaking in worried voices about something called "artificial intelligence." Her father might lose his job. Her mother cried. Stella doesn't understand — and that knot in her chest is real.</p>
+            <p>Then Yakob arrives: a large, gentle owl who perches on the highest branch of the old oak tree. With golden sparks dancing in the air, he takes Stella on an adventure through time — from cave painters to the alphabet, from the lightbulb to learning machines.</p>
+            <p>But there's a twist. A silver fox appears, promising shortcuts and dazzling towers of crystal. Will Stella recognise what is real from what merely glitters?</p>
+          </div>
+          <div class="story-features">
+            <div class="feature-card">
+              <div class="feature-icon">🦉</div>
+              <h3>30 illustrated pages</h3>
+              <p>Minimal loose watercolour — soft brushstrokes, warm amber tones, lots of white paper showing.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">✨</div>
+              <h3>A twist & a lesson</h3>
+              <p>The Silver Fox twist (pages 17–22) teaches children to question dazzling shortcuts and trust their own judgement.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💡</div>
+              <h3>Real themes, gently told</h3>
+              <p>AI, automation, ethics, and the irreplaceable superpowers of being human — curiosity, kindness, courage, creativity.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🌍</div>
+              <h3>5 languages</h3>
+              <p>French, English, Spanish, Portuguese and German. Print-ready at 300 DPI, 8.5″ × 8.5″.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PAGE FLIPPER ──────────────────────────────────────────── -->
+    <section class="flipper-section" id="pages">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-kicker">Inside the Book</span>
+          <h2>A few pages</h2>
+          <p class="section-lead">Eight moments from Stella and Yakob's journey together.</p>
+        </div>
+
+        <div class="flipper">
+          <div class="flipper-track" id="flipper-track">
+
+            <figure class="flip-page" data-caption="Page 1 — The grey garden" tabindex="0">
+              <img src="assets/pages/page-01.jpg" alt="Stella alone in a grey garden, flowers drooping" loading="lazy" width="560" height="560">
+              <figcaption>Page 1 · Le Jardin Gris — <em>Stella alone. The flowers hang their heads.</em></figcaption>
+            </figure>
+
+            <figure class="flip-page" data-caption="Page 4 — Yakob appears" tabindex="0">
+              <img src="assets/pages/page-04.jpg" alt="A warm owl appears on the highest branch of an old oak tree" loading="lazy" width="560" height="560">
+              <figcaption>Page 4 · Une Voix d'en Haut — <em>On the highest branch, a warm owl with round amber eyes.</em></figcaption>
+            </figure>
+
+            <figure class="flip-page" data-caption="Page 7 — The adventure begins" tabindex="0">
+              <img src="assets/pages/page-07.jpg" alt="Yakob spreads great wings as golden dust swirls around Stella" loading="lazy" width="560" height="560">
+              <figcaption>Page 7 · L'Aventure Commence — <em>Golden dust swirls. The garden transforms.</em></figcaption>
+            </figure>
+
+            <figure class="flip-page" data-caption="Page 11 — What is AI?" tabindex="0">
+              <img src="assets/pages/page-11.jpg" alt="A small round robot sorting drawings of cats, dogs and rabbits" loading="lazy" width="560" height="560">
+              <figcaption>Page 11 · C'est quoi l'IA? — <em>A gentle robot sorting drawings, again and again.</em></figcaption>
+            </figure>
+
+            <figure class="flip-page" data-caption="Page 17 — The Silver Fox" tabindex="0">
+              <img src="assets/pages/page-17.jpg" alt="A sleek silver fox emerges from the bushes with a too-wide smile" loading="lazy" width="560" height="560">
+              <figcaption>Page 17 · Le Renard Argenté — <em>A smile too wide. Eyes that glitter cold.</em></figcaption>
+            </figure>
+
+            <figure class="flip-page" data-caption="Page 22 — Stella says no" tabindex="0">
+              <img src="assets/pages/page-22.jpg" alt="Stella plants her feet in the earth and says no clearly" loading="lazy" width="560" height="560">
+              <figcaption>Page 22 · Stella dit Non — <em>"No thank you." The silver path cracks and fades.</em></figcaption>
+            </figure>
+
+            <figure class="flip-page" data-caption="Page 25 — Superpowers" tabindex="0">
+              <img src="assets/pages/page-25.jpg" alt="Glowing words dance around Stella: Curiosity, Kindness, Courage, Creativity" loading="lazy" width="560" height="560">
+              <figcaption>Page 25 · Les Superpouvoirs — <em>Curiosity. Kindness. Courage. Creativity.</em></figcaption>
+            </figure>
+
+            <figure class="flip-page" data-caption="Page 30 — Morning" tabindex="0">
+              <img src="assets/pages/page-30.jpg" alt="Stella painting in her garden, a golden feather on the branch above" loading="lazy" width="560" height="560">
+              <figcaption>Page 30 · Le Matin — <em>Morning. A golden feather glows on the branch.</em></figcaption>
+            </figure>
+
+          </div>
+
+          <div class="flipper-controls">
+            <button class="flip-btn flip-prev" id="flip-prev" aria-label="Previous page">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div class="flip-dots" id="flip-dots" role="tablist" aria-label="Page selector"></div>
+            <button class="flip-btn flip-next" id="flip-next" aria-label="Next page">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CHARACTERS ─────────────────────────────────────────────── -->
+    <section class="characters-section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-kicker">Characters</span>
+          <h2>Who you'll meet</h2>
+        </div>
+        <div class="characters-grid">
+          <div class="character-card">
+            <div class="character-art char-stella">
+              <svg viewBox="0 0 120 120" width="100" height="100" aria-hidden="true">
+                <circle cx="60" cy="45" r="28" fill="#e8d5c0" opacity="0.6"/>
+                <ellipse cx="60" cy="45" rx="20" ry="22" fill="#f5e8d8"/>
+                <ellipse cx="52" cy="43" rx="4" ry="4.5" fill="#3d2c1e"/>
+                <ellipse cx="68" cy="43" rx="4" ry="4.5" fill="#3d2c1e"/>
+                <circle cx="53" cy="42" r="1.5" fill="white"/>
+                <circle cx="69" cy="42" r="1.5" fill="white"/>
+                <ellipse cx="60" cy="52" rx="3" ry="1.5" fill="#c8a08a" opacity="0.6"/>
+                <ellipse cx="50" cy="48" rx="5" ry="3" fill="#e8a090" opacity="0.4"/>
+                <ellipse cx="70" cy="48" rx="5" ry="3" fill="#e8a090" opacity="0.4"/>
+                <!-- dark bob hair -->
+                <ellipse cx="60" cy="30" rx="22" ry="18" fill="#2d2018"/>
+                <ellipse cx="60" cy="38" rx="22" ry="10" fill="#2d2018"/>
+                <ellipse cx="39" cy="44" rx="8" ry="12" fill="#2d2018"/>
+                <ellipse cx="81" cy="44" rx="8" ry="12" fill="#2d2018"/>
+                <!-- body / dress pale blue -->
+                <ellipse cx="60" cy="88" rx="22" ry="26" fill="#b8d0e0" opacity="0.7"/>
+                <rect x="50" y="65" width="20" height="30" rx="4" fill="#b8d0e0" opacity="0.7"/>
+              </svg>
+            </div>
+            <h3>Stella</h3>
+            <p>A small girl with a short dark brown bob, a pale blue dress, rosy cheeks and big expressive eyes. Curious, brave, and wonderfully human.</p>
+          </div>
+          <div class="character-card char-yakob-card">
+            <div class="character-art char-yakob">
+              <svg viewBox="0 0 120 120" width="100" height="100" aria-hidden="true">
+                <!-- body -->
+                <ellipse cx="60" cy="72" rx="30" ry="36" fill="#c8913a" opacity="0.35"/>
+                <ellipse cx="60" cy="72" rx="26" ry="30" fill="#d4a054" opacity="0.5"/>
+                <!-- face -->
+                <ellipse cx="60" cy="50" rx="22" ry="22" fill="#e0b870" opacity="0.6"/>
+                <ellipse cx="60" cy="50" rx="18" ry="18" fill="#e8c87a" opacity="0.7"/>
+                <!-- eyes -->
+                <circle cx="51" cy="49" r="7" fill="#f5a623"/>
+                <circle cx="69" cy="49" r="7" fill="#f5a623"/>
+                <circle cx="51" cy="49" r="4" fill="#2d1a08"/>
+                <circle cx="69" cy="49" r="4" fill="#2d1a08"/>
+                <circle cx="52.5" cy="47.5" r="1.5" fill="white"/>
+                <circle cx="70.5" cy="47.5" r="1.5" fill="white"/>
+                <!-- beak -->
+                <path d="M57 55 L60 60 L63 55 Z" fill="#c87a28" opacity="0.8"/>
+                <!-- ear tufts -->
+                <path d="M44 34 L40 24 L50 30 Z" fill="#b87830" opacity="0.7"/>
+                <path d="M76 34 L80 24 L70 30 Z" fill="#b87830" opacity="0.7"/>
+                <!-- wings -->
+                <ellipse cx="34" cy="80" rx="14" ry="24" fill="#b87830" opacity="0.4" transform="rotate(-15 34 80)"/>
+                <ellipse cx="86" cy="80" rx="14" ry="24" fill="#b87830" opacity="0.4" transform="rotate(15 86 80)"/>
+              </svg>
+            </div>
+            <h3>Yakob</h3>
+            <p>A large natural owl with warm brown feathers and amber/gold tones. Big round eyes full of warmth and wisdom. No glasses, no accessories — just presence.</p>
+          </div>
+          <div class="character-card">
+            <div class="character-art char-fox">
+              <svg viewBox="0 0 120 120" width="100" height="100" aria-hidden="true">
+                <!-- body -->
+                <ellipse cx="60" cy="78" rx="26" ry="28" fill="#b0b8c8" opacity="0.4"/>
+                <!-- head -->
+                <ellipse cx="60" cy="46" rx="22" ry="20" fill="#c8d0dc" opacity="0.6"/>
+                <!-- snout -->
+                <ellipse cx="60" cy="56" rx="10" ry="8" fill="#d8e0e8" opacity="0.7"/>
+                <!-- eyes -->
+                <ellipse cx="50" cy="44" rx="5" ry="5.5" fill="#7090a8"/>
+                <ellipse cx="70" cy="44" rx="5" ry="5.5" fill="#7090a8"/>
+                <ellipse cx="50" cy="44" rx="3" ry="3.5" fill="#283040"/>
+                <ellipse cx="70" cy="44" rx="3" ry="3.5" fill="#283040"/>
+                <circle cx="51" cy="43" r="1" fill="white"/>
+                <circle cx="71" cy="43" r="1" fill="white"/>
+                <!-- pointed ears -->
+                <path d="M42 32 L36 14 L54 26 Z" fill="#a0aabb" opacity="0.7"/>
+                <path d="M78 32 L84 14 L66 26 Z" fill="#a0aabb" opacity="0.7"/>
+                <!-- cold shimmer -->
+                <circle cx="60" cy="46" r="30" fill="none" stroke="#a0c0d8" stroke-width="1" opacity="0.3" stroke-dasharray="4 6"/>
+                <!-- sly smile -->
+                <path d="M50 59 Q60 66 70 59" stroke="#506080" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>The Silver Fox</h3>
+            <p>Sleek, silver-furred, with a smile just a little too wide. Offers shortcuts and crystal towers. Appears pages 17–22 as a lesson in discernment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EDITIONS ──────────────────────────────────────────────── -->
+    <section class="editions-section" id="editions">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-kicker">Free Download</span>
+          <h2>Five editions,<br>five languages</h2>
+          <p class="section-lead">Each edition is a complete, print-ready PDF at 300 DPI. 8.5″ × 8.5″ square — compatible with KDP and IngramSpark.</p>
+        </div>
+        <div class="editions-grid">
+
+          <a class="edition-card" href="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/fr/pdf/stella_et_yakob_fr.pdf" target="_blank" rel="noopener">
+            <img src="assets/covers/cover-fr.jpg" alt="French edition cover" loading="lazy" width="280" height="280">
+            <div class="edition-info">
+              <span class="edition-flag">🇫🇷</span>
+              <h3>Français</h3>
+              <p class="edition-subtitle">Stella &amp; Yakob — <em>Une histoire formidable</em></p>
+              <span class="edition-dl">Télécharger le PDF ↓</span>
+            </div>
+          </a>
+
+          <a class="edition-card" href="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/en/pdf/stella_and_yakob_en.pdf" target="_blank" rel="noopener">
+            <img src="assets/covers/cover-en.jpg" alt="English edition cover" loading="lazy" width="280" height="280">
+            <div class="edition-info">
+              <span class="edition-flag">🇬🇧</span>
+              <h3>English</h3>
+              <p class="edition-subtitle">Stella &amp; Yakob — <em>A wonderful story</em></p>
+              <span class="edition-dl">Download PDF ↓</span>
+            </div>
+          </a>
+
+          <a class="edition-card" href="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/es/pdf/stella_and_yakob_es.pdf" target="_blank" rel="noopener">
+            <img src="assets/covers/cover-es.jpg" alt="Spanish edition cover" loading="lazy" width="280" height="280">
+            <div class="edition-info">
+              <span class="edition-flag">🇪🇸</span>
+              <h3>Español</h3>
+              <p class="edition-subtitle">Stella &amp; Yakob — <em>Una historia maravillosa</em></p>
+              <span class="edition-dl">Descargar PDF ↓</span>
+            </div>
+          </a>
+
+          <a class="edition-card" href="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/pt/pdf/stella_and_yakob_pt.pdf" target="_blank" rel="noopener">
+            <img src="assets/covers/cover-pt.jpg" alt="Portuguese edition cover" loading="lazy" width="280" height="280">
+            <div class="edition-info">
+              <span class="edition-flag">🇵🇹</span>
+              <h3>Português</h3>
+              <p class="edition-subtitle">Stella &amp; Yakob — <em>Uma história maravilhosa</em></p>
+              <span class="edition-dl">Baixar PDF ↓</span>
+            </div>
+          </a>
+
+          <a class="edition-card" href="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/de/pdf/stella_and_yakob_de.pdf" target="_blank" rel="noopener">
+            <img src="assets/covers/cover-de.jpg" alt="German edition cover" loading="lazy" width="280" height="280">
+            <div class="edition-info">
+              <span class="edition-flag">🇩🇪</span>
+              <h3>Deutsch</h3>
+              <p class="edition-subtitle">Stella &amp; Yakob — <em>Eine wunderbare Geschichte</em></p>
+              <span class="edition-dl">PDF herunterladen ↓</span>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="editions-note">
+          <p>All source files, illustrations, and scripts are available in the <a href="https://github.com/paulfxyz/stella-and-yakob" target="_blank" rel="noopener">GitHub repository</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ──────────────────────────────────────────────────── -->
+    <section class="about-section" id="about">
+      <div class="section-inner">
+        <div class="about-grid">
+          <div class="about-text">
+            <span class="section-kicker">About</span>
+            <h2>Why this book?</h2>
+            <p>Children are growing up in a world where AI is everywhere — and often, the adults around them are just as confused. Stella & Yakob was born from a simple belief: that even the hardest questions can be explored gently, with wonder and honesty.</p>
+            <p>The book doesn't preach or simplify. It acknowledges that there are no easy answers. But it gives children — and the grown-ups who read to them — a language for curiosity, discernment, and the irreplaceable things that make us human.</p>
+            <p class="about-sig">— Paul Fleury</p>
+          </div>
+          <div class="about-specs">
+            <h3>Book Specifications</h3>
+            <dl class="specs-list">
+              <div><dt>Format</dt><dd>8.5″ × 8.5″ square</dd></div>
+              <div><dt>Pages</dt><dd>31 (cover + 30 story pages)</dd></div>
+              <div><dt>Resolution</dt><dd>300 DPI — print-ready</dd></div>
+              <div><dt>Print compatibility</dt><dd>KDP, IngramSpark, BookBaby</dd></div>
+              <div><dt>Languages</dt><dd>FR · EN · ES · PT · DE</dd></div>
+              <div><dt>Illustrations</dt><dd>30 original watercolour pages</dd></div>
+              <div><dt>Age range</dt><dd>5–10 years</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <svg viewBox="0 0 48 48" width="28" height="28" fill="none" aria-hidden="true">
+          <ellipse cx="24" cy="26" rx="14" ry="13" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+          <circle cx="19.5" cy="25" r="3.5" fill="currentColor" opacity="0.6"/>
+          <circle cx="28.5" cy="25" r="3.5" fill="currentColor" opacity="0.6"/>
+          <path d="M17 14 L14 8 L20 12" fill="currentColor" opacity="0.4"/>
+          <path d="M31 14 L34 8 L28 12" fill="currentColor" opacity="0.4"/>
+        </svg>
+        <span>Stella & Yakob</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/paulfxyz/stella-and-yakob" target="_blank" rel="noopener">GitHub</a>
+        <a href="#editions">Download</a>
+        <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+      </div>
+      <p class="footer-copy">© 2026 Paul Fleury. Illustrations generated with AI under creative direction.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Theme toggle ──────────────────────────────────────────────
+    (function(){
+      const t = document.querySelector('[data-theme-toggle]');
+      const r = document.documentElement;
+      let d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+      r.setAttribute('data-theme', d);
+      const sunSVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+      const moonSVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      if (t) {
+        t.innerHTML = d === 'dark' ? sunSVG : moonSVG;
+        t.addEventListener('click', () => {
+          d = d === 'dark' ? 'light' : 'dark';
+          r.setAttribute('data-theme', d);
+          t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
+          t.innerHTML = d === 'dark' ? sunSVG : moonSVG;
+        });
+      }
+    })();
+
+    // ── Sticky header ─────────────────────────────────────────────
+    (function(){
+      const hdr = document.getElementById('site-header');
+      let last = 0;
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        hdr.classList.toggle('scrolled', y > 20);
+        last = y;
+      }, { passive: true });
+    })();
+
+    // ── Page flipper ──────────────────────────────────────────────
+    (function(){
+      const track   = document.getElementById('flipper-track');
+      const pages   = Array.from(track.querySelectorAll('.flip-page'));
+      const dotsEl  = document.getElementById('flip-dots');
+      const prevBtn = document.getElementById('flip-prev');
+      const nextBtn = document.getElementById('flip-next');
+      let current = 0;
+
+      // Build dots
+      pages.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-label', `Page ${i + 1}`);
+        dot.classList.toggle('active', i === 0);
+        dot.addEventListener('click', () => goTo(i));
+        dotsEl.appendChild(dot);
+      });
+
+      function goTo(idx) {
+        pages[current].classList.remove('active');
+        dotsEl.children[current].classList.remove('active');
+        current = (idx + pages.length) % pages.length;
+        pages[current].classList.add('active');
+        dotsEl.children[current].classList.add('active');
+        prevBtn.disabled = false;
+        nextBtn.disabled = false;
+      }
+
+      pages[0].classList.add('active');
+      prevBtn.addEventListener('click', () => goTo(current - 1));
+      nextBtn.addEventListener('click', () => goTo(current + 1));
+
+      // Keyboard support
+      track.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight') goTo(current + 1);
+        if (e.key === 'ArrowLeft')  goTo(current - 1);
+      });
+
+      // Touch swipe
+      let tx = 0;
+      track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - tx;
+        if (Math.abs(dx) > 50) goTo(dx < 0 ? current + 1 : current - 1);
+      });
+    })();
+
+    // ── Scroll-reveal ─────────────────────────────────────────────
+    (function(){
+      const els = document.querySelectorAll('.feature-card, .character-card, .edition-card, .story-text, .story-features, .about-text, .about-specs');
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); }});
+      }, { threshold: 0.12 });
+      els.forEach(el => { el.classList.add('reveal'); obs.observe(el); });
+    })();
+  </script>
+
+</body>
+</html>
