@@ -29,6 +29,14 @@ A story about wonder, discernment, and why humans will always bring what machine
 
 ---
 
+## Print & Distribution
+
+The MVP printed editions of Stella & Yakob will be produced via **[IngramSpark](https://myaccount.ingramspark.com/Portal/Tools/ShippingCalculator?hsCtaAttrib=183190289314)**, one of the leading global print-on-demand and book distribution platforms.
+
+IngramSpark allows print-on-demand at high quality (offset-style), global distribution to 40,000+ retailers and libraries, and is fully compatible with the book's 8.5" × 8.5" square format at 300 DPI.
+
+---
+
 ## Characters
 
 **Stella** — Small girl, short dark brown bob hair, simple pale blue or grey dress, rosy cheeks, big expressive eyes. Always consistent across all illustrations.
