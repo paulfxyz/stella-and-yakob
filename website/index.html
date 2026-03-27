@@ -835,7 +835,6 @@
       // (The actual page info text is updated on render, but we store the current lang for it)
       currentLang = code;
       // Persist
-      localStorage.setItem('stella-lang', code);
     }
 
     // ── Language switcher dropdown ──────────────────────────────
@@ -1065,9 +1064,8 @@
       els.forEach(el => { el.classList.add('reveal'); obs.observe(el); });
     })();
 
-    // ── Initialize language from localStorage ─────────────────────
     (function(){
-      const savedLang = localStorage.getItem('stella-lang') || 'en';
+      const savedLang = 'en';
       setLang(savedLang);
     })();
   </script>
