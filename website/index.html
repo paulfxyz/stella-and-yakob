@@ -401,43 +401,44 @@
 
   </main>
 
-  <!-- ── PDF MODAL ────────────────────────────────────────────── -->
-  <div id="pdf-modal" role="dialog" aria-modal="true" aria-label="Book reader">
+  <!-- ── PDF MODAL ─────────────────────────────────────────── -->
+  <div id="pdf-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;background:rgba(15,10,4,0.96);flex-direction:column;overflow:hidden;">
     <!-- Toolbar -->
-    <div id="pdf-toolbar">
-      <span id="pdf-modal-title">Stella &amp; Yakob</span>
-      <div id="pdf-toolbar-right">
-        <a id="pdf-dl-btn" href="#" download target="_blank">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:rgba(25,16,6,0.98);border-bottom:1px solid rgba(255,255,255,0.1);flex-shrink:0;gap:12px;">
+      <span id="pdf-title" style="font-family:Georgia,serif;font-size:1rem;color:rgba(255,255,255,0.9);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Stella &amp; Yakob</span>
+      <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+        <a id="pdf-dl" href="#" download style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:999px;background:#b57a1a;color:#fff;font-size:0.82rem;font-weight:600;border:none;cursor:pointer;text-decoration:none;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download
         </a>
-        <button id="pdf-close-btn" aria-label="Close">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        <button id="pdf-close" onclick="closePdfModal()" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
       </div>
     </div>
-    <!-- Canvas area -->
-    <div id="pdf-canvas-area">
-      <button class="pdf-arrow" id="pdf-prev" aria-label="Previous page">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+    <!-- Viewer -->
+    <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 8px;min-height:0;overflow:hidden;">
+      <button id="pdf-prev" onclick="pdfPrev()" style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);display:flex;align-items:center;justify-content:center;cursor:pointer;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
-      <div id="pdf-canvas-wrap">
-        <canvas id="pdf-canvas"></canvas>
-        <div id="pdf-loading">
-          <div class="pdf-spinner"></div>
-          <span>Loading…</span>
+      <div id="pdf-wrap" style="flex:1;height:100%;display:flex;align-items:center;justify-content:center;position:relative;min-height:0;max-width:calc(100vh - 120px);">
+        <canvas id="pdf-canvas" style="max-width:100%;max-height:100%;display:block;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,0.7);transition:opacity 0.2s;"></canvas>
+        <div id="pdf-loading" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:rgba(255,255,255,0.5);font-style:italic;font-size:0.9rem;">
+          <div style="width:32px;height:32px;border:2px solid rgba(255,255,255,0.15);border-top-color:#b57a1a;border-radius:50%;animation:spin 0.75s linear infinite;"></div>
+          Loading…
         </div>
       </div>
-      <button class="pdf-arrow" id="pdf-next" aria-label="Next page">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <button id="pdf-next" onclick="pdfNext()" style="flex-shrink:0;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);display:flex;align-items:center;justify-content:center;cursor:pointer;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
     </div>
     <!-- Footer -->
-    <div id="pdf-footer-bar">
-      <span id="pdf-page-info">— / —</span>
-      <input type="range" id="pdf-scrubber" min="1" max="31" value="1">
+    <div style="display:flex;align-items:center;gap:16px;padding:10px 24px 14px;background:rgba(25,16,6,0.98);border-top:1px solid rgba(255,255,255,0.1);flex-shrink:0;">
+      <span id="pdf-info" style="font-size:0.78rem;color:rgba(255,255,255,0.4);white-space:nowrap;min-width:80px;">— / —</span>
+      <input id="pdf-scrub" type="range" min="1" max="31" value="1" oninput="pdfScrub(this.value)" style="flex:1;accent-color:#b57a1a;cursor:pointer;">
     </div>
   </div>
+  <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
 
   <!-- ── FOOTER ─────────────────────────────────────────────────── -->
   <footer class="site-footer">
@@ -545,110 +546,100 @@
       pdfjsLib.GlobalWorkerOptions.workerSrc =
         'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-      const modal    = document.getElementById('pdf-modal');
-      const canvas   = document.getElementById('pdf-canvas');
-      const loadingEl= document.getElementById('pdf-loading');
-      const prevBtn  = document.getElementById('pdf-prev');
-      const nextBtn  = document.getElementById('pdf-next');
-      const closeBtn = document.getElementById('pdf-close-btn');
-      const dlBtn    = document.getElementById('pdf-dl-btn');
-      const titleEl  = document.getElementById('pdf-modal-title');
-      const pageInfo = document.getElementById('pdf-page-info');
-      const scrubber = document.getElementById('pdf-scrubber');
-      const ctx      = canvas.getContext('2d');
+      let _doc = null, _page = 1, _total = 0, _busy = false;
 
-      let pdfDoc = null, pageNum = 1, pageCount = 0, rendering = false;
+      const modal   = document.getElementById('pdf-modal');
+      const canvas  = document.getElementById('pdf-canvas');
+      const loading = document.getElementById('pdf-loading');
+      const info    = document.getElementById('pdf-info');
+      const scrub   = document.getElementById('pdf-scrub');
+      const prev    = document.getElementById('pdf-prev');
+      const next    = document.getElementById('pdf-next');
+      const ctx     = canvas.getContext('2d');
 
-      function showModal()  { modal.classList.add('is-open');  document.body.style.overflow = 'hidden'; }
-      function hideModal()  { modal.classList.remove('is-open'); document.body.style.overflow = ''; }
-
-      function setLoading(on) { loadingEl.style.display = on ? 'flex' : 'none'; }
-
-      async function renderPage(n) {
-        if (!pdfDoc || rendering) return;
-        rendering = true;
-        setLoading(true);
+      async function render(n) {
+        if (!_doc || _busy) return;
+        _busy = true;
+        loading.style.display = 'flex';
         canvas.style.opacity = '0';
         try {
-          const page = await pdfDoc.getPage(n);
-          const wrap = document.getElementById('pdf-canvas-wrap');
-          const scale = Math.min(
-            (wrap.clientWidth  - 16) / page.getViewport({scale:1}).width,
-            (wrap.clientHeight - 16) / page.getViewport({scale:1}).height
+          const pg   = await _doc.getPage(n);
+          const wrap = document.getElementById('pdf-wrap');
+          const s    = Math.min(
+            (wrap.clientWidth  - 8) / pg.getViewport({scale:1}).width,
+            (wrap.clientHeight - 8) / pg.getViewport({scale:1}).height
           );
-          const vp = page.getViewport({scale});
+          const vp = pg.getViewport({scale: s});
           canvas.width  = vp.width;
           canvas.height = vp.height;
-          await page.render({canvasContext: ctx, viewport: vp}).promise;
-          canvas.style.opacity = '1';
-          pageInfo.textContent  = 'Page ' + n + ' of ' + pageCount;
-          scrubber.value        = n;
-          prevBtn.disabled      = n <= 1;
-          nextBtn.disabled      = n >= pageCount;
-        } catch(err) { console.warn(err); }
-        setLoading(false);
-        rendering = false;
+          await pg.render({canvasContext: ctx, viewport: vp}).promise;
+          loading.style.display = 'none';
+          canvas.style.opacity  = '1';
+          info.textContent   = 'Page ' + n + ' of ' + _total;
+          scrub.value        = n;
+          prev.disabled      = n <= 1;
+          next.disabled      = n >= _total;
+        } catch(e) { console.warn(e); }
+        _busy = false;
       }
 
-      async function openPdf(url, lang, dlName) {
-        titleEl.textContent = 'Stella & Yakob — ' + lang;
-        dlBtn.href = url; dlBtn.setAttribute('download', dlName);
-        pdfDoc = null; pageNum = 1; pageCount = 0;
+      // Global open function — called by card clicks
+      window.openPdfModal = async function(url, lang, dl) {
+        document.getElementById('pdf-title').textContent = 'Stella & Yakob — ' + lang;
+        const dlBtn = document.getElementById('pdf-dl');
+        dlBtn.href = url;
+        dlBtn.setAttribute('download', dl);
+        _doc = null; _page = 1; _total = 0;
         canvas.width = 1; canvas.height = 1;
         canvas.style.opacity = '0';
-        setLoading(true);
-        showModal();
-
+        loading.style.display = 'flex';
+        loading.innerHTML = '<div style="width:32px;height:32px;border:2px solid rgba(255,255,255,0.15);border-top-color:#b57a1a;border-radius:50%;animation:spin 0.75s linear infinite;"></div><span style="color:rgba(255,255,255,0.5);font-style:italic;margin-top:8px;">Loading…</span>';
+        // Show modal
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
         try {
-          pdfDoc       = await pdfjsLib.getDocument(url).promise;
-          pageCount    = pdfDoc.numPages;
-          scrubber.max = pageCount;
-          await renderPage(pageNum);
+          _doc   = await pdfjsLib.getDocument(url).promise;
+          _total = _doc.numPages;
+          scrub.max = _total;
+          await render(_page);
         } catch(e) {
-          console.warn('PDF load error:', e);
-          loadingEl.innerHTML =
-            '<div style="text-align:center;padding:2rem;color:rgba(255,255,255,.55)">' +
-            '<p style="margin-bottom:1.2rem">Preview unavailable.</p>' +
-            '<a href="' + url + '" target="_blank" style="color:#b57a1a;font-weight:600;font-size:1rem">' +
-            'Open PDF in new tab ↗</a></div>';
+          loading.innerHTML = '<p style="color:rgba(255,255,255,.5);text-align:center;padding:1rem">Could not load preview.<br><a href="'+url+'" target="_blank" style="color:#b57a1a;font-weight:600;">Open PDF ↗</a></p>';
         }
-      }
+      };
 
-      function close() { hideModal(); pdfDoc = null; }
+      // Global nav functions — called by inline onclick
+      window.closePdfModal = function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+        _doc = null;
+      };
+      window.pdfPrev = function() { if (_page > 1)    render(--_page); };
+      window.pdfNext = function() { if (_page < _total) render(++_page); };
+      window.pdfScrub = function(v) { _page = +v; render(_page); };
 
-      // Wire cards
-      document.querySelectorAll('[data-pdf]').forEach(el => {
-        el.addEventListener('click', e => {
+      // Click outside closes
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) window.closePdfModal();
+      });
+
+      // Keyboard
+      document.addEventListener('keydown', function(e) {
+        if (modal.style.display === 'none') return;
+        if (e.key === 'Escape')     window.closePdfModal();
+        if (e.key === 'ArrowRight') window.pdfNext();
+        if (e.key === 'ArrowLeft')  window.pdfPrev();
+      });
+
+      // Wire edition cards
+      document.querySelectorAll('[data-pdf]').forEach(function(el) {
+        el.addEventListener('click', function(e) {
           e.preventDefault();
-          openPdf(el.dataset.pdf, el.dataset.lang, el.dataset.dl);
+          window.openPdfModal(el.dataset.pdf, el.dataset.lang, el.dataset.dl);
         });
-      });
-
-      prevBtn.addEventListener('click', () => { if (pageNum > 1) renderPage(--pageNum); });
-      nextBtn.addEventListener('click', () => { if (pageNum < pageCount) renderPage(++pageNum); });
-      closeBtn.addEventListener('click', close);
-      // Click outside panel closes
-      modal.addEventListener('click', e => { if (e.target === modal) close(); });
-      scrubber.addEventListener('input', () => renderPage(pageNum = +scrubber.value));
-      document.addEventListener('keydown', e => {
-        if (!modal.classList.contains('is-open')) return;
-        if (e.key === 'Escape')     close();
-        if (e.key === 'ArrowRight' && pageNum < pageCount) renderPage(++pageNum);
-        if (e.key === 'ArrowLeft'  && pageNum > 1)          renderPage(--pageNum);
-      });
-      // Touch swipe
-      let tx = 0;
-      canvas.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, {passive:true});
-      canvas.addEventListener('touchend', e => {
-        const dx = e.changedTouches[0].clientX - tx;
-        if (Math.abs(dx) > 40) {
-          if (dx < 0 && pageNum < pageCount) renderPage(++pageNum);
-          else if (dx > 0 && pageNum > 1)    renderPage(--pageNum);
-        }
       });
     })();
 
-    // ── Scroll-reveal ─────────────────────────────────────────────
+        // ── Scroll-reveal ─────────────────────────────────────────────
     (function(){
       const els = document.querySelectorAll('.feature-card, .character-card, .edition-card, .story-text, .story-features, .about-text, .about-specs');
       const obs = new IntersectionObserver(entries => {
