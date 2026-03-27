@@ -48,7 +48,7 @@ All files are also attached to the [latest GitHub release](https://github.com/pa
 
 | Attribute | Value |
 |-----------|-------|
-| Pages | 31 (cover + 30 story pages) |
+| Pages | 46 (cover + 45 story pages) |
 | Format | 8.5″ × 8.5″ square |
 | Resolution | 300 DPI — 2550 × 2550 px |
 | Languages | FR · EN · ES · PT · DE |
@@ -297,18 +297,23 @@ The compositor needed to handle 5 languages with different text lengths. German 
 ```
 stella-and-yakob/
 │
+├── releases/                       # ← Print-ready PDFs (46 pages each)
+│   ├── fr/stella_et_yakob_fr.pdf
+│   ├── en/stella_and_yakob_en.pdf
+│   ├── es/stella_and_yakob_es.pdf
+│   ├── pt/stella_and_yakob_pt.pdf
+│   └── de/stella_and_yakob_de.pdf
+│
 ├── cover/
-│   ├── cover_art_v6.png            # Final cover illustration (3:4, no text)
-│   └── cover_*.png                 # Language covers (2550×2550, with handwriting)
+│   └── cover_art_v6.png            # Final cover illustration
 │
 ├── illustrations/
-│   └── v2_p01.png … v2_p30.png    # Raw story illustrations (4:3, ~1280×960)
+│   └── v2_p01.png … v2_p45.png    # 45 raw watercolor illustrations (4:3)
 │
 ├── languages/
 │   ├── fr/
 │   │   ├── cover/cover_fr.png
-│   │   ├── pages/page_01.png … page_30.png
-│   │   └── pdf/stella_et_yakob_fr.pdf
+│   │   └── pages/page_01.png … page_45.png
 │   ├── en/ (same structure)
 │   ├── es/ (same structure)
 │   ├── pt/ (same structure)
@@ -318,11 +323,11 @@ stella-and-yakob/
 │   ├── compose_book_square.py      # Page compositor (Pillow)
 │   ├── make_cover_square.py        # Cover compositor
 │   ├── assemble_pdf_square.py      # PDF assembler
-│   ├── book_text_fr_v2.py          # French text (30 pages)
-│   ├── book_text_en.py             # English text
-│   ├── book_text_es.py             # Spanish text
-│   ├── book_text_pt.py             # Portuguese text
-│   └── book_text_de.py             # German text
+│   ├── book_text_fr_v3.py          # French text (45 pages)
+│   ├── book_text_en_v3.py          # English text (45 pages)
+│   ├── book_text_es_v3.py          # Spanish text (45 pages)
+│   ├── book_text_pt_v3.py          # Portuguese text (45 pages)
+│   └── book_text_de_v3.py          # German text (45 pages)
 │
 ├── fonts/
 │   ├── Lora.ttf
@@ -354,6 +359,16 @@ stella-and-yakob/
 | 23–25 | The fox's lesson. What AI will never be. Stella's superpowers: CURIOSITÉ · GENTILLESSE · COURAGE · CRÉATIVITÉ |
 | 26–28 | Papa can learn too. Together like a forest. The promise. |
 | 29–30 | Coming home. Stella at her easel. A golden feather on the branch. |
+
+## Act 2 (pages 31–45)
+
+| Pages | Arc |
+|-------|-----|
+| 31–33 | **The Dream Question** — Stella at school wonders if Yakob was real. The golden feather proves it. Descartes for children: *"I remember — so it really happened."* |
+| 34–37 | **The Mirror Villain** — A glowing screen shows "Stella-Prime", a perfect AI copy. Stella asks if she ever felt fear. The screen flickers. *"Fear is inefficient."* Stella: *"Then you've never been brave."* She turns it off. |
+| 38–40 | **Consciousness** — *"Can AI suffer?"* Yakob: *"It can simulate suffering. Simulating is not feeling."* The library metaphor (Searle): a library that knows everything but understands nothing. |
+| 41–43 | **The Gift of Imperfection** — Stella draws Yakob with crayons — wings too big, crooked, perfect. Papa's eyes glisten. *"Tools don't dream. We do."* |
+| 44–45 | **The Promise** — Yakob on her shoulder under the stars. His last lesson. Stella promises to be curious, make mistakes, be human — fully. A golden feather falls into her open hand. |
 
 ---
 

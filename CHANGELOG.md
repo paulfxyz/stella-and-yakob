@@ -7,6 +7,32 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.1.0] — 2026-03-27
+
+### 🚀 Act 2 — 45-page expansion
+
+#### Added
+- **15 new pages (31–45)** — complete Act 2 with new plot twists and philosophical depth
+- **The Dream Question (31–33):** Descartes' cogito adapted for children — *"I remember, therefore it was real"*
+- **The Mirror Villain (34–37):** "Stella-Prime" — a perfect AI copy of Stella. New lesson on identity, authenticity, and why imperfection is human (Sartre-adjacent)
+- **Consciousness arc (38–40):** Can AI suffer? The library metaphor (Searle's Chinese Room for children)
+- **The Gift of Imperfection (41–43):** Art as the uniquely human act. Papa creates. *"Tools don't dream. We do."*
+- **The Promise (44–45):** Yakob's final lesson. Stella's vow under the stars. Golden feather.
+- **15 new watercolor illustrations** matching existing style
+- All 5 language editions updated (FR · EN · ES · PT · DE)
+
+#### Changed
+- Book is now **46 pages** (cover + 45 story pages)
+- Repo restructured: `languages/*/pdf/` → `releases/` at root
+- Removed outdated top-level `/pdf` and `/pages` folders
+- Cover cleaned: only `cover_art_v6.png` retained
+
+#### Fixed
+- PDF cache-busted to `?v=5` to force browser refresh
+- Illustration side margins removed (fill-width scaling)
+
+---
+
 ## [1.0.0] — 2026-03-27
 
 ### 🎉 First public release
