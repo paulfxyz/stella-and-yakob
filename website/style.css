@@ -286,40 +286,63 @@ button { cursor: pointer; background: none; border: none; }
 }
 
 /* ── Language Switcher ──────────────────────────────────────────── */
-.lang-switcher { position: relative; }
+/* ── Language Switcher ──────────────────────────────────────────── */
+.lang-switcher { position: relative; display: flex; align-items: center; }
+
 .lang-btn {
   display: flex; align-items: center; gap: 5px;
   padding: 6px 10px; border-radius: var(--radius-md);
   background: var(--color-surface-2); border: 1px solid var(--color-border);
   font-size: var(--text-sm); font-weight: 600; cursor: pointer;
   color: var(--color-text); transition: all var(--transition);
-  white-space: nowrap;
+  white-space: nowrap; line-height: 1;
 }
 .lang-btn:hover { background: var(--color-surface-offset); }
-.lang-chevron { transition: transform 0.2s; flex-shrink: 0; }
+.lang-chevron { transition: transform 0.2s ease; flex-shrink: 0; }
 .lang-btn[aria-expanded="true"] .lang-chevron { transform: rotate(180deg); }
+
+/* Dropdown: fixed positioning so it escapes all stacking contexts (header backdrop-filter etc.) */
 .lang-dropdown {
-  position: absolute; top: calc(100% + 8px); right: 0;
-  background: var(--color-bg); border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
-  min-width: 150px; padding: 6px;
-  opacity: 0; transform: scale(0.95) translateY(-4px);
-  pointer-events: none; transition: opacity 0.15s, transform 0.15s;
-  transform-origin: top right; z-index: 200;
+  position: fixed;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+  min-width: 160px;
+  padding: 6px;
+  opacity: 0;
+  transform: scale(0.95) translateY(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  transform-origin: top right;
+  z-index: 9000;  /* above everything including header (z-index:50) and pdf modal (z-index:99999 only when open) */
+  display: none;
 }
-.lang-switcher.open .lang-dropdown {
-  opacity: 1; transform: scale(1) translateY(0); pointer-events: all;
+.lang-dropdown.open {
+  opacity: 1;
+  transform: scale(1) translateY(0);
 }
+
 .lang-option {
-  display: flex; align-items: center; gap: 8px;
-  width: 100%; padding: 8px 12px; border-radius: var(--radius-md);
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; padding: 9px 12px; border-radius: var(--radius-md);
   background: none; border: none; cursor: pointer;
   font-size: var(--text-sm); color: var(--color-text);
   text-align: left; transition: background var(--transition);
+  white-space: nowrap;
 }
 .lang-option:hover { background: var(--color-surface-2); }
 .lang-option.active { color: var(--color-primary); font-weight: 600; }
-.lang-option.active::after { content: "✓"; margin-left: auto; font-size: 0.75rem; }
+.lang-option.active::after { content: "✓"; margin-left: auto; font-size: 0.75rem; opacity: 0.7; }
+
+/* Mobile: full-width bottom sheet feel */
+@media (max-width: 600px) {
+  .lang-dropdown {
+    right: 8px !important;
+    left: 8px !important;
+    min-width: 0;
+    transform-origin: top center;
+  }
+}
 
 /* ── Hero ───────────────────────────────────────────────────────── */
 .hero {
