@@ -1061,8 +1061,40 @@
     })();
 
     (function(){
-      const savedLang = 'en';
+      // ── Language detection: cookie → browser OS language → 'en' ──
+      const SUPPORTED = ['en','fr','es','pt','de'];
+
+      function getCookieLang() {
+        var m = document.cookie.match(/(?:^|;\s*)stella-lang=([a-z]{2})/);
+        return m && SUPPORTED.includes(m[1]) ? m[1] : null;
+      }
+
+      function setBrowserCookieLang(code) {
+        // 1-year cookie, SameSite=Lax, works on any host
+        var exp = new Date(Date.now() + 365*24*60*60*1000).toUTCString();
+        document.cookie = 'stella-lang=' + code + '; expires=' + exp + '; path=/; SameSite=Lax';
+      }
+
+      function detectBrowserLang() {
+        // navigator.languages gives ordered list e.g. ['fr-FR','fr','en-US','en']
+        var langs = navigator.languages || [navigator.language || 'en'];
+        for (var i = 0; i < langs.length; i++) {
+          var code = langs[i].split('-')[0].toLowerCase();
+          if (SUPPORTED.includes(code)) return code;
+        }
+        return 'en';
+      }
+
+      // Priority: 1) user saved cookie  2) OS/browser language  3) English
+      var savedLang = getCookieLang() || detectBrowserLang();
       setLang(savedLang);
+
+      // Patch setLang to also save cookie on every call
+      var _origSetLang = setLang;
+      setLang = function(code) {
+        _origSetLang(code);
+        setBrowserCookieLang(code);
+      };
     })();
   </script>
 
