@@ -7,6 +7,34 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [4.1.0] — 2026-03-28
+
+### 🌍 v4.1 — 4 new languages (DA/SV/NO/PL) + Disney landing page redesign
+
+#### New Languages (17 total)
+- **Danish (Dansk):** full 45-page GPT-4o + Claude refinement translation, composed pages, PDF, ZIP
+- **Swedish (Svenska):** full 45-page translation, composed pages, PDF, ZIP
+- **Norwegian Bokmål (Norsk):** full 45-page translation (Bokmål, not Nynorsk), composed pages, PDF, ZIP
+- **Polish (Polski):** full 45-page translation, composed pages, PDF, ZIP — Yakob → Jakub (native Polish form)
+- **Total: FR · EN · ES · PT · DE · AR · HE · ZH · JA · HI · RU · TR · WO · DA · SV · NO · PL**
+- New download shortcuts: `sandy.page/dl/pdf/{da,sv,no,pl}` + zip variants
+
+#### Website — Disney-Level Redesign
+- Cinematic hero section with animated floating character cutouts (Stella, Yakob, Silver Fox)
+- Parallax starfield, glowing orbs, scroll-triggered story panels
+- Character showcase cards with personality descriptions
+- All 17 languages in dropdown switcher with flags
+- Edition cards for all 17 languages
+- RTL fix: AR/HE text displayed RTL but left-aligned in dropdown list
+
+#### Technical
+- Universal compositor: `compose_lang_v3.py` — 2550×2550 px, all languages
+- Translation pipeline: `translate_book.py` — GPT-4o + Claude 3.5 Sonnet (parallel 4×)
+- `.htaccess` now covers all 17 language shortcuts
+- Character PNG cutouts: `assets/char_stella.png`, `char_yakob.png`, `char_fox.png`
+
+---
+
 ## [4.0.0] — 2026-03-27
 
 ### 🚀 v4 — 13 languages, RTL support, clean illustrations
