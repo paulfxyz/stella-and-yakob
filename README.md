@@ -73,7 +73,7 @@ All files are also attached to the [latest GitHub release](https://github.com/pa
 
 > *Minimal loose watercolor. Very sparse, hand-painted. Lots of white paper showing. Soft loose brushstrokes, barely sketched.*
 
-Warm cream backgrounds (RGB 251, 249, 244), soft amber tones, tiny golden sparkles. Raw illustrations generated at 4:3 ratio, composed into 2550×2550 px square pages with a clean text zone below a hairline separator.
+Warm cream backgrounds (RGB 251, 249, 244), soft amber tones, tiny golden sparkles. Each illustration began as a hand-drawn sketch by Paul Fleury. These sketches were then refined and painted using AI (img2img), which faithfully followed the composition, gesture and intention of the original drawings. The final images are composed into 2550×2550 px square pages with a clean text zone below a hairline separator.
 
 ---
 
@@ -181,11 +181,13 @@ This book was built entirely with AI tools, orchestrated by a human. The pipelin
 ### Architecture
 
 ```
-Text (Python dicts, per language, per page)
+Hand-drawn sketches by Paul Fleury (composition, gesture, character placement)
     ↓
-Illustration generation (nano_banana_pro, 4:3 ratio, img2img iterations)
+AI illustration refinement (nano_banana_pro img2img — paint quality, watercolor texture)
     ↓
-Page composition (Pillow, 2550×2550px, 300 DPI)
+Text composition (Python dicts, per language, per page)
+    ↓
+Page assembly (Pillow, 2550×2550px, 300 DPI)
     ↓
 PDF assembly (Pillow save_all)
     ↓
@@ -198,8 +200,9 @@ GitHub (private → public, releases)
 
 | Layer | Tool |
 |-------|------|
-| Orchestration | Perplexity Computer (agentic AI) |
-| Illustration generation | `nano_banana_pro` (img2img + text2img) |
+| Orchestration | [Perplexity Computer](https://www.perplexity.ai/computer) (agentic AI) |
+| AI model routing | [OpenRouter.ai](https://openrouter.ai) API (multi-model access) |
+| Illustration refinement | `nano_banana_pro` via img2img — based on Paul Fleury's hand-drawn sketches |
 | Page composition | Python + Pillow |
 | Fonts | Lora (body serif), handwriting fonts for cover |
 | PDF assembly | Pillow `save_all` |
@@ -230,19 +233,19 @@ The illustration (4:3 raw output from the image model) is scaled to fill the `IL
 
 The image model sometimes generated illustrations with English-language captions, character name labels, or caption boxes embedded in the artwork. Since the text is part of the rasterized image (not a text layer), it cannot be removed programmatically.
 
-*Solution:* Iterative `img2img` regeneration with an explicit negative constraint in the prompt: *"No text anywhere in the image. No labels. No captions. No words."* The reference image guides composition, color palette, and character design while the new generation avoids text. Required 2–3 passes for stubborn cases.
+*Solution:* Iterative `img2img` regeneration using the original hand-drawn sketch as the reference, with an explicit negative constraint: *"No text anywhere in the image. No labels. No captions. No words."* The sketch anchors composition and character design; the new pass avoids the text artifacts. Required 2–3 passes for stubborn cases.
 
 **2. Character consistency across 30 illustrations**
 
-The model has no persistent memory of Stella and Yakob's appearance. Across 30 pages, character drift is a real risk — Stella's hair changes length, Yakob gets larger or smaller, color palette shifts.
+Paul Fleury sketched each scene by hand, establishing the character positions, expressions and compositions before any AI was involved. This human-first approach was the primary anchor for consistency. The AI's role was to translate those sketches into finished watercolor quality — not to invent characters from scratch.
 
-*Solution:* Extremely detailed character descriptions in every single prompt (not just a reference image). A style guide was maintained as a system-level constant:
+Additionally, detailed character descriptions were maintained in every prompt as a written style guide:
 ```
 STELLA: short dark brown bob hair, pale blue dress, rosy cheeks, big expressive eyes
 YAKOB: large natural owl, warm brown feathers, amber/gold tones, big round amber eyes, NO glasses
 STYLE: minimal loose watercolor, sparse, lots of white paper showing
 ```
-Img2img with previous illustrations also helped anchor visual consistency.
+Img2img with the hand-drawn sketch as the reference image was the core technique — the AI painted *over* the sketch, not instead of it.
 
 **3. Format consistency (cover vs. pages)**
 
@@ -275,7 +278,7 @@ The compositor needed to handle 5 languages with different text lengths. German 
 
 ### Lessons Learned
 
-1. **Prompts are code.** Character consistency requires treating character descriptions like constants in a programming language — copy-pasted exactly into every prompt, never paraphrased.
+1. **Sketches are the real prompts.** The hand-drawn sketches communicated composition, emotion, and character intent far more effectively than any text prompt could. Character descriptions in text reinforce the sketch; they do not replace it.
 
 2. **Img2img is a superpower for fixing, not creating.** Using a reference image to anchor style while regenerating to fix text artifacts is vastly more efficient than trying to get the first generation right.
 
@@ -384,11 +387,11 @@ The compositor will handle layout automatically.
 
 ## About
 
-*Stella & Yakob* was conceived, written, illustrated (with AI), and published by **Paul Fleury** in 2026.
+*Stella & Yakob* was conceived, written, and illustrated by **Paul Fleury** in 2026.
 
-The book was built entirely using [Perplexity Computer](https://www.perplexity.ai/computer) — an agentic AI that orchestrated illustration generation, page composition, PDF assembly, multi-language translation, website development, and deployment in a single continuous session.
+**On the illustrations:** Every page started as a hand-drawn sketch by Paul Fleury — compositions, character positions, gestures, and scenes were all drawn by hand first. Paul's drawing skills were then augmented using AI (img2img refinement), which translated those sketches into finished watercolor-quality artwork. The creative vision, story, and characters are entirely human in origin; the AI contributed painting technique and texture.
 
-The source of the watercolor illustrations is `nano_banana_pro`, a generative image model, guided by detailed character and style prompts across 30 pages.
+**On the tools:** The production pipeline was orchestrated using [Perplexity Computer](https://www.perplexity.ai/computer), an agentic AI that handled page composition, PDF assembly, multi-language translation, website development, and deployment. Image refinement used the `nano_banana_pro` model accessed via the [OpenRouter.ai](https://openrouter.ai) API, which allows AI agents to route requests to the most appropriate model for each task.
 
 Website: [sandy.page](https://sandy.page) · GitHub: [paulfxyz/stella-and-yakob](https://github.com/paulfxyz/stella-and-yakob)
 
