@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>A children's book about AI, curiosity, and what makes us human</strong><br>
-  45 pages · 5 languages · Print-ready · Open Source · <strong>v3.0</strong>
+  45 pages · 13 languages · Print-ready · Open Source · <strong>v3.0</strong>
 </p>
 
 <p align="center">
