@@ -1020,11 +1020,11 @@ button { cursor: pointer; background: none; border: none; }
   inset: 0;
   z-index: 9999;
   background: rgba(18, 12, 4, 0.96);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: stretch;
 }
-#pdf-modal[hidden] { display: none !important; }
+#pdf-modal.is-open { display: flex; }
 
 /* Top toolbar */
 #pdf-toolbar {

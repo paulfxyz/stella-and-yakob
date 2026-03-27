@@ -31,6 +31,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body>
 
@@ -312,7 +314,7 @@
         </div>
         <div class="editions-grid">
 
-          <a class="edition-card" href="#" data-pdf="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/fr/pdf/stella_et_yakob_fr.pdf" data-lang="Français" data-dl="stella_et_yakob_fr.pdf">
+          <a class="edition-card" href="#" data-pdf="assets/pdf/stella_et_yakob_fr.pdf" data-lang="Français" data-dl="stella_et_yakob_fr.pdf">
             <img src="assets/covers/cover-fr.jpg" alt="French edition cover" loading="lazy" width="280" height="280">
             <div class="edition-info">
               <span class="edition-flag">🇫🇷</span>
@@ -322,7 +324,7 @@
             </div>
           </a>
 
-          <a class="edition-card" href="#" data-pdf="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/en/pdf/stella_and_yakob_en.pdf" data-lang="English" data-dl="stella_and_yakob_en.pdf">
+          <a class="edition-card" href="#" data-pdf="assets/pdf/stella_and_yakob_en.pdf" data-lang="English" data-dl="stella_and_yakob_en.pdf">
             <img src="assets/covers/cover-en.jpg" alt="English edition cover" loading="lazy" width="280" height="280">
             <div class="edition-info">
               <span class="edition-flag">🇬🇧</span>
@@ -332,7 +334,7 @@
             </div>
           </a>
 
-          <a class="edition-card" href="#" data-pdf="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/es/pdf/stella_and_yakob_es.pdf" data-lang="Español" data-dl="stella_and_yakob_es.pdf">
+          <a class="edition-card" href="#" data-pdf="assets/pdf/stella_and_yakob_es.pdf" data-lang="Español" data-dl="stella_and_yakob_es.pdf">
             <img src="assets/covers/cover-es.jpg" alt="Spanish edition cover" loading="lazy" width="280" height="280">
             <div class="edition-info">
               <span class="edition-flag">🇪🇸</span>
@@ -342,7 +344,7 @@
             </div>
           </a>
 
-          <a class="edition-card" href="#" data-pdf="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/pt/pdf/stella_and_yakob_pt.pdf" data-lang="Português" data-dl="stella_and_yakob_pt.pdf">
+          <a class="edition-card" href="#" data-pdf="assets/pdf/stella_and_yakob_pt.pdf" data-lang="Português" data-dl="stella_and_yakob_pt.pdf">
             <img src="assets/covers/cover-pt.jpg" alt="Portuguese edition cover" loading="lazy" width="280" height="280">
             <div class="edition-info">
               <span class="edition-flag">🇵🇹</span>
@@ -352,7 +354,7 @@
             </div>
           </a>
 
-          <a class="edition-card" href="#" data-pdf="https://github.com/paulfxyz/stella-and-yakob/raw/main/languages/de/pdf/stella_and_yakob_de.pdf" data-lang="Deutsch" data-dl="stella_and_yakob_de.pdf">
+          <a class="edition-card" href="#" data-pdf="assets/pdf/stella_and_yakob_de.pdf" data-lang="Deutsch" data-dl="stella_and_yakob_de.pdf">
             <img src="assets/covers/cover-de.jpg" alt="German edition cover" loading="lazy" width="280" height="280">
             <div class="edition-info">
               <span class="edition-flag">🇩🇪</span>
@@ -400,7 +402,7 @@
   </main>
 
   <!-- ── PDF MODAL ────────────────────────────────────────────── -->
-  <div id="pdf-modal" role="dialog" aria-modal="true" aria-label="Book reader" hidden style="display:none">
+  <div id="pdf-modal" role="dialog" aria-modal="true" aria-label="Book reader">
     <!-- Toolbar -->
     <div id="pdf-toolbar">
       <span id="pdf-modal-title">Stella &amp; Yakob</span>
@@ -539,14 +541,13 @@
     })();
 
     // ── PDF Modal ──────────────────────────────────────────────
-    (async function(){
-      // PDF.js 4.x ESM — load dynamically
-      const pdfjs = await import('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs');
-      pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs';
+    (function(){
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
       const modal    = document.getElementById('pdf-modal');
       const canvas   = document.getElementById('pdf-canvas');
-      const loading  = document.getElementById('pdf-loading');
+      const loadingEl= document.getElementById('pdf-loading');
       const prevBtn  = document.getElementById('pdf-prev');
       const nextBtn  = document.getElementById('pdf-next');
       const closeBtn = document.getElementById('pdf-close-btn');
@@ -556,105 +557,94 @@
       const scrubber = document.getElementById('pdf-scrubber');
       const ctx      = canvas.getContext('2d');
 
-      let pdfDoc = null, currentPage = 1, totalPages = 1, rendering = false, renderTask = null;
+      let pdfDoc = null, pageNum = 1, pageCount = 0, rendering = false;
 
-      async function renderPage(num) {
-        if (!pdfDoc) return;
-        if (rendering && renderTask) { renderTask.cancel(); }
+      function showModal()  { modal.classList.add('is-open');  document.body.style.overflow = 'hidden'; }
+      function hideModal()  { modal.classList.remove('is-open'); document.body.style.overflow = ''; }
+
+      function setLoading(on) { loadingEl.style.display = on ? 'flex' : 'none'; }
+
+      async function renderPage(n) {
+        if (!pdfDoc || rendering) return;
         rendering = true;
-        loading.style.display = 'flex';
+        setLoading(true);
         canvas.style.opacity = '0';
         try {
-          const page = await pdfDoc.getPage(num);
+          const page = await pdfDoc.getPage(n);
           const wrap = document.getElementById('pdf-canvas-wrap');
-          const maxW = wrap.clientWidth  - 8;
-          const maxH = wrap.clientHeight - 8;
-          const vp1  = page.getViewport({scale: 1});
-          const scale = Math.min(maxW / vp1.width, maxH / vp1.height);
-          const vp   = page.getViewport({scale});
+          const scale = Math.min(
+            (wrap.clientWidth  - 16) / page.getViewport({scale:1}).width,
+            (wrap.clientHeight - 16) / page.getViewport({scale:1}).height
+          );
+          const vp = page.getViewport({scale});
           canvas.width  = vp.width;
           canvas.height = vp.height;
-          renderTask = page.render({canvasContext: ctx, viewport: vp});
-          await renderTask.promise;
-          loading.style.display = 'none';
-          canvas.style.opacity  = '1';
-          pageInfo.textContent  = `Page ${num} of ${totalPages}`;
-          scrubber.value        = num;
-          prevBtn.disabled      = num <= 1;
-          nextBtn.disabled      = num >= totalPages;
-        } catch(e) {
-          if (e.name !== 'RenderingCancelledException') console.warn('render error', e);
-        }
+          await page.render({canvasContext: ctx, viewport: vp}).promise;
+          canvas.style.opacity = '1';
+          pageInfo.textContent  = 'Page ' + n + ' of ' + pageCount;
+          scrubber.value        = n;
+          prevBtn.disabled      = n <= 1;
+          nextBtn.disabled      = n >= pageCount;
+        } catch(err) { console.warn(err); }
+        setLoading(false);
         rendering = false;
       }
 
-      async function openModal(pdfUrl, lang, dlName) {
+      async function openPdf(url, lang, dlName) {
         titleEl.textContent = 'Stella & Yakob — ' + lang;
-        dlBtn.href     = pdfUrl;
-        dlBtn.download = dlName;
-        modal.hidden   = false;
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-        loading.style.display = 'flex';
-        canvas.style.opacity  = '0';
+        dlBtn.href = url; dlBtn.setAttribute('download', dlName);
+        pdfDoc = null; pageNum = 1; pageCount = 0;
         canvas.width = 1; canvas.height = 1;
-        pdfDoc = null;
+        canvas.style.opacity = '0';
+        setLoading(true);
+        showModal();
+
         try {
-          // Try direct first, then CORS proxies
-          let loaded = false;
-          const proxies = [
-            pdfUrl,
-            'https://api.allorigins.win/raw?url=' + encodeURIComponent(pdfUrl),
-            'https://corsproxy.io/?' + encodeURIComponent(pdfUrl),
-          ];
-          for (const url of proxies) {
-            try {
-              pdfDoc = await pdfjs.getDocument({url, withCredentials: false}).promise;
-              loaded = true;
-              break;
-            } catch(e) { console.warn('proxy failed:', url, e.message); }
-          }
-          if (!loaded) throw new Error('All proxies failed');
-          totalPages = pdfDoc.numPages;
-          scrubber.max = totalPages;
-          currentPage = 1;
-          await renderPage(currentPage);
+          pdfDoc       = await pdfjsLib.getDocument(url).promise;
+          pageCount    = pdfDoc.numPages;
+          scrubber.max = pageCount;
+          await renderPage(pageNum);
         } catch(e) {
-          loading.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--color-text-muted)"><p style="margin-bottom:1rem">Could not load inline preview.</p><a href="'+pdfUrl+'" target="_blank" style="color:var(--color-primary);font-weight:500">Open PDF in new tab ↗</a></div>';
+          console.warn('PDF load error:', e);
+          loadingEl.innerHTML =
+            '<div style="text-align:center;padding:2rem;color:rgba(255,255,255,.55)">' +
+            '<p style="margin-bottom:1.2rem">Preview unavailable.</p>' +
+            '<a href="' + url + '" target="_blank" style="color:#b57a1a;font-weight:600;font-size:1rem">' +
+            'Open PDF in new tab ↗</a></div>';
         }
       }
 
-      function closeModal() {
-        modal.hidden = true;
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-        pdfDoc = null;
-      }
+      function close() { hideModal(); pdfDoc = null; }
 
-      // Wire edition cards
-      document.querySelectorAll('[data-pdf]').forEach(card => {
-        card.addEventListener('click', e => {
+      // Wire cards
+      document.querySelectorAll('[data-pdf]').forEach(el => {
+        el.addEventListener('click', e => {
           e.preventDefault();
-          openModal(card.dataset.pdf, card.dataset.lang, card.dataset.dl);
+          openPdf(el.dataset.pdf, el.dataset.lang, el.dataset.dl);
         });
       });
 
-      prevBtn.addEventListener('click', () => { if (currentPage > 1) renderPage(--currentPage); });
-      nextBtn.addEventListener('click', () => { if (currentPage < totalPages) renderPage(++currentPage); });
-      closeBtn.addEventListener('click', closeModal);
-      scrubber.addEventListener('input', () => renderPage(currentPage = +scrubber.value));
+      prevBtn.addEventListener('click', () => { if (pageNum > 1) renderPage(--pageNum); });
+      nextBtn.addEventListener('click', () => { if (pageNum < pageCount) renderPage(++pageNum); });
+      closeBtn.addEventListener('click', close);
+      // Click outside panel closes
+      modal.addEventListener('click', e => { if (e.target === modal) close(); });
+      scrubber.addEventListener('input', () => renderPage(pageNum = +scrubber.value));
       document.addEventListener('keydown', e => {
-        if (modal.hidden) return;
-        if (e.key === 'Escape') closeModal();
-        if (e.key === 'ArrowRight' && currentPage < totalPages) renderPage(++currentPage);
-        if (e.key === 'ArrowLeft'  && currentPage > 1)          renderPage(--currentPage);
+        if (!modal.classList.contains('is-open')) return;
+        if (e.key === 'Escape')     close();
+        if (e.key === 'ArrowRight' && pageNum < pageCount) renderPage(++pageNum);
+        if (e.key === 'ArrowLeft'  && pageNum > 1)          renderPage(--pageNum);
       });
-      // Swipe
+      // Touch swipe
       let tx = 0;
       canvas.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, {passive:true});
-      canvas.addEventListener('touchend',   e => {
+      canvas.addEventListener('touchend', e => {
         const dx = e.changedTouches[0].clientX - tx;
-        if (Math.abs(dx) > 40) { if (dx < 0 && currentPage < totalPages) renderPage(++currentPage); else if (dx > 0 && currentPage > 1) renderPage(--currentPage); }
+        if (Math.abs(dx) > 40) {
+          if (dx < 0 && pageNum < pageCount) renderPage(++pageNum);
+          else if (dx > 0 && pageNum > 1)    renderPage(--pageNum);
+        }
       });
     })();
 
