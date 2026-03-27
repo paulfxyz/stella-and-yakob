@@ -285,6 +285,42 @@ button { cursor: pointer; background: none; border: none; }
   .nav-links { display: none; }
 }
 
+/* ── Language Switcher ──────────────────────────────────────────── */
+.lang-switcher { position: relative; }
+.lang-btn {
+  display: flex; align-items: center; gap: 5px;
+  padding: 6px 10px; border-radius: var(--radius-md);
+  background: var(--color-surface-2); border: 1px solid var(--color-border);
+  font-size: var(--text-sm); font-weight: 600; cursor: pointer;
+  color: var(--color-text); transition: all var(--transition);
+  white-space: nowrap;
+}
+.lang-btn:hover { background: var(--color-surface-offset); }
+.lang-chevron { transition: transform 0.2s; flex-shrink: 0; }
+.lang-btn[aria-expanded="true"] .lang-chevron { transform: rotate(180deg); }
+.lang-dropdown {
+  position: absolute; top: calc(100% + 8px); right: 0;
+  background: var(--color-bg); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
+  min-width: 150px; padding: 6px;
+  opacity: 0; transform: scale(0.95) translateY(-4px);
+  pointer-events: none; transition: opacity 0.15s, transform 0.15s;
+  transform-origin: top right; z-index: 200;
+}
+.lang-switcher.open .lang-dropdown {
+  opacity: 1; transform: scale(1) translateY(0); pointer-events: all;
+}
+.lang-option {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; padding: 8px 12px; border-radius: var(--radius-md);
+  background: none; border: none; cursor: pointer;
+  font-size: var(--text-sm); color: var(--color-text);
+  text-align: left; transition: background var(--transition);
+}
+.lang-option:hover { background: var(--color-surface-2); }
+.lang-option.active { color: var(--color-primary); font-weight: 600; }
+.lang-option.active::after { content: "✓"; margin-left: auto; font-size: 0.75rem; }
+
 /* ── Hero ───────────────────────────────────────────────────────── */
 .hero {
   position: relative;

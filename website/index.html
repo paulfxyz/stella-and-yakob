@@ -57,12 +57,27 @@
         <span>Stella & Yakob</span>
       </a>
       <ul class="nav-links" role="list">
-        <li><a href="#story">The Story</a></li>
-        <li><a href="#pages">Preview</a></li>
-        <li><a href="#editions">Editions</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#story" data-i18n="navStory">The Story</a></li>
+        <li><a href="#pages" data-i18n="navPreview">Preview</a></li>
+        <li><a href="#editions" data-i18n="navEditions">Editions</a></li>
+        <li><a href="#about" data-i18n="navAbout">About</a></li>
       </ul>
       <div class="nav-actions">
+        <!-- Language Switcher -->
+        <div class="lang-switcher" id="lang-switcher">
+          <button class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false">
+            <span id="lang-btn-flag">🇬🇧</span>
+            <span id="lang-btn-code">EN</span>
+            <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-dropdown" id="lang-dropdown" role="listbox">
+            <button class="lang-option active" data-lang="en" role="option">🇬🇧 <span>English</span></button>
+            <button class="lang-option" data-lang="fr" role="option">🇫🇷 <span>Français</span></button>
+            <button class="lang-option" data-lang="es" role="option">🇪🇸 <span>Español</span></button>
+            <button class="lang-option" data-lang="pt" role="option">🇵🇹 <span>Português</span></button>
+            <button class="lang-option" data-lang="de" role="option">🇩🇪 <span>Deutsch</span></button>
+          </div>
+        </div>
         <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
@@ -77,16 +92,16 @@
       <div class="hero-bg-wash"></div>
       <div class="hero-inner">
         <div class="hero-text">
-          <p class="hero-kicker">A children's book</p>
+          <p class="hero-kicker" data-i18n="heroKicker">A children's book</p>
           <h1 class="hero-title">Stella<br><em>&amp; Yakob</em></h1>
-          <p class="hero-subtitle">A small girl. A wise owl. And a question that matters more than ever.</p>
-          <p class="hero-body">When Stella hears grown-ups talking about "artificial intelligence", a knot tightens in her chest. She doesn't understand — and that's frightening. Then Yakob appears, a warm brown owl with amber eyes full of wisdom, and together they go on a journey through time, wonder, and a few dazzling traps along the way.</p>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">A small girl. A wise owl. And a question that matters more than ever.</p>
+          <p class="hero-body" data-i18n="heroBody">When Stella hears grown-ups talking about "artificial intelligence", a knot tightens in her chest. She doesn't understand — and that's frightening. Then Yakob appears, a warm brown owl with amber eyes full of wisdom, and together they go on a journey through time, wonder, and a few dazzling traps along the way.</p>
           <div class="hero-ctas">
-            <a href="#pages" class="btn btn-primary">Read a preview</a>
-            <a href="#editions" class="btn btn-ghost">Download free ↓</a>
+            <a href="#pages" class="btn btn-primary" data-i18n="heroCta1">Read a preview</a>
+            <a href="#editions" class="btn btn-ghost" data-i18n="heroCta2">Download free ↓</a>
           </div>
           <div class="hero-languages">
-            <span class="lang-label">Available in</span>
+            <span class="lang-label" data-i18n="heroAvailable">Available in</span>
             <span class="lang-flag" title="Français">🇫🇷</span>
             <span class="lang-flag" title="English">🇬🇧</span>
             <span class="lang-flag" title="Español">🇪🇸</span>
@@ -111,32 +126,32 @@
       <div class="section-inner">
         <div class="story-grid">
           <div class="story-text">
-            <span class="section-kicker">The Story</span>
-            <h2>What is AI?<br>And why does it matter?</h2>
-            <p>One grey evening, Stella overhears her parents speaking in worried voices about something called "artificial intelligence." Her father might lose his job. Her mother cried. Stella doesn't understand — and that knot in her chest is real.</p>
-            <p>Then Yakob arrives: a large, gentle owl who perches on the highest branch of the old oak tree. With golden sparks dancing in the air, he takes Stella on an adventure through time — from cave painters to the alphabet, from the lightbulb to learning machines.</p>
-            <p>But there's a twist. A silver fox appears, promising shortcuts and dazzling towers of crystal. Will Stella recognise what is real from what merely glitters?</p>
+            <span class="section-kicker" data-i18n="storyKicker">The Story</span>
+            <h2 data-i18n-html="storyTitle">What is AI?<br>And why does it matter?</h2>
+            <p data-i18n="storyP1">One grey evening, Stella overhears her parents speaking in worried voices about something called "artificial intelligence." Her father might lose his job. Her mother cried. Stella doesn't understand — and that knot in her chest is real.</p>
+            <p data-i18n="storyP2">Then Yakob arrives: a large, gentle owl who perches on the highest branch of the old oak tree. With golden sparks dancing in the air, he takes Stella on an adventure through time — from cave painters to the alphabet, from the lightbulb to learning machines.</p>
+            <p data-i18n="storyP3">But there's a twist. A silver fox appears, promising shortcuts and dazzling towers of crystal. Will Stella recognise what is real from what merely glitters?</p>
           </div>
           <div class="story-features">
             <div class="feature-card">
               <div class="feature-icon">🦉</div>
-              <h3>30 illustrated pages</h3>
-              <p>Minimal loose watercolour — soft brushstrokes, warm amber tones, lots of white paper showing.</p>
+              <h3 data-i18n="feat1Title">30 illustrated pages</h3>
+              <p data-i18n="feat1Body">Minimal loose watercolour — soft brushstrokes, warm amber tones, lots of white paper showing.</p>
             </div>
             <div class="feature-card">
               <div class="feature-icon">✨</div>
-              <h3>A twist & a lesson</h3>
-              <p>The Silver Fox twist (pages 17–22) teaches children to question dazzling shortcuts and trust their own judgement.</p>
+              <h3 data-i18n="feat2Title">A twist & a lesson</h3>
+              <p data-i18n="feat2Body">The Silver Fox twist (pages 17–22) teaches children to question dazzling shortcuts and trust their own judgement.</p>
             </div>
             <div class="feature-card">
               <div class="feature-icon">💡</div>
-              <h3>Real themes, gently told</h3>
-              <p>AI, automation, ethics, and the irreplaceable superpowers of being human — curiosity, kindness, courage, creativity.</p>
+              <h3 data-i18n="feat3Title">Real themes, gently told</h3>
+              <p data-i18n="feat3Body">AI, automation, ethics, and the irreplaceable superpowers of being human — curiosity, kindness, courage, creativity.</p>
             </div>
             <div class="feature-card">
               <div class="feature-icon">🌍</div>
-              <h3>5 languages</h3>
-              <p>French, English, Spanish, Portuguese and German. Print-ready at 300 DPI, 8.5″ × 8.5″.</p>
+              <h3 data-i18n="feat4Title">5 languages</h3>
+              <p data-i18n="feat4Body">French, English, Spanish, Portuguese and German. Print-ready at 300 DPI, 8.5″ × 8.5″.</p>
             </div>
           </div>
         </div>
@@ -147,9 +162,9 @@
     <section class="flipper-section" id="pages">
       <div class="section-inner">
         <div class="section-header">
-          <span class="section-kicker">Inside the Book</span>
-          <h2>A few pages</h2>
-          <p class="section-lead">Eight moments from Stella and Yakob's journey together.</p>
+          <span class="section-kicker" data-i18n="previewKicker">Inside the Book</span>
+          <h2 data-i18n="previewTitle">A few pages</h2>
+          <p class="section-lead" data-i18n="previewLead">Eight moments from Stella and Yakob's journey together.</p>
         </div>
 
         <div class="flipper">
@@ -214,8 +229,8 @@
     <section class="characters-section">
       <div class="section-inner">
         <div class="section-header">
-          <span class="section-kicker">Characters</span>
-          <h2>Who you'll meet</h2>
+          <span class="section-kicker" data-i18n="charsKicker">Characters</span>
+          <h2 data-i18n="charsTitle">Who you'll meet</h2>
         </div>
         <div class="characters-grid">
           <div class="character-card">
@@ -241,7 +256,7 @@
               </svg>
             </div>
             <h3>Stella</h3>
-            <p>A small girl with a short dark brown bob, a pale blue dress, rosy cheeks and big expressive eyes. Curious, brave, and wonderfully human.</p>
+            <p data-i18n="stellaDesc">A small girl with a short dark brown bob, a pale blue dress, rosy cheeks and big expressive eyes. Curious, brave, and wonderfully human.</p>
           </div>
           <div class="character-card char-yakob-card">
             <div class="character-art char-yakob">
@@ -270,7 +285,7 @@
               </svg>
             </div>
             <h3>Yakob</h3>
-            <p>A large natural owl with warm brown feathers and amber/gold tones. Big round eyes full of warmth and wisdom. No glasses, no accessories — just presence.</p>
+            <p data-i18n="yakobDesc">A large natural owl with warm brown feathers and amber/gold tones. Big round eyes full of warmth and wisdom. No glasses, no accessories — just presence.</p>
           </div>
           <div class="character-card">
             <div class="character-art char-fox">
@@ -297,8 +312,8 @@
                 <path d="M50 59 Q60 66 70 59" stroke="#506080" stroke-width="1.5" fill="none" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>The Silver Fox</h3>
-            <p>Sleek, silver-furred, with a smile just a little too wide. Offers shortcuts and crystal towers. Appears pages 17–22 as a lesson in discernment.</p>
+            <h3 data-i18n="foxName">The Silver Fox</h3>
+            <p data-i18n="foxDesc">Sleek, silver-furred, with a smile just a little too wide. Offers shortcuts and crystal towers. Appears pages 17–22 as a lesson in discernment.</p>
           </div>
         </div>
       </div>
@@ -308,9 +323,9 @@
     <section class="editions-section" id="editions">
       <div class="section-inner">
         <div class="section-header">
-          <span class="section-kicker">Free Download</span>
-          <h2>Five editions,<br>five languages</h2>
-          <p class="section-lead">Each edition is a complete, print-ready PDF at 300 DPI. 8.5″ × 8.5″ square — compatible with KDP and IngramSpark.</p>
+          <span class="section-kicker" data-i18n="editionsKicker">Free Download</span>
+          <h2 data-i18n-html="editionsTitle">Five editions,<br>five languages</h2>
+          <p class="section-lead" data-i18n="editionsLead">Each edition is a complete, print-ready PDF at 300 DPI. 8.5″ × 8.5″ square — compatible with KDP and IngramSpark.</p>
         </div>
         <div class="editions-grid">
 
@@ -367,7 +382,7 @@
         </div>
 
         <div class="editions-note">
-          <p>All source files, illustrations, and scripts are available in the <a href="https://github.com/paulfxyz/stella-and-yakob" target="_blank" rel="noopener">GitHub repository</a>.</p>
+          <p><span data-i18n="editionsNote">All source files, illustrations, and scripts are available in the</span> <a href="https://github.com/paulfxyz/stella-and-yakob" target="_blank" rel="noopener" data-i18n="editionsNoteLink">GitHub repository</a>.</p>
         </div>
       </div>
     </section>
@@ -377,22 +392,22 @@
       <div class="section-inner">
         <div class="about-grid">
           <div class="about-text">
-            <span class="section-kicker">About</span>
-            <h2>Why this book?</h2>
-            <p>Children are growing up in a world where AI is everywhere — and often, the adults around them are just as confused. Stella & Yakob was born from a simple belief: that even the hardest questions can be explored gently, with wonder and honesty.</p>
-            <p>The book doesn't preach or simplify. It acknowledges that there are no easy answers. But it gives children — and the grown-ups who read to them — a language for curiosity, discernment, and the irreplaceable things that make us human.</p>
+            <span class="section-kicker" data-i18n="aboutKicker">About</span>
+            <h2 data-i18n="aboutTitle">Why this book?</h2>
+            <p data-i18n="aboutP1">Children are growing up in a world where AI is everywhere — and often, the adults around them are just as confused. Stella & Yakob was born from a simple belief: that even the hardest questions can be explored gently, with wonder and honesty.</p>
+            <p data-i18n="aboutP2">The book doesn't preach or simplify. It acknowledges that there are no easy answers. But it gives children — and the grown-ups who read to them — a language for curiosity, discernment, and the irreplaceable things that make us human.</p>
             <p class="about-sig">— Paul Fleury</p>
           </div>
           <div class="about-specs">
-            <h3>Book Specifications</h3>
+            <h3 data-i18n="specsTitle">Book Specifications</h3>
             <dl class="specs-list">
-              <div><dt>Format</dt><dd>8.5″ × 8.5″ square</dd></div>
-              <div><dt>Pages</dt><dd>31 (cover + 30 story pages)</dd></div>
-              <div><dt>Resolution</dt><dd>300 DPI — print-ready</dd></div>
-              <div><dt>Print compatibility</dt><dd>KDP, IngramSpark, BookBaby</dd></div>
-              <div><dt>Languages</dt><dd>FR · EN · ES · PT · DE</dd></div>
-              <div><dt>Illustrations</dt><dd>30 original watercolour pages</dd></div>
-              <div><dt>Age range</dt><dd>5–10 years</dd></div>
+              <div><dt data-i18n="specFormat">Format</dt><dd data-i18n="specFormatVal">8.5″ × 8.5″ square</dd></div>
+              <div><dt data-i18n="specPages">Pages</dt><dd data-i18n="specPagesVal">31 (cover + 30 story pages)</dd></div>
+              <div><dt data-i18n="specRes">Resolution</dt><dd data-i18n="specResVal">300 DPI — print-ready</dd></div>
+              <div><dt data-i18n="specPrint">Print compatibility</dt><dd data-i18n="specPrintVal">KDP, IngramSpark, BookBaby</dd></div>
+              <div><dt data-i18n="specLangs">Languages</dt><dd data-i18n="specLangsVal">FR · EN · ES · PT · DE</dd></div>
+              <div><dt data-i18n="specIllu">Illustrations</dt><dd data-i18n="specIlluVal">30 original watercolour pages</dd></div>
+              <div><dt data-i18n="specAge">Age range</dt><dd data-i18n="specAgeVal">5–10 years</dd></div>
             </dl>
           </div>
         </div>
@@ -409,7 +424,7 @@
       <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
         <a id="pdf-dl" href="#" download style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:999px;background:#b57a1a;color:#fff;font-size:0.82rem;font-weight:600;border:none;cursor:pointer;text-decoration:none;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download
+          <span data-i18n="pdfDownload">Download</span>
         </a>
         <button id="pdf-close" onclick="closePdfModal()" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -444,9 +459,9 @@
   <!-- ── OPEN SOURCE ──────────────────────────────────────────── -->
   <section class="section-open-source" id="opensource" style="background:var(--color-surface);border-top:1px solid var(--color-divider);padding:var(--space-20) var(--space-6);">
     <div style="max-width:760px;margin:0 auto;">
-      <p class="section-eyebrow" style="text-align:center;">Open Source</p>
-      <h2 style="font-family:var(--font-display);font-size:var(--text-4xl);text-align:center;margin-bottom:var(--space-6);line-height:1.15;">Built in the open.<br>Free to share.</h2>
-      <p style="text-align:center;color:var(--color-text-muted);max-width:56ch;margin:0 auto var(--space-10);">
+      <p class="section-eyebrow" style="text-align:center;" data-i18n="openKicker">Open Source</p>
+      <h2 style="font-family:var(--font-display);font-size:var(--text-4xl);text-align:center;margin-bottom:var(--space-6);line-height:1.15;" data-i18n-html="openTitle">Built in the open.<br>Free to share.</h2>
+      <p style="text-align:center;color:var(--color-text-muted);max-width:56ch;margin:0 auto var(--space-10);" data-i18n="openBody">
         Every illustration, script, and page of this book is open source — licensed under CC BY-NC-SA 4.0.
         Browse the source, fork it, translate it into a new language, or use the pipeline to build your own book.
       </p>
@@ -458,12 +473,12 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="color:var(--color-text);flex-shrink:0;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
             <strong style="font-size:var(--text-lg);font-family:var(--font-display);">paulfxyz/stella-and-yakob</strong>
           </div>
-          <p style="color:var(--color-text-muted);font-size:var(--text-sm);margin-bottom:var(--space-4);">
+          <p style="color:var(--color-text-muted);font-size:var(--text-sm);margin-bottom:var(--space-4);" data-i18n="openGhDesc">
             30 watercolor illustrations · 5 languages · print-ready PDFs · full pipeline source
           </p>
           <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
-            <a href="https://github.com/paulfxyz/stella-and-yakob" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:var(--text-sm);">View on GitHub →</a>
-            <a href="https://github.com/paulfxyz/stella-and-yakob/releases/latest" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:var(--text-sm);">Latest Release</a>
+            <a href="https://github.com/paulfxyz/stella-and-yakob" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:var(--text-sm);" data-i18n="openViewGh">View on GitHub →</a>
+            <a href="https://github.com/paulfxyz/stella-and-yakob/releases/latest" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:var(--text-sm);" data-i18n="openRelease">Latest Release</a>
           </div>
         </div>
         <div style="display:flex;flex-direction:column;gap:var(--space-2);flex-shrink:0;">
@@ -473,7 +488,7 @@
       </div>
 
       <!-- Clean download links table -->
-      <h3 style="font-family:var(--font-display);font-size:var(--text-2xl);margin-bottom:var(--space-4);">Direct download links</h3>
+      <h3 style="font-family:var(--font-display);font-size:var(--text-2xl);margin-bottom:var(--space-4);" data-i18n="openDlTitle">Direct download links</h3>
       <div style="overflow-x:auto;">
         <table style="width:100%;border-collapse:collapse;font-size:var(--text-sm);">
           <thead>
@@ -513,11 +528,356 @@
         <a href="#editions">Download</a>
         <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
       </div>
-      <p class="footer-copy">© 2026 Paul Fleury. Illustrations generated with AI under creative direction.</p>
+      <p class="footer-copy" data-i18n="footerCopy">© 2026 Paul Fleury. Illustrations generated with AI under creative direction.</p>
     </div>
   </footer>
 
   <script>
+    // ══════════════════════════════════════════════════════════════
+    //  i18n — Full translations
+    // ══════════════════════════════════════════════════════════════
+    const TRANSLATIONS = {
+      en: {
+        lang: 'en', htmlLang: 'en',
+        title: "Stella & Yakob — A Children's Book About AI, Curiosity & Wisdom",
+        metaDesc: "A beautifully illustrated children's book about a girl named Stella, a wise owl named Yakob, and what it means to be human in an age of artificial intelligence. Available in 5 languages.",
+        navStory: "The Story", navPreview: "Preview", navEditions: "Editions", navAbout: "About",
+        heroKicker: "A children's book",
+        heroSubtitle: "A small girl. A wise owl. And a question that matters more than ever.",
+        heroBody: "When Stella hears grown-ups talking about \"artificial intelligence\", a knot tightens in her chest. She doesn't understand — and that's frightening. Then Yakob appears, a warm brown owl with amber eyes full of wisdom, and together they go on a journey through time, wonder, and a few dazzling traps along the way.",
+        heroCta1: "Read a preview", heroCta2: "Download free ↓", heroAvailable: "Available in",
+        storyKicker: "The Story",
+        storyTitle: "What is AI?<br>And why does it matter?",
+        storyP1: "One grey evening, Stella overhears her parents speaking in worried voices about something called \"artificial intelligence.\" Her father might lose his job. Her mother cried. Stella doesn't understand — and that knot in her chest is real.",
+        storyP2: "Then Yakob arrives: a large, gentle owl who perches on the highest branch of the old oak tree. With golden sparks dancing in the air, he takes Stella on an adventure through time — from cave painters to the alphabet, from the lightbulb to learning machines.",
+        storyP3: "But there's a twist. A silver fox appears, promising shortcuts and dazzling towers of crystal. Will Stella recognise what is real from what merely glitters?",
+        feat1Title: "30 illustrated pages",
+        feat1Body: "Minimal loose watercolour — soft brushstrokes, warm amber tones, lots of white paper showing.",
+        feat2Title: "A twist & a lesson",
+        feat2Body: "The Silver Fox twist (pages 17–22) teaches children to question dazzling shortcuts and trust their own judgement.",
+        feat3Title: "Real themes, gently told",
+        feat3Body: "AI, automation, ethics, and the irreplaceable superpowers of being human — curiosity, kindness, courage, creativity.",
+        feat4Title: "5 languages",
+        feat4Body: "French, English, Spanish, Portuguese and German. Print-ready at 300 DPI, 8.5\" × 8.5\".",
+        previewKicker: "Inside the Book", previewTitle: "A few pages",
+        previewLead: "Eight moments from Stella and Yakob's journey together.",
+        charsKicker: "Characters", charsTitle: "Who you'll meet",
+        stellaDesc: "A small girl with a short dark brown bob, a pale blue dress, rosy cheeks and big expressive eyes. Curious, brave, and wonderfully human.",
+        yakobDesc: "A large natural owl with warm brown feathers and amber/gold tones. Big round eyes full of warmth and wisdom. No glasses, no accessories — just presence.",
+        foxName: "The Silver Fox",
+        foxDesc: "Sleek, silver-furred, with a smile just a little too wide. Offers shortcuts and crystal towers. Appears pages 17–22 as a lesson in discernment.",
+        editionsKicker: "Free Download",
+        editionsTitle: "Five editions,<br>five languages",
+        editionsLead: "Each edition is a complete, print-ready PDF at 300 DPI. 8.5\" × 8.5\" square — compatible with KDP and IngramSpark.",
+        editionsNote: "All source files, illustrations, and scripts are available in the",
+        editionsNoteLink: "GitHub repository",
+        aboutKicker: "About", aboutTitle: "Why this book?",
+        aboutP1: "Children are growing up in a world where AI is everywhere — and often, the adults around them are just as confused. Stella & Yakob was born from a simple belief: that even the hardest questions can be explored gently, with wonder and honesty.",
+        aboutP2: "The book doesn't preach or simplify. It acknowledges that there are no easy answers. But it gives children — and the grown-ups who read to them — a language for curiosity, discernment, and the irreplaceable things that make us human.",
+        specsTitle: "Book Specifications",
+        specFormat: "Format", specPages: "Pages", specRes: "Resolution", specPrint: "Print compatibility",
+        specLangs: "Languages", specIllu: "Illustrations", specAge: "Age range",
+        specFormatVal: "8.5\" × 8.5\" square", specPagesVal: "31 (cover + 30 story pages)",
+        specResVal: "300 DPI — print-ready", specPrintVal: "KDP, IngramSpark, BookBaby",
+        specLangsVal: "FR · EN · ES · PT · DE", specIlluVal: "30 original watercolour pages", specAgeVal: "5–10 years",
+        openKicker: "Open Source",
+        openTitle: "Built in the open.<br>Free to share.",
+        openBody: "Every illustration, script, and page of this book is open source — licensed under CC BY-NC-SA 4.0. Browse the source, fork it, translate it into a new language, or use the pipeline to build your own book.",
+        openGhDesc: "30 watercolour illustrations · 5 languages · print-ready PDFs · full pipeline source",
+        openViewGh: "View on GitHub →", openRelease: "Latest Release",
+        openDlTitle: "Direct download links",
+        pdfDownload: "Download", pdfPage: "Page", pdfOf: "of",
+        footerCopy: "© 2026 Paul Fleury. Illustrations generated with AI under creative direction.",
+      },
+      fr: {
+        lang: 'fr', htmlLang: 'fr',
+        title: "Stella & Yakob — Un livre illustré sur l'IA, la curiosité et la sagesse",
+        metaDesc: "Un magnifique livre illustré pour enfants sur une petite fille prénommée Stella, un hibou sage appelé Yakob, et ce que signifie être humain à l'ère de l'intelligence artificielle. Disponible en 5 langues.",
+        navStory: "L'Histoire", navPreview: "Aperçu", navEditions: "Éditions", navAbout: "À propos",
+        heroKicker: "Un livre pour enfants",
+        heroSubtitle: "Une petite fille. Un hibou sage. Et une question qui n'a jamais été aussi importante.",
+        heroBody: "Quand Stella entend les adultes parler d'« intelligence artificielle », quelque chose se noue dans sa poitrine. Elle ne comprend pas — et ça fait peur. Puis Yakob apparaît : un grand hibou brun aux yeux dorés pleins de sagesse. Ensemble, ils partent en voyage à travers le temps, les merveilles… et quelques pièges éblouissants.",
+        heroCta1: "Lire un extrait", heroCta2: "Télécharger gratuitement ↓", heroAvailable: "Disponible en",
+        storyKicker: "L'Histoire",
+        storyTitle: "C'est quoi l'IA ?<br>Et pourquoi ça compte ?",
+        storyP1: "Un soir gris, Stella surprend ses parents qui parlent à voix basse d'« intelligence artificielle ». Son père risque de perdre son travail. Sa mère a pleuré. Stella ne comprend pas — mais ce nœud dans sa poitrine, lui, est bien réel.",
+        storyP2: "Alors Yakob arrive : un grand hibou doux qui se pose sur la plus haute branche du vieux chêne. Avec des étincelles dorées dans l'air, il emmène Stella à travers le temps — des peintres des cavernes à l'alphabet, de l'ampoule aux machines qui apprennent.",
+        storyP3: "Mais il y a un coup de théâtre. Un renard argenté surgit, promettant des raccourcis et des tours de cristal éblouissantes. Stella saura-t-elle distinguer le vrai du brillant ?",
+        feat1Title: "30 pages illustrées",
+        feat1Body: "Aquarelle légère et minimale — traits souples, tons ambrés chauds, beaucoup de blanc.",
+        feat2Title: "Un twist et une leçon",
+        feat2Body: "Le Renard Argenté (pages 17–22) apprend aux enfants à se méfier des raccourcis séduisants et à faire confiance à leur propre jugement.",
+        feat3Title: "De vrais sujets, racontés doucement",
+        feat3Body: "IA, automatisation, éthique et les superpouvoirs irremplaçables de l'être humain — curiosité, gentillesse, courage, créativité.",
+        feat4Title: "5 langues",
+        feat4Body: "Français, anglais, espagnol, portugais et allemand. Prêt à imprimer en 300 DPI, format carré 21,6 cm.",
+        previewKicker: "Dans le livre", previewTitle: "Quelques pages",
+        previewLead: "Huit moments du voyage de Stella et Yakob.",
+        charsKicker: "Personnages", charsTitle: "Les héros de l'histoire",
+        stellaDesc: "Une petite fille au carré brun foncé, robe bleu pâle, joues rosées et grands yeux expressifs. Curieuse, courageuse et profondément humaine.",
+        yakobDesc: "Un grand hibou naturel aux plumes brun chaud et aux reflets dorés. De grands yeux ronds emplis de chaleur et de sagesse. Sans lunettes, sans artifice — juste une présence.",
+        foxName: "Le Renard Argenté",
+        foxDesc: "Élancé, au pelage argenté, avec un sourire un peu trop large. Il propose des raccourcis et des tours de cristal. Présent pages 17–22, il enseigne l'art du discernement.",
+        editionsKicker: "Téléchargement gratuit",
+        editionsTitle: "Cinq éditions,<br>cinq langues",
+        editionsLead: "Chaque édition est un PDF complet, prêt à l'impression en 300 DPI. Format carré 21,6 cm × 21,6 cm — compatible KDP et IngramSpark.",
+        editionsNote: "Tous les fichiers sources, illustrations et scripts sont disponibles sur le",
+        editionsNoteLink: "dépôt GitHub",
+        aboutKicker: "À propos", aboutTitle: "Pourquoi ce livre ?",
+        aboutP1: "Les enfants grandissent dans un monde où l'IA est partout — et souvent, les adultes autour d'eux sont tout aussi désorientés. Stella & Yakob est né d'une conviction simple : même les questions les plus difficiles peuvent être explorées avec douceur, émerveillement et honnêteté.",
+        aboutP2: "Ce livre ne prêche pas, il n'édulcore rien. Il reconnaît qu'il n'y a pas de réponses faciles. Mais il offre aux enfants — et aux adultes qui leur font la lecture — un langage pour la curiosité, le discernement, et tout ce qui fait de nous des humains irremplaçables.",
+        specsTitle: "Caractéristiques du livre",
+        specFormat: "Format", specPages: "Pages", specRes: "Résolution", specPrint: "Impression",
+        specLangs: "Langues", specIllu: "Illustrations", specAge: "Tranche d'âge",
+        specFormatVal: "21,6 cm × 21,6 cm (carré)", specPagesVal: "31 (couverture + 30 pages)",
+        specResVal: "300 DPI — prêt à l'impression", specPrintVal: "KDP, IngramSpark, BookBaby",
+        specLangsVal: "FR · EN · ES · PT · DE", specIlluVal: "30 pages aquarelle originales", specAgeVal: "5–10 ans",
+        openKicker: "Open Source",
+        openTitle: "Construit en public.<br>Libre de partager.",
+        openBody: "Toutes les illustrations, scripts et pages de ce livre sont open source — sous licence CC BY-NC-SA 4.0. Explorez les sources, forkez, traduisez dans une nouvelle langue, ou utilisez le pipeline pour créer votre propre livre.",
+        openGhDesc: "30 illustrations aquarelle · 5 langues · PDFs prêts à l'impression · pipeline complet",
+        openViewGh: "Voir sur GitHub →", openRelease: "Dernière version",
+        openDlTitle: "Liens de téléchargement directs",
+        pdfDownload: "Télécharger", pdfPage: "Page", pdfOf: "sur",
+        footerCopy: "© 2026 Paul Fleury. Illustrations générées avec l'IA sous direction créative.",
+      },
+      es: {
+        lang: 'es', htmlLang: 'es',
+        title: "Stella & Yakob — Un libro ilustrado sobre la IA, la curiosidad y la sabiduría",
+        metaDesc: "Un hermoso libro ilustrado para niños sobre una niña llamada Stella, un búho sabio llamado Yakob, y lo que significa ser humano en la era de la inteligencia artificial. Disponible en 5 idiomas.",
+        navStory: "La Historia", navPreview: "Vista previa", navEditions: "Ediciones", navAbout: "Acerca de",
+        heroKicker: "Un libro infantil",
+        heroSubtitle: "Una niña pequeña. Un búho sabio. Y una pregunta más importante que nunca.",
+        heroBody: "Cuando Stella escucha a los adultos hablar de «inteligencia artificial», algo se aprieta en su pecho. No entiende nada — y eso da miedo. Entonces aparece Yakob: un gran búho pardo con ojos ámbar llenos de sabiduría, y juntos emprenden un viaje a través del tiempo, la maravilla… y algunas trampas deslumbrantes.",
+        heroCta1: "Leer una muestra", heroCta2: "Descarga gratuita ↓", heroAvailable: "Disponible en",
+        storyKicker: "La Historia",
+        storyTitle: "¿Qué es la IA?<br>¿Y por qué importa?",
+        storyP1: "Una tarde gris, Stella escucha a sus padres hablar en voz baja sobre «inteligencia artificial». Su padre podría perder el trabajo. Su madre lloró. Stella no entiende — pero ese nudo en el pecho es muy real.",
+        storyP2: "Entonces llega Yakob: un gran búho tranquilo que se posa en la rama más alta del viejo roble. Con chispas doradas en el aire, lleva a Stella a través del tiempo — de los pintores de cuevas al alfabeto, de la bombilla a las máquinas que aprenden.",
+        storyP3: "Pero hay un giro inesperado. Un zorro plateado aparece prometiendo atajos y deslumbrantes torres de cristal. ¿Será Stella capaz de distinguir lo real de lo que solo brilla?",
+        feat1Title: "30 páginas ilustradas",
+        feat1Body: "Acuarela suelta y minimalista — trazos suaves, tonos ámbar cálidos, mucho espacio en blanco.",
+        feat2Title: "Un giro y una lección",
+        feat2Body: "El Zorro Plateado (páginas 17–22) enseña a los niños a cuestionar los atajos tentadores y confiar en su propio criterio.",
+        feat3Title: "Temas reales, contados con ternura",
+        feat3Body: "IA, automatización, ética y los superpoderes irremplazables del ser humano — curiosidad, bondad, valentía, creatividad.",
+        feat4Title: "5 idiomas",
+        feat4Body: "Francés, inglés, español, portugués y alemán. Listo para imprimir en 300 DPI, formato cuadrado 21,6 cm.",
+        previewKicker: "Dentro del libro", previewTitle: "Algunas páginas",
+        previewLead: "Ocho momentos del viaje de Stella y Yakob.",
+        charsKicker: "Personajes", charsTitle: "A quién vas a conocer",
+        stellaDesc: "Una niña con melena corta castaño oscuro, vestido azul pálido, mejillas sonrosadas y grandes ojos expresivos. Curiosa, valiente y maravillosamente humana.",
+        yakobDesc: "Un gran búho natural con plumas cálidas en tonos marrones y dorados. Ojos redondos y grandes llenos de calor y sabiduría. Sin gafas, sin accesorios — solo presencia.",
+        foxName: "El Zorro Plateado",
+        foxDesc: "Elegante, de pelaje plateado, con una sonrisa demasiado amplia. Ofrece atajos y torres de cristal. Aparece en las páginas 17–22 como una lección de discernimiento.",
+        editionsKicker: "Descarga gratuita",
+        editionsTitle: "Cinco ediciones,<br>cinco idiomas",
+        editionsLead: "Cada edición es un PDF completo, listo para imprimir en 300 DPI. Formato cuadrado 21,6 cm — compatible con KDP e IngramSpark.",
+        editionsNote: "Todos los archivos fuente, ilustraciones y scripts están disponibles en el",
+        editionsNoteLink: "repositorio de GitHub",
+        aboutKicker: "Acerca de", aboutTitle: "¿Por qué este libro?",
+        aboutP1: "Los niños crecen en un mundo donde la IA está en todas partes — y a menudo, los adultos a su alrededor están igual de perdidos. Stella & Yakob nació de una convicción simple: que incluso las preguntas más difíciles pueden explorarse con delicadeza, asombro y honestidad.",
+        aboutP2: "El libro no predica ni simplifica. Reconoce que no hay respuestas fáciles. Pero ofrece a los niños — y a los adultos que les leen — un lenguaje para la curiosidad, el discernimiento y todo aquello que nos hace humanos e irremplazables.",
+        specsTitle: "Especificaciones del libro",
+        specFormat: "Formato", specPages: "Páginas", specRes: "Resolución", specPrint: "Impresión",
+        specLangs: "Idiomas", specIllu: "Ilustraciones", specAge: "Edad recomendada",
+        specFormatVal: "21,6 cm × 21,6 cm (cuadrado)", specPagesVal: "31 (portada + 30 páginas)",
+        specResVal: "300 DPI — listo para imprimir", specPrintVal: "KDP, IngramSpark, BookBaby",
+        specLangsVal: "FR · EN · ES · PT · DE", specIlluVal: "30 páginas de acuarela originales", specAgeVal: "5–10 años",
+        openKicker: "Código abierto",
+        openTitle: "Hecho en abierto.<br>Libre de compartir.",
+        openBody: "Todas las ilustraciones, scripts y páginas de este libro son de código abierto — bajo licencia CC BY-NC-SA 4.0. Explora el código, haz un fork, tradúcelo a otro idioma, o usa el pipeline para crear tu propio libro.",
+        openGhDesc: "30 ilustraciones en acuarela · 5 idiomas · PDFs listos para imprimir · pipeline completo",
+        openViewGh: "Ver en GitHub →", openRelease: "Última versión",
+        openDlTitle: "Enlaces de descarga directa",
+        pdfDownload: "Descargar", pdfPage: "Página", pdfOf: "de",
+        footerCopy: "© 2026 Paul Fleury. Ilustraciones generadas con IA bajo dirección creativa.",
+      },
+      pt: {
+        lang: 'pt', htmlLang: 'pt',
+        title: "Stella & Yakob — Um livro ilustrado sobre IA, curiosidade e sabedoria",
+        metaDesc: "Um lindo livro ilustrado infantil sobre uma menina chamada Stella, uma coruja sábia chamada Yakob, e o que significa ser humano na era da inteligência artificial. Disponível em 5 idiomas.",
+        navStory: "A História", navPreview: "Pré-visualização", navEditions: "Edições", navAbout: "Sobre",
+        heroKicker: "Um livro infantil",
+        heroSubtitle: "Uma menina pequena. Uma coruja sábia. E uma pergunta mais importante do que nunca.",
+        heroBody: "Quando Stella ouve os adultos falarem sobre «inteligência artificial», algo aperta no seu peito. Ela não entende — e isso assusta. Então Yakob aparece: uma grande coruja castanha com olhos âmbar cheios de sabedoria, e juntos partem numa viagem pelo tempo, pelas maravilhas… e por algumas armadilhas deslumbrantes.",
+        heroCta1: "Ler uma amostra", heroCta2: "Descarregar grátis ↓", heroAvailable: "Disponível em",
+        storyKicker: "A História",
+        storyTitle: "O que é a IA?<br>E por que é que importa?",
+        storyP1: "Numa tarde cinzenta, Stella ouve os pais a falar em voz baixa sobre «inteligência artificial». O pai pode perder o emprego. A mãe chorou. Stella não percebe — mas aquele nó no peito é bem real.",
+        storyP2: "Então chega Yakob: uma grande coruja serena que pousa no ramo mais alto do velho carvalho. Com faíscas douradas no ar, leva Stella numa aventura pelo tempo — dos pintores rupestres ao alfabeto, da lâmpada às máquinas que aprendem.",
+        storyP3: "Mas há uma reviravolta. Uma raposa prateada surge, prometendo atalhos e torres de cristal deslumbrantes. Será que Stella consegue distinguir o que é real daquilo que apenas brilha?",
+        feat1Title: "30 páginas ilustradas",
+        feat1Body: "Aguarela solta e minimalista — traços suaves, tons âmbar quentes, muito espaço em branco.",
+        feat2Title: "Uma reviravolta e uma lição",
+        feat2Body: "A Raposa Prateada (páginas 17–22) ensina as crianças a questionar atalhos sedutores e a confiar no seu próprio julgamento.",
+        feat3Title: "Temas reais, contados com delicadeza",
+        feat3Body: "IA, automação, ética e os superpoderes insubstituíveis do ser humano — curiosidade, bondade, coragem, criatividade.",
+        feat4Title: "5 idiomas",
+        feat4Body: "Francês, inglês, espanhol, português e alemão. Pronto a imprimir em 300 DPI, formato quadrado 21,6 cm.",
+        previewKicker: "Dentro do livro", previewTitle: "Algumas páginas",
+        previewLead: "Oito momentos da viagem de Stella e Yakob.",
+        charsKicker: "Personagens", charsTitle: "Quem vais conhecer",
+        stellaDesc: "Uma menina com cabelo curto castanho-escuro, vestido azul-pálido, bochechas rosadas e grandes olhos expressivos. Curiosa, corajosa e maravilhosamente humana.",
+        yakobDesc: "Uma grande coruja natural com penas castanho-quente e tons dourados. Grandes olhos redondos cheios de calor e sabedoria. Sem óculos, sem acessórios — só presença.",
+        foxName: "A Raposa Prateada",
+        foxDesc: "Elegante, com pelo prateado e um sorriso um pouco largo demais. Oferece atalhos e torres de cristal. Aparece nas páginas 17–22 como uma lição de discernimento.",
+        editionsKicker: "Descarregamento gratuito",
+        editionsTitle: "Cinco edições,<br>cinco idiomas",
+        editionsLead: "Cada edição é um PDF completo, pronto a imprimir em 300 DPI. Formato quadrado 21,6 cm — compatível com KDP e IngramSpark.",
+        editionsNote: "Todos os ficheiros fonte, ilustrações e scripts estão disponíveis no",
+        editionsNoteLink: "repositório GitHub",
+        aboutKicker: "Sobre", aboutTitle: "Porquê este livro?",
+        aboutP1: "As crianças crescem num mundo onde a IA está em todo o lado — e muitas vezes, os adultos à sua volta estão igualmente perdidos. Stella & Yakob nasceu de uma convicção simples: que mesmo as perguntas mais difíceis podem ser exploradas com suavidade, espanto e honestidade.",
+        aboutP2: "O livro não prega nem simplifica. Reconhece que não há respostas fáceis. Mas dá às crianças — e aos adultos que lhes leem — uma linguagem para a curiosidade, o discernimento e tudo aquilo que nos torna humanos e insubstituíveis.",
+        specsTitle: "Especificações do livro",
+        specFormat: "Formato", specPages: "Páginas", specRes: "Resolução", specPrint: "Impressão",
+        specLangs: "Idiomas", specIllu: "Ilustrações", specAge: "Faixa etária",
+        specFormatVal: "21,6 cm × 21,6 cm (quadrado)", specPagesVal: "31 (capa + 30 páginas)",
+        specResVal: "300 DPI — pronto a imprimir", specPrintVal: "KDP, IngramSpark, BookBaby",
+        specLangsVal: "FR · EN · ES · PT · DE", specIlluVal: "30 páginas de aguarela originais", specAgeVal: "5–10 anos",
+        openKicker: "Código Aberto",
+        openTitle: "Construído em público.<br>Livre para partilhar.",
+        openBody: "Todas as ilustrações, scripts e páginas deste livro são de código aberto — licenciadas sob CC BY-NC-SA 4.0. Explora o código, faz um fork, traduz para outro idioma, ou usa o pipeline para criar o teu próprio livro.",
+        openGhDesc: "30 ilustrações em aguarela · 5 idiomas · PDFs prontos a imprimir · pipeline completo",
+        openViewGh: "Ver no GitHub →", openRelease: "Última versão",
+        openDlTitle: "Links de descarregamento direto",
+        pdfDownload: "Descarregar", pdfPage: "Página", pdfOf: "de",
+        footerCopy: "© 2026 Paul Fleury. Ilustrações geradas com IA sob direção criativa.",
+      },
+      de: {
+        lang: 'de', htmlLang: 'de',
+        title: "Stella & Yakob — Ein Kinderbuch über KI, Neugier und Weisheit",
+        metaDesc: "Ein wunderschön illustriertes Kinderbuch über ein Mädchen namens Stella, eine weise Eule namens Yakob, und was es bedeutet, in einer Welt der künstlichen Intelligenz Mensch zu sein. In 5 Sprachen verfügbar.",
+        navStory: "Die Geschichte", navPreview: "Vorschau", navEditions: "Ausgaben", navAbout: "Über das Buch",
+        heroKicker: "Ein Kinderbuch",
+        heroSubtitle: "Ein kleines Mädchen. Eine weise Eule. Und eine Frage, die wichtiger ist denn je.",
+        heroBody: "Als Stella die Erwachsenen über «künstliche Intelligenz» reden hört, schnürt sich ihr die Brust zu. Sie versteht es nicht — und das macht ihr Angst. Dann taucht Yakob auf: eine große braune Eule mit goldenen Augen voller Weisheit. Gemeinsam reisen sie durch die Zeit, durch Wunder… und an einigen blendenden Fallen vorbei.",
+        heroCta1: "Leseprobe ansehen", heroCta2: "Kostenlos herunterladen ↓", heroAvailable: "Verfügbar in",
+        storyKicker: "Die Geschichte",
+        storyTitle: "Was ist KI?<br>Und warum ist sie wichtig?",
+        storyP1: "An einem grauen Abend belauscht Stella ihre Eltern, die gedämpft über «künstliche Intelligenz» sprechen. Der Vater könnte seinen Job verlieren. Die Mutter hat geweint. Stella versteht das nicht — aber dieser Knoten in ihrer Brust ist sehr real.",
+        storyP2: "Dann kommt Yakob: eine große, sanfte Eule, die sich auf den höchsten Ast des alten Eichbaums setzt. Mit goldenen Funken in der Luft nimmt er Stella mit auf eine Reise durch die Zeit — von den Höhlenmalern bis zum Alphabet, von der Glühbirne bis zu lernenden Maschinen.",
+        storyP3: "Doch dann gibt es eine Wendung. Ein silberner Fuchs erscheint und verspricht Abkürzungen und glitzernde Kristalltürme. Wird Stella erkennen, was wirklich ist — und was nur glänzt?",
+        feat1Title: "30 illustrierte Seiten",
+        feat1Body: "Lockere, minimalistische Aquarelle — weiche Pinselstriche, warme Bernsteintöne, viel weißes Papier.",
+        feat2Title: "Eine Wendung und eine Lektion",
+        feat2Body: "Der silberne Fuchs (Seiten 17–22) lehrt Kinder, verlockende Abkürzungen zu hinterfragen und dem eigenen Urteil zu vertrauen.",
+        feat3Title: "Echte Themen, behutsam erzählt",
+        feat3Body: "KI, Automatisierung, Ethik und die unersetzlichen Superkräfte des Menschseins — Neugier, Güte, Mut, Kreativität.",
+        feat4Title: "5 Sprachen",
+        feat4Body: "Französisch, Englisch, Spanisch, Portugiesisch und Deutsch. Druckfertig in 300 DPI, quadratisches Format 21,6 cm.",
+        previewKicker: "Im Buch", previewTitle: "Ein paar Seiten",
+        previewLead: "Acht Momente aus Stella und Yakobs gemeinsamer Reise.",
+        charsKicker: "Figuren", charsTitle: "Wen du treffen wirst",
+        stellaDesc: "Ein kleines Mädchen mit kurzem dunkelbraunem Bob, hellblauem Kleid, rosigen Wangen und großen ausdrucksstarken Augen. Neugierig, mutig und durch und durch menschlich.",
+        yakobDesc: "Eine große, natürliche Eule mit warmbraunen Federn und gold-bernsteinfarbenen Tönen. Große runde Augen voller Wärme und Weisheit. Keine Brille, keine Accessoires — nur Präsenz.",
+        foxName: "Der Silberfuchs",
+        foxDesc: "Elegant, silbergrau, mit einem Lächeln, das ein bisschen zu breit ist. Er verspricht Abkürzungen und Kristalltürme. Erscheint auf den Seiten 17–22 als Lektion im Unterscheidungsvermögen.",
+        editionsKicker: "Kostenloser Download",
+        editionsTitle: "Fünf Ausgaben,<br>fünf Sprachen",
+        editionsLead: "Jede Ausgabe ist ein vollständiges, druckfertiges PDF in 300 DPI. Quadratisches Format 21,6 cm — kompatibel mit KDP und IngramSpark.",
+        editionsNote: "Alle Quelldateien, Illustrationen und Skripte sind verfügbar im",
+        editionsNoteLink: "GitHub-Repository",
+        aboutKicker: "Über das Buch", aboutTitle: "Warum dieses Buch?",
+        aboutP1: "Kinder wachsen in einer Welt auf, in der KI allgegenwärtig ist — und oft sind die Erwachsenen um sie herum genauso ratlos. Stella & Yakob entstand aus einer einfachen Überzeugung: dass selbst die schwierigsten Fragen behutsam, mit Staunen und Ehrlichkeit erkundet werden können.",
+        aboutP2: "Das Buch predigt nicht und vereinfacht nicht. Es erkennt an, dass es keine einfachen Antworten gibt. Aber es gibt Kindern — und den Erwachsenen, die ihnen vorlesen — eine Sprache für Neugier, Urteilsvermögen und all das, was uns als Menschen unersetzlich macht.",
+        specsTitle: "Buchdetails",
+        specFormat: "Format", specPages: "Seiten", specRes: "Auflösung", specPrint: "Druckkompatibilität",
+        specLangs: "Sprachen", specIllu: "Illustrationen", specAge: "Altersempfehlung",
+        specFormatVal: "21,6 cm × 21,6 cm (quadratisch)", specPagesVal: "31 (Umschlag + 30 Seiten)",
+        specResVal: "300 DPI — druckfertig", specPrintVal: "KDP, IngramSpark, BookBaby",
+        specLangsVal: "FR · EN · ES · PT · DE", specIlluVal: "30 originale Aquarellseiten", specAgeVal: "5–10 Jahre",
+        openKicker: "Open Source",
+        openTitle: "Offen gebaut.<br>Frei zu teilen.",
+        openBody: "Alle Illustrationen, Skripte und Seiten dieses Buches sind Open Source — lizenziert unter CC BY-NC-SA 4.0. Sieh dir den Quellcode an, fork ihn, übersetze ihn in eine neue Sprache, oder nutze die Pipeline für dein eigenes Buch.",
+        openGhDesc: "30 Aquarell-Illustrationen · 5 Sprachen · druckfertige PDFs · vollständige Pipeline",
+        openViewGh: "Auf GitHub ansehen →", openRelease: "Neueste Version",
+        openDlTitle: "Direkte Download-Links",
+        pdfDownload: "Herunterladen", pdfPage: "Seite", pdfOf: "von",
+        footerCopy: "© 2026 Paul Fleury. Illustrationen mit KI unter kreativer Leitung generiert.",
+      }
+    };
+
+    // ══════════════════════════════════════════════════════════════
+    //  i18n — Language switching
+    // ══════════════════════════════════════════════════════════════
+    let currentLang = 'en';
+    const FLAGS = {en:'🇬🇧',fr:'🇫🇷',es:'🇪🇸',pt:'🇵🇹',de:'🇩🇪'};
+    const CODES = {en:'EN',fr:'FR',es:'ES',pt:'PT',de:'DE'};
+
+    function setLang(code) {
+      const t = TRANSLATIONS[code];
+      if (!t) return;
+      // Update html lang
+      document.documentElement.lang = t.htmlLang;
+      document.title = t.title;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.content = t.metaDesc;
+      // Swap all data-i18n elements (textContent)
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+      // Swap all data-i18n-html elements (innerHTML — for <br> etc.)
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.dataset.i18nHtml;
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+      // Update switcher button
+      document.getElementById('lang-btn-flag').textContent = FLAGS[code];
+      document.getElementById('lang-btn-code').textContent = CODES[code];
+      // Mark active in dropdown
+      document.querySelectorAll('.lang-option').forEach(o => {
+        o.classList.toggle('active', o.dataset.lang === code);
+      });
+      // Update PDF modal page info format
+      // (The actual page info text is updated on render, but we store the current lang for it)
+      currentLang = code;
+      // Persist
+      localStorage.setItem('stella-lang', code);
+    }
+
+    // ── Language switcher dropdown ──────────────────────────────
+    (function(){
+      const switcher = document.getElementById('lang-switcher');
+      const btn = document.getElementById('lang-btn');
+      const dropdown = document.getElementById('lang-dropdown');
+
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = switcher.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      // Close on click outside
+      document.addEventListener('click', function(e) {
+        if (!switcher.contains(e.target)) {
+          switcher.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Close on Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && switcher.classList.contains('open')) {
+          switcher.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.focus();
+        }
+      });
+
+      // Language option clicks
+      dropdown.addEventListener('click', function(e) {
+        const option = e.target.closest('.lang-option');
+        if (!option) return;
+        const lang = option.dataset.lang;
+        setLang(lang);
+        switcher.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    })();
+
     // ── Theme toggle ──────────────────────────────────────────────
     (function(){
       const t = document.querySelector('[data-theme-toggle]');
@@ -630,7 +990,9 @@
           await pg.render({canvasContext: ctx, viewport: vp}).promise;
           loading.style.display = 'none';
           canvas.style.opacity  = '1';
-          info.textContent   = 'Page ' + n + ' of ' + _total;
+          // Use i18n for page info
+          const t = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+          info.textContent = t.pdfPage + ' ' + n + ' ' + t.pdfOf + ' ' + _total;
           scrub.value        = n;
           prev.disabled      = n <= 1;
           next.disabled      = n >= _total;
@@ -694,13 +1056,19 @@
       });
     })();
 
-        // ── Scroll-reveal ─────────────────────────────────────────────
+    // ── Scroll-reveal ─────────────────────────────────────────────
     (function(){
       const els = document.querySelectorAll('.feature-card, .character-card, .edition-card, .story-text, .story-features, .about-text, .about-specs');
       const obs = new IntersectionObserver(entries => {
         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); }});
       }, { threshold: 0.12 });
       els.forEach(el => { el.classList.add('reveal'); obs.observe(el); });
+    })();
+
+    // ── Initialize language from localStorage ─────────────────────
+    (function(){
+      const savedLang = localStorage.getItem('stella-lang') || 'en';
+      setLang(savedLang);
     })();
   </script>
 
