@@ -30,7 +30,7 @@ PAGES = [
         "deux yeux ambrés s'ouvrirent dans la nuit.",
     ]),
     (5, [
-        "L'hibou pencha la tête.",
+        "Le hibou pencha la tête.",
         "Des étincelles dorées dansèrent dans l'air.",
         "« Je m'appelle Yakob », dit-il.",
         "« Et ta question mérite un long voyage. »",
