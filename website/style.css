@@ -660,7 +660,26 @@ h1,h2,h3,h4 {
 }
 .pdf-viewer {
   flex:1; display:flex; align-items:center; justify-content:center;
-  gap:8px; padding:12px 8px; min-height:0; overflow:hidden;
+  gap:8px; padding:8px; min-height:0; overflow:hidden;
+  width:100%;
+}
+#pdf-wrap {
+  flex:1;
+  height:100%;
+  min-height:0;
+  min-width:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+#pdf-canvas {
+  max-width:100%;
+  max-height:100%;
+  display:block;
+  box-shadow:0 4px 32px rgba(0,0,0,0.6);
+  border-radius:2px;
 }
 .pdf-nav-btn {
   flex-shrink:0; width:44px; height:44px; border-radius:50%;

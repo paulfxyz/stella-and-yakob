@@ -957,24 +957,30 @@ const TRANSLATIONS = {
         loading.style.display = 'flex';
         canvas.style.opacity = '0';
         try {
-          const pg   = await _doc.getPage(n);
-          const wrap = document.getElementById('pdf-wrap');
-          const s    = Math.min(
-            (wrap.clientWidth  - 8) / pg.getViewport({scale:1}).width,
-            (wrap.clientHeight - 8) / pg.getViewport({scale:1}).height
+          const pdfPage = await _doc.getPage(n);
+          const wrap    = document.getElementById('pdf-wrap');
+          // Get the actual rendered dimensions of the wrap container
+          const wW = wrap.clientWidth  || wrap.getBoundingClientRect().width  || window.innerWidth  - 120;
+          const wH = wrap.clientHeight || wrap.getBoundingClientRect().height || window.innerHeight - 120;
+          const baseVp = pdfPage.getViewport({scale: 1});
+          const scale  = Math.min(
+            (wW - 16) / baseVp.width,
+            (wH - 16) / baseVp.height
           );
-          const vp = pg.getViewport({scale: s});
+          const vp = pdfPage.getViewport({scale: Math.max(scale, 0.1)});
           canvas.width  = vp.width;
           canvas.height = vp.height;
-          await pg.render({canvasContext: ctx, viewport: vp}).promise;
+          canvas.style.maxWidth  = '100%';
+          canvas.style.maxHeight = '100%';
+          await pdfPage.render({canvasContext: ctx, viewport: vp}).promise;
           loading.style.display = 'none';
           canvas.style.opacity  = '1';
           const t = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
           info.textContent = t.pdfPage + ' ' + n + ' ' + t.pdfOf + ' ' + _total;
-          scrub.value        = n;
-          prev.disabled      = n <= 1;
-          next.disabled      = n >= _total;
-        } catch(e) { console.warn(e); }
+          scrub.value   = n;
+          prev.disabled = n <= 1;
+          next.disabled = n >= _total;
+        } catch(e) { console.warn('PDF render error:', e); }
         _busy = false;
       }
 
