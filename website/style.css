@@ -1547,3 +1547,418 @@ html[lang="ar"] .lang-dropdown, html[lang="he"] .lang-dropdown {
   left: 0;
   right: auto;
 }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   TYPOGRAPHY SCALE UPGRADE — bigger, more readable, Apple-weight
+   ═══════════════════════════════════════════════════════════════ */
+
+:root, [data-theme="light"], [data-theme="dark"] {
+  /* Bigger base scale — was 1rem/1.125rem, now 1.125/1.25rem */
+  --text-xs:   clamp(0.85rem,  0.78rem + 0.3vw,  1rem);
+  --text-sm:   clamp(1rem,     0.92rem + 0.4vw,  1.2rem);
+  --text-base: clamp(1.15rem,  1.05rem + 0.5vw,  1.4rem);
+  --text-lg:   clamp(1.4rem,   1.15rem + 1.1vw,  1.9rem);
+  --text-xl:   clamp(1.8rem,   1.3rem  + 2vw,    2.8rem);
+  --text-2xl:  clamp(2.4rem,   1.5rem  + 3.5vw,  4.2rem);
+  --text-3xl:  clamp(3rem,     1.5rem  + 5.5vw,  6rem);
+  --text-hero: clamp(4rem,     1.5rem  + 8.5vw,  8.5rem);
+}
+
+/* Better body line-height + letter-spacing for readability */
+body {
+  font-size: var(--text-base);
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
+/* Section headers — more generous */
+.section-header h2 {
+  font-size: var(--text-2xl);
+  letter-spacing: -0.02em;
+}
+
+.section-lead {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  max-width: 58ch;
+}
+
+.section-kicker {
+  font-size: var(--text-sm);
+  letter-spacing: 0.12em;
+}
+
+/* Story panels — bigger headings + more legible body */
+.story-panel-text h3 {
+  font-size: var(--text-2xl);
+  letter-spacing: -0.02em;
+}
+
+.story-panel-text p {
+  font-size: var(--text-lg);
+  line-height: 1.75;
+  opacity: 0.85;
+}
+
+/* Feature cards — more breathing room */
+.feature-card {
+  padding: var(--space-8) var(--space-6);
+}
+
+.feature-card h3 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+
+.feature-card p {
+  font-size: var(--text-base);
+  line-height: 1.7;
+}
+
+/* Character cards */
+.character-card h3 {
+  font-size: var(--text-xl);
+  letter-spacing: -0.01em;
+}
+
+.character-card p {
+  font-size: var(--text-base);
+  line-height: 1.7;
+  max-width: 32ch;
+}
+
+/* Story section — "What is AI?" */
+.story-text h2 {
+  font-size: var(--text-2xl);
+  letter-spacing: -0.02em;
+}
+
+.story-text p {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+}
+
+/* Editions section */
+.editions-lead {
+  font-size: var(--text-lg);
+}
+
+.about-text h2 {
+  font-size: var(--text-2xl);
+  letter-spacing: -0.02em;
+}
+
+.about-text p {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+}
+
+/* Hero body copy (was too muted/tiny) */
+.hero-body {
+  font-size: var(--text-base);
+  color: rgba(255, 235, 200, 0.75);
+  line-height: 1.85;
+}
+
+.hero-subtitle {
+  font-size: var(--text-xl);
+}
+
+/* Open source section */
+.open-body {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+}
+
+/* Footer */
+.site-footer {
+  font-size: var(--text-sm);
+}
+
+/* Download links table */
+.dl-table td, .dl-table th {
+  font-size: var(--text-sm);
+}
+
+/* Nav links */
+.nav-links a {
+  font-size: var(--text-base);
+}
+
+/* Edition cards */
+.edition-lang {
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+.edition-meta {
+  font-size: var(--text-sm);
+}
+
+/* Page flip caption */
+.flip-page figcaption {
+  font-size: var(--text-base);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   APPLE-STYLE SCROLL & ENTRANCE ANIMATIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Base state — all animated elements start invisible */
+[data-reveal] {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition:
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Variants */
+[data-reveal="up"]      { transform: translateY(56px); }
+[data-reveal="down"]    { transform: translateY(-40px); }
+[data-reveal="left"]    { transform: translateX(-60px); }
+[data-reveal="right"]   { transform: translateX(60px); }
+[data-reveal="scale"]   { transform: scale(0.88); }
+[data-reveal="scaleup"] { transform: scale(0.88) translateY(40px); }
+[data-reveal="fade"]    { transform: none; }
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none !important;
+}
+
+/* Stagger delays for children */
+[data-stagger] > * {
+  opacity: 0;
+  transform: translateY(48px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-stagger].is-visible > * {
+  opacity: 1;
+  transform: none;
+}
+
+[data-stagger].is-visible > *:nth-child(1)  { transition-delay: 0ms; }
+[data-stagger].is-visible > *:nth-child(2)  { transition-delay: 90ms; }
+[data-stagger].is-visible > *:nth-child(3)  { transition-delay: 180ms; }
+[data-stagger].is-visible > *:nth-child(4)  { transition-delay: 270ms; }
+[data-stagger].is-visible > *:nth-child(5)  { transition-delay: 360ms; }
+[data-stagger].is-visible > *:nth-child(6)  { transition-delay: 450ms; }
+[data-stagger].is-visible > *:nth-child(7)  { transition-delay: 540ms; }
+[data-stagger].is-visible > *:nth-child(8)  { transition-delay: 630ms; }
+[data-stagger].is-visible > *:nth-child(9)  { transition-delay: 720ms; }
+
+/* Apple-style heading split lines (letter reveal) */
+.split-line {
+  overflow: hidden;
+  display: block;
+}
+
+.split-line span {
+  display: block;
+  opacity: 0;
+  transform: translateY(100%);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.split-line.is-visible span {
+  opacity: 1;
+  transform: none;
+}
+
+.split-line:nth-child(2) span { transition-delay: 120ms; }
+.split-line:nth-child(3) span { transition-delay: 240ms; }
+
+/* Parallax layers */
+[data-parallax] {
+  will-change: transform;
+}
+
+/* Counter number animation */
+.count-up {
+  display: inline-block;
+  min-width: 1ch;
+}
+
+/* Section title flourish underline (Apple-style grow-in) */
+.underline-flourish {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-flourish::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.3s;
+}
+
+.underline-flourish.is-visible::after {
+  width: 100%;
+}
+
+/* Magnetic hover effect on CTAs */
+.btn-primary {
+  transition:
+    background 0.2s var(--ease-out),
+    box-shadow 0.2s var(--ease-out),
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Sticky progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #b57a1a, #d4963c, #f0bc60);
+  z-index: 9999;
+  transform-origin: left;
+  transition: width 0.1s linear;
+}
+
+/* Number counter badges */
+.stat-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 300;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Stats row in hero */
+.hero-stats {
+  display: flex;
+  gap: var(--space-8);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(255,235,200,0.1);
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hero-stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 1rem + 2vw, 2.4rem);
+  font-weight: 300;
+  color: #d4963c;
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-size: var(--text-xs);
+  color: rgba(255,235,200,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* Morphing blob behind character cards */
+.section-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  animation: blob-drift 12s ease-in-out infinite alternate;
+}
+
+@keyframes blob-drift {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(30px, -20px) scale(1.08); }
+}
+
+/* Floating label on edition cards (new language badge) */
+.edition-card {
+  transition:
+    box-shadow 0.4s var(--ease-out),
+    transform 0.4s cubic-bezier(0.34, 1.4, 0.64, 1),
+    border-color 0.4s var(--ease-out);
+}
+
+.edition-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Story section panels - richer scroll transition */
+.story-panel {
+  transition: none;
+}
+
+/* Open source section */
+.open-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.open-section::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(181,122,26,0.08) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  border-radius: 50%;
+  animation: blob-drift 15s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+/* Horizontal scroll hint on mobile edition cards */
+@media (max-width: 768px) {
+  .editions-grid {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .edition-card {
+    scroll-snap-align: start;
+  }
+}
+
+/* Bigger section spacing for better breathing room */
+.story-section,
+.characters-section,
+.flipper-section,
+.editions-section,
+.about-section,
+.open-section {
+  padding-block: clamp(var(--space-20), 14vw, 9rem);
+}
+
+/* Bigger section headers */
+.section-header {
+  margin-bottom: clamp(var(--space-12), 7vw, 7rem);
+}
+
