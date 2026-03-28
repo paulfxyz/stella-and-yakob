@@ -12,8 +12,8 @@
 <p align="center">
   <a href="https://sandy.page">🌐 Website</a> ·
   <a href="https://sandy.page/dl/pdf/en">📥 Download English PDF</a> ·
-  <a href="https://github.com/paulfxyz/stella-and-yakob/releases/latest">🚀 v4.1 Release</a> ·
-  <a href="#download">All 17 languages ↓</a>
+  <a href="https://github.com/paulfxyz/stella-and-yakob/releases/latest">🚀 v4.2 Release</a> ·
+  <a href="#download">All 18 languages ↓</a>
 </p>
 
 <p align="center"><em>Made with ❤️ + AI</em></p>
@@ -53,6 +53,7 @@ Then **Yakob** appears: a large, wise owl with warm brown feathers and amber eye
 | 🇸🇪 Svenska | [sandy.page/dl/pdf/sv](https://sandy.page/dl/pdf/sv) | [sandy.page/dl/zip/sv](https://sandy.page/dl/zip/sv) |
 | 🇳🇴 Norsk (Bokmål) | [sandy.page/dl/pdf/no](https://sandy.page/dl/pdf/no) | [sandy.page/dl/zip/no](https://sandy.page/dl/zip/no) |
 | 🇵🇱 Polski | [sandy.page/dl/pdf/pl](https://sandy.page/dl/pdf/pl) | [sandy.page/dl/zip/pl](https://sandy.page/dl/zip/pl) |
+| 🇳🇵 नेपाली | [sandy.page/dl/pdf/ne](https://sandy.page/dl/pdf/ne) | [sandy.page/dl/zip/ne](https://sandy.page/dl/zip/ne) |
 
 > All shortlinks follow the pattern `sandy.page/dl/{pdf|zip}/{lang}` and redirect directly to the file.
 
@@ -68,7 +69,7 @@ All PDFs also attached to the [latest GitHub release](https://github.com/paulfxy
 | **Pages** | **46 (cover + 45 story pages)** |
 | Format | 8.5″ × 8.5″ square |
 | Resolution | 300 DPI — 2550 × 2550 px |
-| Languages | **17** — FR · EN · ES · PT · DE · AR · HE · ZH · JA · HI · RU · TR · WO · DA · SV · NO · PL |
+| Languages | **18** — FR · EN · ES · PT · DE · AR · HE · ZH · JA · HI · RU · TR · WO · DA · SV · NO · PL · NE |
 | Print-ready | Yes — [IngramSpark](https://myaccount.ingramspark.com/Portal/Tools/ShippingCalculator?hsCtaAttrib=183190289314), KDP, BookBaby |
 | License | CC BY-NC-SA 4.0 |
 

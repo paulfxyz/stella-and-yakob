@@ -7,6 +7,24 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [4.2.0] — 2026-03-28
+
+### 🇳🇵 v4.2 — Nepali (नेपाली) Edition
+
+#### New Language
+- **Nepali (नेपाली):** full 45-page GPT-4o + Claude 3.5 refinement translation
+- Font: Noto Serif Devanagari (same script as Hindi)
+- Character names: स्टेला (Stella), याकोब (Yakob), चाँदीको सियार (Silver Fox)
+- Download: `sandy.page/dl/pdf/ne` · `sandy.page/dl/zip/ne`
+- **Total: 18 languages — FR · EN · ES · PT · DE · AR · HE · ZH · JA · HI · RU · TR · WO · DA · SV · NO · PL · NE**
+
+#### Security
+- Removed hardcoded OpenRouter API key from all scripts
+- API key now loaded from `OPENROUTER_API_KEY` environment variable
+- Added `.gitignore` (blocks `.env` files) and `.env.example` template
+
+---
+
 ## [4.1.0] — 2026-03-28
 
 ### 🌍 v4.1 — 4 new languages (DA/SV/NO/PL) + Disney landing page redesign
