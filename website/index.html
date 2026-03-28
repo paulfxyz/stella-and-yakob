@@ -419,38 +419,52 @@
 </footer>
 
 <!-- ── PDF MODAL ─────────────────────────────────────────────── -->
-<div id="pdf-modal">
-  <div class="pdf-toolbar">
-    <span class="pdf-title" id="pdf-title">Stella &amp; Yakob</span>
-    <div class="pdf-tools">
-      <a class="pdf-dl-btn" id="pdf-dl" href="#" download>
+<div id="pdf-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;background:rgba(8,6,16,0.97);flex-direction:column;">
+
+  <!-- Toolbar -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 24px;background:rgba(12,10,22,0.98);border-bottom:1px solid rgba(255,255,255,0.08);flex-shrink:0;gap:12px;height:56px;">
+    <span id="pdf-title" style="font-family:Georgia,serif;font-size:1.05rem;color:rgba(255,255,255,0.9);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Stella &amp; Yakob</span>
+    <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+      <a id="pdf-dl" href="#" download style="display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:99px;background:#b57a1a;color:#fff;font-size:0.85rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         <span data-i18n="pdfDownload">Download</span>
       </a>
-      <button class="pdf-close-btn" onclick="closePdfModal()">
+      <button onclick="closePdfModal()" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
   </div>
-  <div class="pdf-viewer">
-    <button class="pdf-nav-btn" id="pdf-prev" onclick="pdfPrev()">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+
+  <!-- Viewer — fills remaining height -->
+  <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:12px;padding:12px;min-height:0;overflow:hidden;position:relative;">
+
+    <!-- Prev button -->
+    <button id="pdf-prev" onclick="pdfPrev()" style="flex-shrink:0;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:1;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
     </button>
-    <div id="pdf-wrap">
-      <canvas id="pdf-canvas"></canvas>
-      <div id="pdf-loading" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:rgba(255,255,255,0.5);">
-        <div style="width:32px;height:32px;border:2px solid rgba(255,255,255,0.15);border-top-color:#b57a1a;border-radius:50%;animation:spin 0.75s linear infinite;"></div>
-        Loading…
+
+    <!-- Canvas wrapper — absolutely sized by JS -->
+    <div id="pdf-wrap" style="position:relative;flex:1;height:100%;display:flex;align-items:center;justify-content:center;min-width:0;overflow:hidden;">
+      <canvas id="pdf-canvas" style="display:block;border-radius:3px;box-shadow:0 8px 48px rgba(0,0,0,0.7);"></canvas>
+      <div id="pdf-loading" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:rgba(255,255,255,0.5);">
+        <div style="width:36px;height:36px;border:2.5px solid rgba(255,255,255,0.12);border-top-color:#b57a1a;border-radius:50%;animation:spin 0.7s linear infinite;"></div>
+        <span style="font-style:italic;font-size:0.9rem;">Loading…</span>
       </div>
     </div>
-    <button class="pdf-nav-btn" id="pdf-next" onclick="pdfNext()">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+
+    <!-- Next button -->
+    <button id="pdf-next" onclick="pdfNext()" style="flex-shrink:0;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:1;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
     </button>
+
   </div>
-  <div class="pdf-footer">
-    <span id="pdf-info">— / —</span>
-    <input id="pdf-scrub" type="range" min="1" max="46" value="1" oninput="pdfScrub(this.value)">
+
+  <!-- Footer -->
+  <div style="display:flex;align-items:center;gap:16px;padding:10px 24px 14px;background:rgba(12,10,22,0.98);border-top:1px solid rgba(255,255,255,0.08);flex-shrink:0;height:48px;">
+    <span id="pdf-info" style="font-size:0.78rem;color:rgba(255,255,255,0.4);white-space:nowrap;min-width:80px;">— / —</span>
+    <input id="pdf-scrub" type="range" min="1" max="46" value="1" oninput="pdfScrub(this.value)" style="flex:1;accent-color:#b57a1a;cursor:pointer;">
   </div>
+
 </div>
 
 <script>
@@ -958,29 +972,28 @@ const TRANSLATIONS = {
         canvas.style.opacity = '0';
         try {
           const pdfPage = await _doc.getPage(n);
-          const wrap    = document.getElementById('pdf-wrap');
-          // Get the actual rendered dimensions of the wrap container
-          const wW = wrap.clientWidth  || wrap.getBoundingClientRect().width  || window.innerWidth  - 120;
-          const wH = wrap.clientHeight || wrap.getBoundingClientRect().height || window.innerHeight - 120;
-          const baseVp = pdfPage.getViewport({scale: 1});
-          const scale  = Math.min(
-            (wW - 16) / baseVp.width,
-            (wH - 16) / baseVp.height
-          );
-          const vp = pdfPage.getViewport({scale: Math.max(scale, 0.1)});
+          // Calculate available space from window, NOT from the wrap div
+          // toolbar=56px, footer=48px, side-buttons+padding=120px, margins=32px
+          const availW  = window.innerWidth  - 120;
+          const availH  = window.innerHeight - 56 - 48 - 32;
+          const baseVp  = pdfPage.getViewport({scale: 1});
+          const scale   = Math.min(availW / baseVp.width, availH / baseVp.height);
+          const vp      = pdfPage.getViewport({scale: Math.max(scale, 0.1)});
           canvas.width  = vp.width;
           canvas.height = vp.height;
-          canvas.style.maxWidth  = '100%';
-          canvas.style.maxHeight = '100%';
+          canvas.style.display = 'block';
           await pdfPage.render({canvasContext: ctx, viewport: vp}).promise;
           loading.style.display = 'none';
           canvas.style.opacity  = '1';
           const t = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
-          info.textContent = t.pdfPage + ' ' + n + ' ' + t.pdfOf + ' ' + _total;
+          info.textContent = (t.pdfPage||'Page') + ' ' + n + ' ' + (t.pdfOf||'of') + ' ' + _total;
           scrub.value   = n;
           prev.disabled = n <= 1;
           next.disabled = n >= _total;
-        } catch(e) { console.warn('PDF render error:', e); }
+        } catch(e) {
+          console.warn('PDF render error:', e);
+          loading.innerHTML = '<p style="color:rgba(255,255,255,.5);text-align:center;padding:2rem">Could not load.<br><a href="' + (modal._url||'') + '" target="_blank" style="color:#b57a1a;font-weight:600;">Open PDF directly ↗</a></p>';
+        }
         _busy = false;
       }
 
@@ -989,6 +1002,7 @@ const TRANSLATIONS = {
         const dlBtn = document.getElementById('pdf-dl');
         dlBtn.href = url;
         dlBtn.setAttribute('download', dl);
+        modal._url = url;
         _doc = null; _page = 1; _total = 0;
         canvas.width = 1; canvas.height = 1;
         canvas.style.opacity = '0';
