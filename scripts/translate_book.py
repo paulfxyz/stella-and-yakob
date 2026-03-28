@@ -1,3 +1,4 @@
+import os
 """
 Translate Stella & Yakob into Danish, Swedish, Norwegian (Bokmål), and Polish
 using OpenRouter API with GPT-4o for initial translation and Claude 3.5 Sonnet for refinement.
@@ -8,7 +9,7 @@ import requests
 import time
 import concurrent.futures
 
-API_KEY = "[REDACTED]"
+API_KEY = os.environ.get('OPENROUTER_API_KEY', '')
 BASE_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 HEADERS = {
