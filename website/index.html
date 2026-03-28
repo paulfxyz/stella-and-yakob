@@ -39,14 +39,14 @@
       </svg>
       <span>Stella &amp; Yakob</span>
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="#story" data-i18n="navStory">The Story</a></li>
       <li><a href="#preview" data-i18n="navPreview">Preview</a></li>
       <li><a href="#editions" data-i18n="navEditions">Editions</a></li>
       <li><a href="#about" data-i18n="navAbout">About</a></li>
     </ul>
     <div class="nav-right">
-      <div class="lang-sw" id="lang-sw">
+      <div class="lang-sw" id="lang-switcher">
         <button class="lang-btn" id="lang-btn" aria-haspopup="listbox" aria-expanded="false">
           <span id="lang-btn-flag">🇬🇧</span>
           <span id="lang-btn-code">EN</span>
@@ -432,17 +432,17 @@
     </div>
   </div>
   <div class="pdf-viewer">
-    <button class="pdf-nav-btn" onclick="pdfPrev()">
+    <button class="pdf-nav-btn" id="pdf-prev" onclick="pdfPrev()">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
     </button>
-    <div id="pdf-canvas-wrap">
+    <div id="pdf-wrap">
       <canvas id="pdf-canvas"></canvas>
       <div id="pdf-loading" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:rgba(255,255,255,0.5);">
         <div style="width:32px;height:32px;border:2px solid rgba(255,255,255,0.15);border-top-color:#b57a1a;border-radius:50%;animation:spin 0.75s linear infinite;"></div>
         Loading…
       </div>
     </div>
-    <button class="pdf-nav-btn" onclick="pdfNext()">
+    <button class="pdf-nav-btn" id="pdf-next" onclick="pdfNext()">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
     </button>
   </div>
@@ -1112,7 +1112,7 @@ const TRANSLATIONS = {
       }
 
       // 4. Parallax — hero characters on mousemove
-      var stage = document.getElementById('hero-stage');
+      var stage = document.getElementById('hero');
       var stella = document.getElementById('char-stella');
       var yakob  = document.getElementById('char-yakob');
       var cover  = document.getElementById('hero-cover');
