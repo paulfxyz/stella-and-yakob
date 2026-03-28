@@ -12,8 +12,8 @@
 <p align="center">
   <a href="https://sandy.page">🌐 Website</a> ·
   <a href="https://sandy.page/dl/pdf/en">📥 Download English PDF</a> ·
-  <a href="https://github.com/paulfxyz/stella-and-yakob/releases/latest">🚀 v4.0 Release</a> ·
-  <a href="#download">All 13 languages ↓</a>
+  <a href="https://github.com/paulfxyz/stella-and-yakob/releases/latest">🚀 v4.1 Release</a> ·
+  <a href="#download">All 17 languages ↓</a>
 </p>
 
 <p align="center"><em>Made with ❤️ + AI</em></p>
@@ -32,23 +32,29 @@ Then **Yakob** appears: a large, wise owl with warm brown feathers and amber eye
 
 ---
 
-## Download — All 13 Languages
+## Download — All 17 Languages {#download}
 
-| Language | PDF | ZIP | Shortlink |
-|----------|-----|-----|-----------|
-| 🇫🇷 Français | [sandy.page/dl/pdf/fr](https://sandy.page/dl/pdf/fr) | [sandy.page/dl/zip/fr](https://sandy.page/dl/zip/fr) | `/dl/pdf/fr` |
-| 🇬🇧 English | [sandy.page/dl/pdf/en](https://sandy.page/dl/pdf/en) | [sandy.page/dl/zip/en](https://sandy.page/dl/zip/en) | `/dl/pdf/en` |
-| 🇪🇸 Español | [sandy.page/dl/pdf/es](https://sandy.page/dl/pdf/es) | [sandy.page/dl/zip/es](https://sandy.page/dl/zip/es) | `/dl/pdf/es` |
-| 🇵🇹 Português | [sandy.page/dl/pdf/pt](https://sandy.page/dl/pdf/pt) | [sandy.page/dl/zip/pt](https://sandy.page/dl/zip/pt) | `/dl/pdf/pt` |
-| 🇩🇪 Deutsch | [sandy.page/dl/pdf/de](https://sandy.page/dl/pdf/de) | [sandy.page/dl/zip/de](https://sandy.page/dl/zip/de) | `/dl/pdf/de` |
-| 🇸🇦 العربية | [sandy.page/dl/pdf/ar](https://sandy.page/dl/pdf/ar) | [sandy.page/dl/zip/ar](https://sandy.page/dl/zip/ar) | `/dl/pdf/ar` |
-| 🇮🇱 עברית | [sandy.page/dl/pdf/he](https://sandy.page/dl/pdf/he) | [sandy.page/dl/zip/he](https://sandy.page/dl/zip/he) | `/dl/pdf/he` |
-| 🇨🇳 中文 | [sandy.page/dl/pdf/zh](https://sandy.page/dl/pdf/zh) | [sandy.page/dl/zip/zh](https://sandy.page/dl/zip/zh) | `/dl/pdf/zh` |
-| 🇯🇵 日本語 | [sandy.page/dl/pdf/ja](https://sandy.page/dl/pdf/ja) | [sandy.page/dl/zip/ja](https://sandy.page/dl/zip/ja) | `/dl/pdf/ja` |
-| 🇮🇳 हिन्दी | [sandy.page/dl/pdf/hi](https://sandy.page/dl/pdf/hi) | [sandy.page/dl/zip/hi](https://sandy.page/dl/zip/hi) | `/dl/pdf/hi` |
-| 🇷🇺 Русский | [sandy.page/dl/pdf/ru](https://sandy.page/dl/pdf/ru) | [sandy.page/dl/zip/ru](https://sandy.page/dl/zip/ru) | `/dl/pdf/ru` |
-| 🇹🇷 Türkçe | [sandy.page/dl/pdf/tr](https://sandy.page/dl/pdf/tr) | [sandy.page/dl/zip/tr](https://sandy.page/dl/zip/tr) | `/dl/pdf/tr` |
-| 🇸🇳 Wolof | [sandy.page/dl/pdf/wo](https://sandy.page/dl/pdf/wo) | [sandy.page/dl/zip/wo](https://sandy.page/dl/zip/wo) | `/dl/pdf/wo` |
+| Language | PDF | ZIP |
+|----------|-----|-----|
+| 🇫🇷 Français | [sandy.page/dl/pdf/fr](https://sandy.page/dl/pdf/fr) | [sandy.page/dl/zip/fr](https://sandy.page/dl/zip/fr) |
+| 🇬🇧 English | [sandy.page/dl/pdf/en](https://sandy.page/dl/pdf/en) | [sandy.page/dl/zip/en](https://sandy.page/dl/zip/en) |
+| 🇪🇸 Español | [sandy.page/dl/pdf/es](https://sandy.page/dl/pdf/es) | [sandy.page/dl/zip/es](https://sandy.page/dl/zip/es) |
+| 🇵🇹 Português | [sandy.page/dl/pdf/pt](https://sandy.page/dl/pdf/pt) | [sandy.page/dl/zip/pt](https://sandy.page/dl/zip/pt) |
+| 🇩🇪 Deutsch | [sandy.page/dl/pdf/de](https://sandy.page/dl/pdf/de) | [sandy.page/dl/zip/de](https://sandy.page/dl/zip/de) |
+| 🇸🇦 العربية | [sandy.page/dl/pdf/ar](https://sandy.page/dl/pdf/ar) | [sandy.page/dl/zip/ar](https://sandy.page/dl/zip/ar) |
+| 🇮🇱 עברית | [sandy.page/dl/pdf/he](https://sandy.page/dl/pdf/he) | [sandy.page/dl/zip/he](https://sandy.page/dl/zip/he) |
+| 🇨🇳 中文 | [sandy.page/dl/pdf/zh](https://sandy.page/dl/pdf/zh) | [sandy.page/dl/zip/zh](https://sandy.page/dl/zip/zh) |
+| 🇯🇵 日本語 | [sandy.page/dl/pdf/ja](https://sandy.page/dl/pdf/ja) | [sandy.page/dl/zip/ja](https://sandy.page/dl/zip/ja) |
+| 🇮🇳 हिन्दी | [sandy.page/dl/pdf/hi](https://sandy.page/dl/pdf/hi) | [sandy.page/dl/zip/hi](https://sandy.page/dl/zip/hi) |
+| 🇷🇺 Русский | [sandy.page/dl/pdf/ru](https://sandy.page/dl/pdf/ru) | [sandy.page/dl/zip/ru](https://sandy.page/dl/zip/ru) |
+| 🇹🇷 Türkçe | [sandy.page/dl/pdf/tr](https://sandy.page/dl/pdf/tr) | [sandy.page/dl/zip/tr](https://sandy.page/dl/zip/tr) |
+| 🇸🇳 Wolof | [sandy.page/dl/pdf/wo](https://sandy.page/dl/pdf/wo) | [sandy.page/dl/zip/wo](https://sandy.page/dl/zip/wo) |
+| 🇩🇰 Dansk | [sandy.page/dl/pdf/da](https://sandy.page/dl/pdf/da) | [sandy.page/dl/zip/da](https://sandy.page/dl/zip/da) |
+| 🇸🇪 Svenska | [sandy.page/dl/pdf/sv](https://sandy.page/dl/pdf/sv) | [sandy.page/dl/zip/sv](https://sandy.page/dl/zip/sv) |
+| 🇳🇴 Norsk (Bokmål) | [sandy.page/dl/pdf/no](https://sandy.page/dl/pdf/no) | [sandy.page/dl/zip/no](https://sandy.page/dl/zip/no) |
+| 🇵🇱 Polski | [sandy.page/dl/pdf/pl](https://sandy.page/dl/pdf/pl) | [sandy.page/dl/zip/pl](https://sandy.page/dl/zip/pl) |
+
+> All shortlinks follow the pattern `sandy.page/dl/{pdf|zip}/{lang}` and redirect directly to the file.
 
 All PDFs also attached to the [latest GitHub release](https://github.com/paulfxyz/stella-and-yakob/releases/latest).
 
@@ -58,11 +64,11 @@ All PDFs also attached to the [latest GitHub release](https://github.com/paulfxy
 
 | Attribute | Value |
 |-----------|-------|
-| **Version** | **v4.0** |
+| **Version** | **v4.1** |
 | **Pages** | **46 (cover + 45 story pages)** |
 | Format | 8.5″ × 8.5″ square |
 | Resolution | 300 DPI — 2550 × 2550 px |
-| Languages | **13** — FR · EN · ES · PT · DE · AR · HE · ZH · JA · HI · RU · TR · WO |
+| Languages | **17** — FR · EN · ES · PT · DE · AR · HE · ZH · JA · HI · RU · TR · WO · DA · SV · NO · PL |
 | Print-ready | Yes — [IngramSpark](https://myaccount.ingramspark.com/Portal/Tools/ShippingCalculator?hsCtaAttrib=183190289314), KDP, BookBaby |
 | License | CC BY-NC-SA 4.0 |
 

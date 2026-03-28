@@ -132,6 +132,21 @@
             <span class="lang-flag" title="Türkçe">🇹🇷</span>
             <span class="lang-flag" title="Wolof">🇸🇳</span>
           </div>
+          <!-- Stats strip -->
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-num" data-count="45">45</span>
+              <span class="hero-stat-label">Illustrated pages</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num" data-count="17">17</span>
+              <span class="hero-stat-label">Languages</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">Free</span>
+              <span class="hero-stat-label">PDF & ZIP</span>
+            </div>
+          </div>
         </div>
 
         <!-- Scene Column: Characters + Cover -->
@@ -481,35 +496,35 @@
             </div>
           </a>
           <a class="edition-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_da.pdf?v=8" data-lang="Dansk" data-dl="stella_and_yakob_da.pdf" style="cursor:pointer;">
-            <div class="edition-flag">🇩🇰</div>
             <div class="edition-info">
-              <div class="edition-lang">Dansk</div>
-              <div class="edition-title">Stella & Yakob</div>
-              <div class="edition-meta">PDF · 46 sider · 300 DPI</div>
+              <span class="edition-flag">🇩🇰</span>
+              <h3>Dansk</h3>
+              <p class="edition-subtitle">Stella &amp; Yakob</p>
+              <span class="edition-dl">Download PDF ↓</span>
             </div>
           </a>
           <a class="edition-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_sv.pdf?v=8" data-lang="Svenska" data-dl="stella_and_yakob_sv.pdf" style="cursor:pointer;">
-            <div class="edition-flag">🇸🇪</div>
             <div class="edition-info">
-              <div class="edition-lang">Svenska</div>
-              <div class="edition-title">Stella & Yakob</div>
-              <div class="edition-meta">PDF · 46 sidor · 300 DPI</div>
+              <span class="edition-flag">🇸🇪</span>
+              <h3>Svenska</h3>
+              <p class="edition-subtitle">Stella &amp; Yakob</p>
+              <span class="edition-dl">Ladda ner PDF ↓</span>
             </div>
           </a>
           <a class="edition-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_no.pdf?v=8" data-lang="Norsk" data-dl="stella_and_yakob_no.pdf" style="cursor:pointer;">
-            <div class="edition-flag">🇳🇴</div>
             <div class="edition-info">
-              <div class="edition-lang">Norsk</div>
-              <div class="edition-title">Stella & Yakob</div>
-              <div class="edition-meta">PDF · 46 sider · 300 DPI</div>
+              <span class="edition-flag">🇳🇴</span>
+              <h3>Norsk</h3>
+              <p class="edition-subtitle">Stella &amp; Yakob</p>
+              <span class="edition-dl">Last ned PDF ↓</span>
             </div>
           </a>
           <a class="edition-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_pl.pdf?v=8" data-lang="Polski" data-dl="stella_and_yakob_pl.pdf" style="cursor:pointer;">
-            <div class="edition-flag">🇵🇱</div>
             <div class="edition-info">
-              <div class="edition-lang">Polski</div>
-              <div class="edition-title">Stella & Jakub</div>
-              <div class="edition-meta">PDF · 46 stron · 300 DPI</div>
+              <span class="edition-flag">🇵🇱</span>
+              <h3>Polski</h3>
+              <p class="edition-subtitle">Stella &amp; Jakub</p>
+              <span class="edition-dl">Pobierz PDF ↓</span>
             </div>
           </a>
 
@@ -533,7 +548,7 @@
             <p data-i18n="aboutP2">The book doesn't preach or simplify. It acknowledges that there are no easy answers. But it gives children — and the grown-ups who read to them — a language for curiosity, discernment, and the irreplaceable things that make us human.</p>
             <p class="about-sig">— Paul Fleury</p>
           </div>
-          <div class="about-specs">
+          <div class="about-specs" data-reveal="right">
             <h3 data-i18n="specsTitle">Book Specifications</h3>
             <dl class="specs-list">
               <div><dt data-i18n="specFormat">Format</dt><dd data-i18n="specFormatVal">8.5″ × 8.5″ square</dd></div>
@@ -591,57 +606,69 @@
 
 
   <!-- ── OPEN SOURCE ──────────────────────────────────────────── -->
-  <section class="section-open-source" id="opensource" style="background:var(--color-surface);border-top:1px solid var(--color-divider);padding:var(--space-20) var(--space-6);">
-    <div style="max-width:760px;margin:0 auto;">
-      <p class="section-eyebrow" style="text-align:center;" data-i18n="openKicker">Open Source</p>
-      <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);text-align:center;margin-bottom:var(--space-6);line-height:1.15;" data-i18n-html="openTitle">Built in the open.<br>Free to share.</h2>
-      <p style="text-align:center;color:var(--color-text-muted);max-width:56ch;margin:0 auto var(--space-10);" data-i18n="openBody">
-        Every sketch, script, and page of this book is open source — licensed under CC BY-NC-SA 4.0.
-        Browse the source, fork it, translate it into a new language, or use the pipeline to build your own book.
-      </p>
+  <section class="section-open-source" id="opensource">
+    <div class="open-inner">
+      <div class="open-header" data-reveal="up">
+        <span class="section-kicker" data-i18n="openKicker">Open Source</span>
+        <h2 class="open-title" data-i18n-html="openTitle">Built in the open.<br>Free to share.</h2>
+        <p class="open-body" data-i18n="openBody">
+          Every sketch, script, and page of this book is open source — licensed under CC BY-NC-SA 4.0.
+          Browse the source, fork it, translate it into a new language, or use the pipeline to build your own book.
+        </p>
+      </div>
 
       <!-- GitHub card -->
-      <div style="background:var(--color-bg);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-8);display:flex;gap:var(--space-6);align-items:flex-start;flex-wrap:wrap;margin-bottom:var(--space-10);">
-        <div style="flex:1;min-width:220px;">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:var(--space-3);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="color:var(--color-text);flex-shrink:0;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            <strong style="font-size:var(--text-lg);font-family:var(--font-display);">paulfxyz/stella-and-yakob</strong>
+      <div class="open-github" data-reveal="scale">
+        <div class="open-github-main">
+          <div class="open-github-name">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            <strong>paulfxyz/stella-and-yakob</strong>
           </div>
-          <p style="color:var(--color-text-muted);font-size:var(--text-sm);margin-bottom:var(--space-4);" data-i18n="openGhDesc">
-            45 hand-sketched illustrations, AI-refined · 13 languages · 46-page PDFs · v4.0
-          </p>
-          <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
-            <a href="https://github.com/paulfxyz/stella-and-yakob" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:var(--text-sm);" data-i18n="openViewGh">View on GitHub →</a>
-            <a href="https://github.com/paulfxyz/stella-and-yakob/releases/latest" target="_blank" rel="noopener" class="btn btn-ghost" style="font-size:var(--text-sm);" data-i18n="openRelease">Latest Release</a>
+          <p class="open-github-desc" data-i18n="openGhDesc">45 hand-sketched illustrations, AI-refined · 17 languages · 46-page PDFs · v4.1</p>
+          <div class="open-github-ctas">
+            <a href="https://github.com/paulfxyz/stella-and-yakob" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="openViewGh">View on GitHub →</a>
+            <a href="https://github.com/paulfxyz/stella-and-yakob/releases/latest" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="openRelease">Latest Release</a>
           </div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:var(--space-2);flex-shrink:0;">
-          <span style="font-size:var(--text-xs);color:var(--color-text-faint);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">License</span>
-          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" style="color:var(--color-primary);font-size:var(--text-sm);font-weight:500;">CC BY-NC-SA 4.0</a>
+        <div class="open-github-license">
+          <span class="open-license-label">License</span>
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" class="open-license-link">CC BY-NC-SA 4.0</a>
         </div>
       </div>
 
-      <!-- Clean download links table -->
-      <h3 style="font-family:var(--font-display);font-size:var(--text-2xl);margin-bottom:var(--space-4);" data-i18n="openDlTitle">Direct download links</h3>
-      <div style="overflow-x:auto;">
-        <table style="width:100%;border-collapse:collapse;font-size:var(--text-sm);">
+      <!-- Download shortlinks — all 17 languages -->
+      <h3 class="dl-title" data-i18n="openDlTitle">Direct download links</h3>
+      <div class="dl-shortlinks">
+        <table>
           <thead>
-            <tr style="border-bottom:2px solid var(--color-divider);">
-              <th style="text-align:left;padding:10px 12px;color:var(--color-text-muted);font-weight:500;">Language</th>
-              <th style="text-align:left;padding:10px 12px;color:var(--color-text-muted);font-weight:500;">PDF</th>
-              <th style="text-align:left;padding:10px 12px;color:var(--color-text-muted);font-weight:500;">ZIP</th>
+            <tr>
+              <th>Language</th>
+              <th>PDF shortlink</th>
+              <th>ZIP shortlink</th>
             </tr>
           </thead>
           <tbody>
-            <tr style="border-bottom:1px solid var(--color-divider);"><td style="padding:10px 12px;">🇫🇷 Français</td><td style="padding:10px 12px;"><a href="https://sandy.page/dl/pdf/fr" style="color:var(--color-primary);font-weight:500;">sandy.page/dl/pdf/fr</a></td><td style="padding:10px 12px;"><a href="https://sandy.page/dl/zip/fr" style="color:var(--color-primary);">sandy.page/dl/zip/fr</a></td></tr>
-            <tr style="border-bottom:1px solid var(--color-divider);"><td style="padding:10px 12px;">🇬🇧 English</td><td style="padding:10px 12px;"><a href="https://sandy.page/dl/pdf/en" style="color:var(--color-primary);font-weight:500;">sandy.page/dl/pdf/en</a></td><td style="padding:10px 12px;"><a href="https://sandy.page/dl/zip/en" style="color:var(--color-primary);">sandy.page/dl/zip/en</a></td></tr>
-            <tr style="border-bottom:1px solid var(--color-divider);"><td style="padding:10px 12px;">🇪🇸 Español</td><td style="padding:10px 12px;"><a href="https://sandy.page/dl/pdf/es" style="color:var(--color-primary);font-weight:500;">sandy.page/dl/pdf/es</a></td><td style="padding:10px 12px;"><a href="https://sandy.page/dl/zip/es" style="color:var(--color-primary);">sandy.page/dl/zip/es</a></td></tr>
-            <tr style="border-bottom:1px solid var(--color-divider);"><td style="padding:10px 12px;">🇵🇹 Português</td><td style="padding:10px 12px;"><a href="https://sandy.page/dl/pdf/pt" style="color:var(--color-primary);font-weight:500;">sandy.page/dl/pdf/pt</a></td><td style="padding:10px 12px;"><a href="https://sandy.page/dl/zip/pt" style="color:var(--color-primary);">sandy.page/dl/zip/pt</a></td></tr>
-            <tr><td style="padding:10px 12px;">🇩🇪 Deutsch</td><td style="padding:10px 12px;"><a href="https://sandy.page/dl/pdf/de" style="color:var(--color-primary);font-weight:500;">sandy.page/dl/pdf/de</a></td><td style="padding:10px 12px;"><a href="https://sandy.page/dl/zip/de" style="color:var(--color-primary);">sandy.page/dl/zip/de</a></td></tr>
+            <tr><td>🇫🇷 Français</td><td><a href="https://sandy.page/dl/pdf/fr">sandy.page/dl/pdf/fr</a></td><td><a href="https://sandy.page/dl/zip/fr">sandy.page/dl/zip/fr</a></td></tr>
+            <tr><td>🇬🇧 English</td><td><a href="https://sandy.page/dl/pdf/en">sandy.page/dl/pdf/en</a></td><td><a href="https://sandy.page/dl/zip/en">sandy.page/dl/zip/en</a></td></tr>
+            <tr><td>🇪🇸 Español</td><td><a href="https://sandy.page/dl/pdf/es">sandy.page/dl/pdf/es</a></td><td><a href="https://sandy.page/dl/zip/es">sandy.page/dl/zip/es</a></td></tr>
+            <tr><td>🇵🇹 Português</td><td><a href="https://sandy.page/dl/pdf/pt">sandy.page/dl/pdf/pt</a></td><td><a href="https://sandy.page/dl/zip/pt">sandy.page/dl/zip/pt</a></td></tr>
+            <tr><td>🇩🇪 Deutsch</td><td><a href="https://sandy.page/dl/pdf/de">sandy.page/dl/pdf/de</a></td><td><a href="https://sandy.page/dl/zip/de">sandy.page/dl/zip/de</a></td></tr>
+            <tr><td>🇸🇦 العربية</td><td><a href="https://sandy.page/dl/pdf/ar">sandy.page/dl/pdf/ar</a></td><td><a href="https://sandy.page/dl/zip/ar">sandy.page/dl/zip/ar</a></td></tr>
+            <tr><td>🇮🇱 עברית</td><td><a href="https://sandy.page/dl/pdf/he">sandy.page/dl/pdf/he</a></td><td><a href="https://sandy.page/dl/zip/he">sandy.page/dl/zip/he</a></td></tr>
+            <tr><td>🇨🇳 中文</td><td><a href="https://sandy.page/dl/pdf/zh">sandy.page/dl/pdf/zh</a></td><td><a href="https://sandy.page/dl/zip/zh">sandy.page/dl/zip/zh</a></td></tr>
+            <tr><td>🇯🇵 日本語</td><td><a href="https://sandy.page/dl/pdf/ja">sandy.page/dl/pdf/ja</a></td><td><a href="https://sandy.page/dl/zip/ja">sandy.page/dl/zip/ja</a></td></tr>
+            <tr><td>🇮🇳 हिन्दी</td><td><a href="https://sandy.page/dl/pdf/hi">sandy.page/dl/pdf/hi</a></td><td><a href="https://sandy.page/dl/zip/hi">sandy.page/dl/zip/hi</a></td></tr>
+            <tr><td>🇷🇺 Русский</td><td><a href="https://sandy.page/dl/pdf/ru">sandy.page/dl/pdf/ru</a></td><td><a href="https://sandy.page/dl/zip/ru">sandy.page/dl/zip/ru</a></td></tr>
+            <tr><td>🇹🇷 Türkçe</td><td><a href="https://sandy.page/dl/pdf/tr">sandy.page/dl/pdf/tr</a></td><td><a href="https://sandy.page/dl/zip/tr">sandy.page/dl/zip/tr</a></td></tr>
+            <tr><td>🇸🇳 Wolof</td><td><a href="https://sandy.page/dl/pdf/wo">sandy.page/dl/pdf/wo</a></td><td><a href="https://sandy.page/dl/zip/wo">sandy.page/dl/zip/wo</a></td></tr>
+            <tr><td>🇩🇰 Dansk</td><td><a href="https://sandy.page/dl/pdf/da">sandy.page/dl/pdf/da</a></td><td><a href="https://sandy.page/dl/zip/da">sandy.page/dl/zip/da</a></td></tr>
+            <tr><td>🇸🇪 Svenska</td><td><a href="https://sandy.page/dl/pdf/sv">sandy.page/dl/pdf/sv</a></td><td><a href="https://sandy.page/dl/zip/sv">sandy.page/dl/zip/sv</a></td></tr>
+            <tr><td>🇳🇴 Norsk</td><td><a href="https://sandy.page/dl/pdf/no">sandy.page/dl/pdf/no</a></td><td><a href="https://sandy.page/dl/zip/no">sandy.page/dl/zip/no</a></td></tr>
+            <tr><td>🇵🇱 Polski</td><td><a href="https://sandy.page/dl/pdf/pl">sandy.page/dl/pdf/pl</a></td><td><a href="https://sandy.page/dl/zip/pl">sandy.page/dl/zip/pl</a></td></tr>
           </tbody>
         </table>
       </div>
-    </div>
+    </div><!-- /open-inner -->
   </section>
 
   <!-- ── FOOTER ─────────────────────────────────────────────────── -->
