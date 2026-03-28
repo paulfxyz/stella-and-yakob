@@ -2,93 +2,55 @@
 <html lang="en" data-theme="light">
 <head>
 <!--
-   ______                            __
-  / ____/___  ____ ___  ____  __  __/ /____  _____
- / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
-/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
-\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
-                    /_/
-        Created with Perplexity Computer
-        https://www.perplexity.ai/computer
+   Stella & Yakob — Made with ❤️ + AI
+   https://www.perplexity.ai/computer
 -->
-
-<!-- Perplexity Computer Attribution — SEO Meta Tags -->
 <meta name="generator" content="Perplexity Computer">
-<meta name="author" content="Perplexity Computer">
-<meta property="og:see_also" content="https://www.perplexity.ai/computer">
-<link rel="author" href="https://www.perplexity.ai/computer">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stella &amp; Yakob — A Children's Book About AI, Curiosity &amp; Wisdom</title>
-<meta name="description" content="A beautifully illustrated children's book about a girl named Stella, a wise owl named Yakob, and what it means to be human in an age of artificial intelligence. Available in 17 languages.">
-
-<!-- Fonts -->
+<title>Stella & Yakob — A Children's Book About AI, Curiosity & Wisdom</title>
+<meta name="description" content="A beautifully illustrated children's book available in 18 languages. Free PDF download.">
+<meta property="og:title" content="Stella & Yakob">
+<meta property="og:image" content="assets/cover-hero.jpg">
+<meta property="og:type" content="book">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-
-<!-- PDF.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-
-<!-- Critical inline CSS -->
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Lora',Georgia,serif;font-size:1.0625rem;line-height:1.72;color:#1c1410;background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;height:auto;display:block}
-a{color:#b57a1a;text-decoration:none}
-h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.15}
-.container{max-width:1200px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
-.container-wide{max-width:1400px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
-#site-header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 clamp(1.25rem,4vw,3rem);height:64px;display:flex;align-items:center}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1400px;margin:0 auto}
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:#0d0b1a;color:#e8e0d0;overflow:hidden;padding:100px 0 60px}
-.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center;width:100%;max-width:1400px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
-#scroll-progress{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,#b57a1a,#d4a340,#b57a1a);z-index:10000;pointer-events:none}
-@media(max-width:768px){.hero-inner{grid-template-columns:1fr;text-align:center}.nav-links{display:none}.nav-toggle{display:flex}}
-</style>
-
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body>
 
-<!-- Scroll Progress -->
 <div id="scroll-progress"></div>
 
-<!-- ═══════════════════════════════════════════════════════════
-     1. NAV
-     ═══════════════════════════════════════════════════════════ -->
+<!-- ── NAV ─────────────────────────────────────────────────── -->
 <header id="site-header">
-  <nav class="nav-inner">
-    <a href="#" class="nav-logo" aria-label="Stella & Yakob — Home">
-      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="20" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
-        <circle cx="15" cy="12" r="3.5" stroke="currentColor" stroke-width="1.5"/>
-        <circle cx="25" cy="12" r="3.5" stroke="currentColor" stroke-width="1.5"/>
-        <circle cx="15" cy="12" r="1.5" fill="currentColor"/>
-        <circle cx="25" cy="12" r="1.5" fill="currentColor"/>
-        <path d="M18 17l2 2.5 2-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M12 26c-3 2-4 6-4 10h24c0-4-1-8-4-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M8 14c-3-1-6 0-7 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M32 14c3-1 6 0 7 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  <div class="nav-wrap">
+    <a href="#" class="nav-logo">
+      <svg viewBox="0 0 40 40" width="30" height="30" fill="none">
+        <ellipse cx="20" cy="22" rx="11" ry="10" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="15.5" cy="20" r="3" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="24.5" cy="20" r="3" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="15.5" cy="20" r="1.2" fill="currentColor"/>
+        <circle cx="24.5" cy="20" r="1.2" fill="currentColor"/>
+        <path d="M14 10 L12 5 L17 9" fill="currentColor" opacity="0.6"/>
+        <path d="M26 10 L28 5 L23 9" fill="currentColor" opacity="0.6"/>
+        <path d="M18 24 L20 26.5 L22 24" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
       </svg>
-      <span class="nav-logo-text">Stella &amp; Yakob</span>
+      <span>Stella &amp; Yakob</span>
     </a>
-
-    <ul class="nav-links" id="nav-links">
+    <ul class="nav-links">
       <li><a href="#story" data-i18n="navStory">The Story</a></li>
       <li><a href="#preview" data-i18n="navPreview">Preview</a></li>
       <li><a href="#editions" data-i18n="navEditions">Editions</a></li>
       <li><a href="#about" data-i18n="navAbout">About</a></li>
     </ul>
-
     <div class="nav-right">
-      <div id="lang-switcher">
-        <button id="lang-btn" aria-expanded="false" aria-haspopup="true" aria-label="Change language">
-          <span id="lang-btn-flag">🇬🇧</span>
-          <span id="lang-btn-code">EN</span>
-          <svg class="lang-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5l3 3 3-3"/></svg>
+      <div class="lang-sw" id="lang-sw">
+        <button class="lang-btn" id="lang-btn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="lang-flag">🇬🇧</span>
+          <span id="lang-code">EN</span>
+          <svg class="lang-chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div id="lang-dropdown" role="listbox">
           <div class="lang-option active" data-lang="en" role="option"><span class="flag">🇬🇧</span> English <span class="code">EN</span></div>
@@ -111,186 +73,152 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-
           <div class="lang-option" data-lang="ne" role="option"><span class="flag">🇳🇵</span> नेपाली <span class="code">NE</span></div>
         </div>
       </div>
-
-      <button data-theme-toggle aria-label="Toggle dark mode"></button>
-
-      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
+      <button class="theme-btn" id="theme-btn" data-theme-toggle aria-label="Toggle theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
     </div>
-  </nav>
+  </div>
 </header>
 
-<!-- ═══════════════════════════════════════════════════════════
-     2. HERO
-     ═══════════════════════════════════════════════════════════ -->
+<!-- ── HERO ─────────────────────────────────────────────────── -->
 <section class="hero" id="hero">
-  <canvas class="hero-stars" id="hero-stars" aria-hidden="true"></canvas>
-
+  <canvas class="hero-stars" id="hero-stars"></canvas>
   <div class="hero-inner">
-    <div class="hero-content">
+    <div class="hero-text">
       <p class="hero-kicker" data-i18n="heroKicker">A children's book</p>
-      <h1 class="hero-title">Stella <em>&amp; Yakob</em></h1>
-      <p class="hero-subtitle" data-i18n="heroSubtitle">A small girl. A wise owl. And a question that matters more than ever.</p>
-      <p class="hero-body" data-i18n="heroBody">When Stella hears grown-ups talking about "artificial intelligence", a knot tightens in her chest. She doesn't understand — and that's frightening. Then Yakob appears, a warm brown owl with amber eyes full of wisdom, and together they go on a journey through time, wonder, and a few dazzling traps along the way.</p>
+      <h1 class="hero-title">Stella<em>&amp; Yakob</em></h1>
+      <p class="hero-sub" data-i18n="heroSubtitle">A small girl. A wise owl. And a question that matters more than ever.</p>
+      <p class="hero-body" data-i18n="heroBody">When Stella hears grown-ups talking about "artificial intelligence", a knot tightens in her chest. She doesn't understand — and that's frightening. Then Yakob appears, a warm brown owl with amber eyes full of wisdom.</p>
       <div class="hero-ctas">
-        <a href="#preview" class="btn-primary" data-i18n="heroCta1">Read a preview</a>
-        <a href="#editions" class="btn-ghost" data-i18n="heroCta2">Download free ↓</a>
+        <a href="#preview" class="btn btn-amber" data-i18n="heroCta1">Read a preview</a>
+        <a href="#editions" class="btn btn-ghost-light" data-i18n="heroCta2">Download free ↓</a>
       </div>
-      <div class="hero-flags" aria-label="Available languages">
-        <span title="English">🇬🇧</span>
-        <span title="Français">🇫🇷</span>
-        <span title="Español">🇪🇸</span>
-        <span title="Português">🇵🇹</span>
-        <span title="Deutsch">🇩🇪</span>
-        <span title="العربية">🇸🇦</span>
-        <span title="עברית">🇮🇱</span>
-        <span title="中文">🇨🇳</span>
-        <span title="日本語">🇯🇵</span>
-        <span title="हिन्दी">🇮🇳</span>
-        <span title="Русский">🇷🇺</span>
-        <span title="Türkçe">🇹🇷</span>
-        <span title="Wolof">🇸🇳</span>
-            <span class="lang-flag" title="नेपाली">🇳🇵</span>
-        <span title="Dansk">🇩🇰</span>
-        <span title="Svenska">🇸🇪</span>
-        <span title="Norsk">🇳🇴</span>
-        <span title="Polski">🇵🇱</span>
+      <div class="hero-flags">
+        <span title="Français">🇫🇷</span><span title="English">🇬🇧</span>
+        <span title="Español">🇪🇸</span><span title="Português">🇵🇹</span>
+        <span title="Deutsch">🇩🇪</span><span title="العربية">🇸🇦</span>
+        <span title="עברית">🇮🇱</span><span title="中文">🇨🇳</span>
+        <span title="日本語">🇯🇵</span><span title="हिन्दी">🇮🇳</span>
+        <span title="Русский">🇷🇺</span><span title="Türkçe">🇹🇷</span>
+        <span title="Wolof">🇸🇳</span><span title="Dansk">🇩🇰</span>
+        <span title="Svenska">🇸🇪</span><span title="Norsk">🇳🇴</span>
+        <span title="Polski">🇵🇱</span><span title="नेपाली">🇳🇵</span>
       </div>
     </div>
-
-    <div id="hero-stage">
-      <div class="hero-cover-wrap">
-        <img id="hero-cover" src="assets/cover-hero.jpg" alt="Stella & Yakob book cover" width="380" height="380">
-      </div>
-      <img id="char-stella" src="assets/char_stella.png" alt="Stella character" width="200" height="280">
-      <img id="char-yakob" src="assets/char_yakob.png" alt="Yakob the owl" width="180" height="240">
+    <div class="hero-scene">
+      <img class="hero-cover" id="hero-cover" src="assets/cover-hero.jpg" alt="Stella & Yakob book cover">
+      <img id="char-stella" src="assets/char_stella.png" alt="Stella">
+      <img id="char-yakob" src="assets/char_yakob.png" alt="Yakob">
     </div>
   </div>
-
-  <div class="scroll-indicator" aria-hidden="true">
-    <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="14" height="22" rx="7"/><line x1="8" y1="6" x2="8" y2="10"/></svg>
-    Scroll
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     3. STORY PANELS
-     ═══════════════════════════════════════════════════════════ -->
-<section class="story-panels" id="story">
+<!-- ── STORY PANELS — white bg ──────────────────────────────── -->
+<div class="panels" id="story">
 
-  <!-- Panel 1: Stella — dark navy -->
-  <div class="story-panel-dark">
-    <div class="story-panel">
-      <div class="story-panel-figure">
-        <img class="story-panel-char" src="assets/char_stella.png" alt="Stella" data-parallax="0.12">
-      </div>
-      <div class="story-panel-content">
-        <p class="story-panel-kicker" data-i18n="storyP1Heading">A grey evening…</p>
-        <h2 class="story-panel-heading underline-flourish" data-i18n="storyP1Heading">A grey evening…</h2>
-        <p class="story-panel-text" data-i18n="storyP1">One grey evening, Stella overhears her parents speaking in worried voices about something called "artificial intelligence." Her father might lose his job. Her mother cried. Stella doesn't understand — and that knot in her chest is real.</p>
-      </div>
+  <div class="panel" data-reveal="up">
+    <div class="panel-char">
+      <img src="assets/char_stella.png" alt="Stella" loading="lazy">
+    </div>
+    <div class="panel-text">
+      <p class="panel-kicker" data-i18n="storyP1Heading">A grey evening…</p>
+      <h2 class="panel-title flourish" data-i18n="storyP1Heading">A grey evening…</h2>
+      <p class="panel-body" data-i18n="storyP1">One grey evening, Stella overhears her parents speaking in worried voices about something called "artificial intelligence." Her father might lose his job. Her mother cried. Stella doesn't understand — and that knot in her chest is real.</p>
     </div>
   </div>
 
-  <!-- Panel 2: Yakob — warm brown -->
-  <div class="story-panel-warm">
-    <div class="story-panel reverse">
-      <div class="story-panel-content">
-        <p class="story-panel-kicker" data-i18n="storyP2Heading">Then Yakob arrived…</p>
-        <h2 class="story-panel-heading underline-flourish" data-i18n="storyP2Heading">Then Yakob arrived…</h2>
-        <p class="story-panel-text" data-i18n="storyP2">Then Yakob arrives: a large, gentle owl who perches on the highest branch of the old oak tree. With golden sparks dancing in the air, he takes Stella on an adventure through time — from cave painters to the alphabet, from the lightbulb to learning machines.</p>
-      </div>
-      <div class="story-panel-figure">
-        <img class="story-panel-char" src="assets/char_yakob.png" alt="Yakob the owl" data-parallax="0.12">
-      </div>
+  <div class="panel-sep"></div>
+
+  <div class="panel reverse" data-reveal="up">
+    <div class="panel-char">
+      <img src="assets/char_yakob.png" alt="Yakob the owl" loading="lazy">
+    </div>
+    <div class="panel-text">
+      <p class="panel-kicker" data-i18n="storyP2Heading">Then Yakob arrived…</p>
+      <h2 class="panel-title flourish" data-i18n="storyP2Heading">Then Yakob arrived…</h2>
+      <p class="panel-body" data-i18n="storyP2">Then Yakob arrives: a large, gentle owl who perches on the highest branch of the old oak tree. With golden sparks dancing in the air, he takes Stella on an adventure through time — from cave painters to the alphabet, from the lightbulb to learning machines.</p>
     </div>
   </div>
 
-  <!-- Panel 3: Fox — cold slate -->
-  <div class="story-panel-cold">
-    <div class="story-panel">
-      <div class="story-panel-figure">
-        <img class="story-panel-char" src="assets/char_fox.png" alt="The Silver Fox" data-parallax="0.12">
-      </div>
-      <div class="story-panel-content">
-        <p class="story-panel-kicker" data-i18n="storyP3Heading">But there was a twist…</p>
-        <h2 class="story-panel-heading underline-flourish" data-i18n="storyP3Heading">But there was a twist…</h2>
-        <p class="story-panel-text" data-i18n="storyP3">But there's a twist. A silver fox appears, promising shortcuts and dazzling towers of crystal. Will Stella recognise what is real from what merely glitters?</p>
-      </div>
+  <div class="panel-sep"></div>
+
+  <div class="panel" data-reveal="up">
+    <div class="panel-char">
+      <img src="assets/char_fox.png" alt="The Silver Fox" loading="lazy">
+    </div>
+    <div class="panel-text">
+      <p class="panel-kicker" data-i18n="storyP3Heading">But there was a twist…</p>
+      <h2 class="panel-title flourish" data-i18n="storyP3Heading">But there was a twist…</h2>
+      <p class="panel-body" data-i18n="storyP3">But there's a twist. A silver fox appears, promising shortcuts and dazzling towers of crystal. Will Stella recognise what is real from what merely glitters?</p>
     </div>
   </div>
-</section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     4. STORY FEATURES
-     ═══════════════════════════════════════════════════════════ -->
-<section class="story-features-section" id="story-features">
-  <div class="container">
-    <p class="section-kicker" data-i18n="storyKicker">The Story</p>
-    <h2 class="section-title underline-flourish" data-i18n-html="storyTitle">What is AI?<br>And why does it matter?</h2>
+</div>
 
-    <div class="story-features-grid" data-reveal>
-      <div class="story-text">
+<!-- ── STORY FEATURES — cream bg ────────────────────────────── -->
+<section class="section section--cream" id="features">
+  <div class="wrap">
+    <div class="story-grid">
+      <div class="story-text" data-reveal="left">
+        <span class="kicker" data-i18n="storyKicker">The Story</span>
+        <h2 class="section-title" data-i18n-html="storyTitle">What is AI?<br>And why does it matter?</h2>
         <h3 data-i18n="storyP1Heading">A grey evening…</h3>
         <p data-i18n="storyP1">One grey evening, Stella overhears her parents speaking in worried voices about something called "artificial intelligence." Her father might lose his job. Her mother cried. Stella doesn't understand — and that knot in her chest is real.</p>
-
         <h3 data-i18n="storyP2Heading">Then Yakob arrived…</h3>
         <p data-i18n="storyP2">Then Yakob arrives: a large, gentle owl who perches on the highest branch of the old oak tree. With golden sparks dancing in the air, he takes Stella on an adventure through time — from cave painters to the alphabet, from the lightbulb to learning machines.</p>
-
         <h3 data-i18n="storyP3Heading">But there was a twist…</h3>
         <p data-i18n="storyP3">But there's a twist. A silver fox appears, promising shortcuts and dazzling towers of crystal. Will Stella recognise what is real from what merely glitters?</p>
       </div>
-
       <div class="features-grid" data-stagger>
         <div class="feature-card">
-          <div class="feature-emoji">🦉</div>
+          <div class="emoji">🦉</div>
           <h4 data-i18n="feat1Title">45 illustrated pages</h4>
           <p data-i18n="feat1Body">Minimal loose watercolour — soft brushstrokes, warm amber tones, lots of white paper showing.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-emoji">✨</div>
+          <div class="emoji">✨</div>
           <h4 data-i18n="feat2Title">A twist &amp; a lesson</h4>
           <p data-i18n="feat2Body">The Silver Fox twist (pages 17–22) teaches children to question dazzling shortcuts and trust their own judgement.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-emoji">💡</div>
+          <div class="emoji">💡</div>
           <h4 data-i18n="feat3Title">Real themes, gently told</h4>
           <p data-i18n="feat3Body">AI, automation, ethics, and the irreplaceable superpowers of being human — curiosity, kindness, courage, creativity.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-emoji">🌍</div>
-          <h4><span data-count="17">17</span> <span data-i18n="feat4Title">languages</span></h4>
-          <p data-i18n="feat4Body">Available in seventeen languages. Print-ready at 300 DPI, 8.5″ square.</p>
+          <div class="emoji">🌍</div>
+          <h4 data-i18n="feat4Title">18 languages</h4>
+          <p data-i18n="feat4Body">Available in eighteen languages. Print-ready at 300 DPI, 8.5″ square.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     5. CHARACTERS
-     ═══════════════════════════════════════════════════════════ -->
-<section class="characters-section" id="characters">
-  <div class="container">
-    <div style="text-align:center" data-reveal>
-      <p class="section-kicker" data-i18n="charsKicker">Characters</p>
-      <h2 class="section-title underline-flourish" style="display:inline-block" data-i18n="charsTitle">Who you'll meet</h2>
+<!-- ── CHARACTERS — white bg ─────────────────────────────────── -->
+<section class="section" id="characters">
+  <div class="wrap">
+    <div class="section-header" data-reveal="up">
+      <span class="kicker" data-i18n="charsKicker">Characters</span>
+      <h2 class="section-title" data-i18n="charsTitle">Who you'll meet</h2>
     </div>
-
-    <div class="characters-grid" data-stagger>
-      <div class="character-card">
-        <img src="assets/char_stella.png" alt="Stella" width="200" height="200">
+    <div class="chars-grid" data-stagger>
+      <div class="char-card">
+        <img src="assets/char_stella.png" alt="Stella" loading="lazy">
         <h3>Stella</h3>
         <p data-i18n="stellaDesc">A small girl with a short dark brown bob, a pale blue dress, rosy cheeks and big expressive eyes. Curious, brave, and wonderfully human.</p>
       </div>
-      <div class="character-card">
-        <img src="assets/char_yakob.png" alt="Yakob" width="200" height="200">
+      <div class="char-card">
+        <img src="assets/char_yakob.png" alt="Yakob" loading="lazy">
         <h3>Yakob</h3>
-        <p data-i18n="yakobDesc">A large natural owl with warm brown feathers and amber/gold tones. Big round eyes full of warmth and wisdom. No glasses, no accessories — just presence.</p>
+        <p data-i18n="yakobDesc">A large natural owl with warm brown feathers and amber/gold tones. Big round eyes full of warmth and wisdom. No glasses — just presence.</p>
       </div>
-      <div class="character-card">
-        <img src="assets/char_fox.png" alt="The Silver Fox" width="200" height="200">
+      <div class="char-card">
+        <img src="assets/char_fox.png" alt="The Silver Fox" loading="lazy">
         <h3 data-i18n="foxName">The Silver Fox</h3>
         <p data-i18n="foxDesc">Sleek, silver-furred, with a smile just a little too wide. Offers shortcuts and crystal towers. Appears pages 17–22 as a lesson in discernment.</p>
       </div>
@@ -298,361 +226,335 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     6. PAGE PREVIEW / FLIPPER
-     ═══════════════════════════════════════════════════════════ -->
-<section class="flipper-section" id="preview">
-  <div class="container" style="text-align:center">
-    <div data-reveal>
-      <p class="section-kicker" data-i18n="previewKicker">Inside the Book</p>
-      <h2 class="section-title underline-flourish" style="display:inline-block" data-i18n="previewTitle">A few pages</h2>
-      <p class="section-lead" style="margin:0 auto 2rem" data-i18n="previewLead">Eight moments from Stella and Yakob's journey together.</p>
+<!-- ── PAGE PREVIEW — cream bg ──────────────────────────────── -->
+<section class="section section--cream" id="preview">
+  <div class="wrap">
+    <div class="section-header" data-reveal="up">
+      <span class="kicker" data-i18n="previewKicker">Inside the Book</span>
+      <h2 class="section-title" data-i18n="previewTitle">A few pages</h2>
+      <p class="section-lead" data-i18n="previewLead">Eight moments from Stella and Yakob's journey together.</p>
     </div>
-
-    <div class="flipper-wrap" data-reveal>
-      <div id="flipper-track" role="tabpanel" tabindex="0">
-        <div class="flip-page active">
+    <div class="flipper-wrap" data-reveal="scale">
+      <div class="flipper-track" id="flipper-track">
+        <figure class="flip-page" tabindex="0">
           <img src="assets/pages/page-01.jpg" alt="Page 1" loading="lazy">
-          <div class="caption">Page 1</div>
-        </div>
-        <div class="flip-page">
+          <figcaption>Page 1 · <em>Stella alone. The flowers hang their heads.</em></figcaption>
+        </figure>
+        <figure class="flip-page" tabindex="0">
           <img src="assets/pages/page-04.jpg" alt="Page 4" loading="lazy">
-          <div class="caption">Page 4</div>
-        </div>
-        <div class="flip-page">
+          <figcaption>Page 4 · <em>On the highest branch, a warm owl with round amber eyes.</em></figcaption>
+        </figure>
+        <figure class="flip-page" tabindex="0">
           <img src="assets/pages/page-07.jpg" alt="Page 7" loading="lazy">
-          <div class="caption">Page 7</div>
-        </div>
-        <div class="flip-page">
+          <figcaption>Page 7 · <em>Golden dust swirls. The garden transforms.</em></figcaption>
+        </figure>
+        <figure class="flip-page" tabindex="0">
           <img src="assets/pages/page-11.jpg" alt="Page 11" loading="lazy">
-          <div class="caption">Page 11</div>
-        </div>
-        <div class="flip-page">
+          <figcaption>Page 11 · <em>A gentle robot sorting drawings, again and again.</em></figcaption>
+        </figure>
+        <figure class="flip-page" tabindex="0">
           <img src="assets/pages/page-17.jpg" alt="Page 17" loading="lazy">
-          <div class="caption">Page 17 — The Silver Fox appears</div>
-        </div>
-        <div class="flip-page">
+          <figcaption>Page 17 · <em>A smile too wide. Eyes that glitter cold.</em></figcaption>
+        </figure>
+        <figure class="flip-page" tabindex="0">
           <img src="assets/pages/page-22.jpg" alt="Page 22" loading="lazy">
-          <div class="caption">Page 22</div>
-        </div>
-        <div class="flip-page">
+          <figcaption>Page 22 · <em>"No thank you." The silver path cracks and fades.</em></figcaption>
+        </figure>
+        <figure class="flip-page" tabindex="0">
           <img src="assets/pages/page-25.jpg" alt="Page 25" loading="lazy">
-          <div class="caption">Page 25</div>
-        </div>
-        <div class="flip-page">
+          <figcaption>Page 25 · <em>Curiosity. Kindness. Courage. Creativity.</em></figcaption>
+        </figure>
+        <figure class="flip-page" tabindex="0">
           <img src="assets/pages/page-30.jpg" alt="Page 30" loading="lazy">
-          <div class="caption">Page 30</div>
-        </div>
+          <figcaption>Page 30 · <em>Morning. A golden feather glows on the branch.</em></figcaption>
+        </figure>
+      </div>
+      <div class="flipper-controls">
+        <button class="flip-btn" id="flip-prev" aria-label="Previous">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="flip-dots" id="flip-dots" role="tablist"></div>
+        <button class="flip-btn" id="flip-next" aria-label="Next">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
       </div>
     </div>
-
-    <div class="flip-controls">
-      <button class="flip-btn" id="flip-prev" aria-label="Previous page">←</button>
-      <div id="flip-dots" role="tablist"></div>
-      <button class="flip-btn" id="flip-next" aria-label="Next page">→</button>
-    </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     7. EDITIONS
-     ═══════════════════════════════════════════════════════════ -->
-<section class="editions-section" id="editions">
-  <div class="container">
-    <div style="text-align:center" data-reveal>
-      <p class="section-kicker" data-i18n="editionsKicker">Free Download</p>
-      <h2 class="section-title underline-flourish" style="display:inline-block" data-i18n-html="editionsTitle">Seventeen editions, seventeen languages</h2>
-      <p class="section-lead" style="margin:0 auto 1rem" data-i18n="editionsLead">Each edition is a complete, print-ready PDF at 300 DPI. 8.5″ × 8.5″ square — compatible with KDP and IngramSpark.</p>
+<!-- ── EDITIONS — white bg ───────────────────────────────────── -->
+<section class="section" id="editions">
+  <div class="wrap">
+    <div class="section-header" data-reveal="up">
+      <span class="kicker" data-i18n="editionsKicker">Free Download</span>
+      <h2 class="section-title" data-i18n-html="editionsTitle">Eighteen editions,<br>eighteen languages</h2>
+      <p class="section-lead" data-i18n="editionsLead">Each edition is a complete, print-ready PDF at 300 DPI. 8.5″ × 8.5″ square.</p>
     </div>
-
     <div class="editions-grid" data-stagger>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_en.pdf?v=7" data-lang="English" data-dl="stella_and_yakob_en.pdf">
-        <span class="edition-flag">🇬🇧</span>
-        <div class="edition-name">English</div>
-        <div class="edition-subtitle">Stella &amp; Yakob</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_et_yakob_fr.pdf?v=7" data-lang="Français" data-dl="stella_et_yakob_fr.pdf">
-        <span class="edition-flag">🇫🇷</span>
-        <div class="edition-name">Français</div>
-        <div class="edition-subtitle">Stella et Yakob</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_es.pdf?v=7" data-lang="Español" data-dl="stella_and_yakob_es.pdf">
-        <span class="edition-flag">🇪🇸</span>
-        <div class="edition-name">Español</div>
-        <div class="edition-subtitle">Stella y Yakob</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_pt.pdf?v=7" data-lang="Português" data-dl="stella_and_yakob_pt.pdf">
-        <span class="edition-flag">🇵🇹</span>
-        <div class="edition-name">Português</div>
-        <div class="edition-subtitle">Stella e Yakob</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_de.pdf?v=7" data-lang="Deutsch" data-dl="stella_and_yakob_de.pdf">
-        <span class="edition-flag">🇩🇪</span>
-        <div class="edition-name">Deutsch</div>
-        <div class="edition-subtitle">Stella und Yakob</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_ar.pdf?v=7" data-lang="العربية" data-dl="stella_and_yakob_ar.pdf">
-        <span class="edition-flag">🇸🇦</span>
-        <div class="edition-name">العربية</div>
-        <div class="edition-subtitle">ستيلا ويعقوب</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_he.pdf?v=7" data-lang="עברית" data-dl="stella_and_yakob_he.pdf">
-        <span class="edition-flag">🇮🇱</span>
-        <div class="edition-name">עברית</div>
-        <div class="edition-subtitle">סטלה ויעקב</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_zh.pdf?v=7" data-lang="中文" data-dl="stella_and_yakob_zh.pdf">
-        <span class="edition-flag">🇨🇳</span>
-        <div class="edition-name">中文</div>
-        <div class="edition-subtitle">斯特拉和雅各布</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_ja.pdf?v=7" data-lang="日本語" data-dl="stella_and_yakob_ja.pdf">
-        <span class="edition-flag">🇯🇵</span>
-        <div class="edition-name">日本語</div>
-        <div class="edition-subtitle">ステラとヤコブ</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_hi.pdf?v=7" data-lang="हिन्दी" data-dl="stella_and_yakob_hi.pdf">
-        <span class="edition-flag">🇮🇳</span>
-        <div class="edition-name">हिन्दी</div>
-        <div class="edition-subtitle">स्टेला और याकोब</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_ru.pdf?v=7" data-lang="Русский" data-dl="stella_and_yakob_ru.pdf">
-        <span class="edition-flag">🇷🇺</span>
-        <div class="edition-name">Русский</div>
-        <div class="edition-subtitle">Стелла и Якоб</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_tr.pdf?v=7" data-lang="Türkçe" data-dl="stella_and_yakob_tr.pdf">
-        <span class="edition-flag">🇹🇷</span>
-        <div class="edition-name">Türkçe</div>
-        <div class="edition-subtitle">Stella ve Yakob</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_wo.pdf?v=7" data-lang="Wolof" data-dl="stella_and_yakob_wo.pdf">
-        <span class="edition-flag">🇸🇳</span>
-        <div class="edition-name">Wolof</div>
-        <div class="edition-subtitle">Stella ak Yakob</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_da.pdf?v=8" data-lang="Dansk" data-dl="stella_and_yakob_da.pdf">
-        <span class="edition-flag">🇩🇰</span>
-        <div class="edition-name">Dansk</div>
-        <div class="edition-subtitle">Stella og Yakob</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_sv.pdf?v=8" data-lang="Svenska" data-dl="stella_and_yakob_sv.pdf">
-        <span class="edition-flag">🇸🇪</span>
-        <div class="edition-name">Svenska</div>
-        <div class="edition-subtitle">Stella och Yakob</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_no.pdf?v=8" data-lang="Norsk" data-dl="stella_and_yakob_no.pdf">
-        <span class="edition-flag">🇳🇴</span>
-        <div class="edition-name">Norsk</div>
-        <div class="edition-subtitle">Stella og Yakob</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
-      <a class="edition-card" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_pl.pdf?v=8" data-lang="Polski" data-dl="stella_and_yakob_pl.pdf">
-        <span class="edition-flag">🇵🇱</span>
-        <div class="edition-name">Polski</div>
-        <div class="edition-subtitle">Stella i Yakob</div>
-        <div class="edition-dl" data-i18n="pdfDownload">Download PDF ↓</div>
-      </a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_et_yakob_fr.pdf?v=7" data-lang="Français" data-dl="stella_et_yakob_fr.pdf"><span class="ed-flag">🇫🇷</span><span class="ed-name">Français</span><span class="ed-sub"><em>Une histoire formidable</em></span><span class="ed-dl">Télécharger ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_en.pdf?v=7" data-lang="English" data-dl="stella_and_yakob_en.pdf"><span class="ed-flag">🇬🇧</span><span class="ed-name">English</span><span class="ed-sub"><em>A wonderful story</em></span><span class="ed-dl">Download ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_es.pdf?v=7" data-lang="Español" data-dl="stella_and_yakob_es.pdf"><span class="ed-flag">🇪🇸</span><span class="ed-name">Español</span><span class="ed-sub"><em>Una historia maravillosa</em></span><span class="ed-dl">Descargar ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_pt.pdf?v=7" data-lang="Português" data-dl="stella_and_yakob_pt.pdf"><span class="ed-flag">🇵🇹</span><span class="ed-name">Português</span><span class="ed-sub"><em>Uma história maravilhosa</em></span><span class="ed-dl">Baixar ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_de.pdf?v=7" data-lang="Deutsch" data-dl="stella_and_yakob_de.pdf"><span class="ed-flag">🇩🇪</span><span class="ed-name">Deutsch</span><span class="ed-sub"><em>Eine wunderbare Geschichte</em></span><span class="ed-dl">Herunterladen ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_ar.pdf?v=7" data-lang="العربية" data-dl="stella_and_yakob_ar.pdf"><span class="ed-flag">🇸🇦</span><span class="ed-name">العربية</span><span class="ed-sub" dir="rtl">ستيلا ويعقوب</span><span class="ed-dl">تحميل ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_he.pdf?v=7" data-lang="עברית" data-dl="stella_and_yakob_he.pdf"><span class="ed-flag">🇮🇱</span><span class="ed-name">עברית</span><span class="ed-sub" dir="rtl">סטלה ויעקב</span><span class="ed-dl">הורד ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_zh.pdf?v=7" data-lang="中文" data-dl="stella_and_yakob_zh.pdf"><span class="ed-flag">🇨🇳</span><span class="ed-name">中文</span><span class="ed-sub">斯特拉与雅可布</span><span class="ed-dl">下载 ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_ja.pdf?v=7" data-lang="日本語" data-dl="stella_and_yakob_ja.pdf"><span class="ed-flag">🇯🇵</span><span class="ed-name">日本語</span><span class="ed-sub">ステラとヤコブ</span><span class="ed-dl">ダウンロード ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_hi.pdf?v=7" data-lang="हिन्दी" data-dl="stella_and_yakob_hi.pdf"><span class="ed-flag">🇮🇳</span><span class="ed-name">हिन्दी</span><span class="ed-sub">स्टेला और याकोब</span><span class="ed-dl">डाउनलोड ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_ru.pdf?v=7" data-lang="Русский" data-dl="stella_and_yakob_ru.pdf"><span class="ed-flag">🇷🇺</span><span class="ed-name">Русский</span><span class="ed-sub">Стелла и Якоб</span><span class="ed-dl">Скачать ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_tr.pdf?v=7" data-lang="Türkçe" data-dl="stella_and_yakob_tr.pdf"><span class="ed-flag">🇹🇷</span><span class="ed-name">Türkçe</span><span class="ed-sub">Stella ve Yakob</span><span class="ed-dl">İndir ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_wo.pdf?v=7" data-lang="Wolof" data-dl="stella_and_yakob_wo.pdf"><span class="ed-flag">🇸🇳</span><span class="ed-name">Wolof</span><span class="ed-sub">Stella ak Yakob</span><span class="ed-dl">Jëfëndikoo ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_da.pdf?v=8" data-lang="Dansk" data-dl="stella_and_yakob_da.pdf"><span class="ed-flag">🇩🇰</span><span class="ed-name">Dansk</span><span class="ed-sub">Stella &amp; Yakob</span><span class="ed-dl">Download ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_sv.pdf?v=8" data-lang="Svenska" data-dl="stella_and_yakob_sv.pdf"><span class="ed-flag">🇸🇪</span><span class="ed-name">Svenska</span><span class="ed-sub">Stella &amp; Yakob</span><span class="ed-dl">Ladda ner ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_no.pdf?v=8" data-lang="Norsk" data-dl="stella_and_yakob_no.pdf"><span class="ed-flag">🇳🇴</span><span class="ed-name">Norsk</span><span class="ed-sub">Stella &amp; Yakob</span><span class="ed-dl">Last ned ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_pl.pdf?v=8" data-lang="Polski" data-dl="stella_and_yakob_pl.pdf"><span class="ed-flag">🇵🇱</span><span class="ed-name">Polski</span><span class="ed-sub">Stella &amp; Jakub</span><span class="ed-dl">Pobierz ↓</span></a>
+      <a class="ed-card" href="#" data-pdf="https://sandy.page/assets/pdf/stella_and_yakob_ne.pdf?v=9" data-lang="नेपाली" data-dl="stella_and_yakob_ne.pdf"><span class="ed-flag">🇳🇵</span><span class="ed-name">नेपाली</span><span class="ed-sub">स्टेला र याकोब</span><span class="ed-dl">डाउनलोड ↓</span></a>
     </div>
-
-    <p class="editions-note" data-reveal>
-      <span data-i18n="editionsNote">All source files, illustrations, and scripts are available in the</span>
-      <a href="https://github.com/pfleury/stella-and-yakob" target="_blank" rel="noopener noreferrer" data-i18n="editionsNoteLink">GitHub repository</a>.
-    </p>
+    <p class="editions-note"><span data-i18n="editionsNote">All source files are available in the</span> <a href="https://github.com/paulfxyz/stella-and-yakob" target="_blank" rel="noopener" data-i18n="editionsNoteLink">GitHub repository</a>.</p>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     8. ABOUT
-     ═══════════════════════════════════════════════════════════ -->
-<section class="about-section" id="about">
-  <div class="container">
-    <div data-reveal>
-      <p class="section-kicker" data-i18n="aboutKicker">About</p>
-      <h2 class="section-title underline-flourish" data-i18n="aboutTitle">Why this book?</h2>
-    </div>
-
+<!-- ── ABOUT — cream bg ──────────────────────────────────────── -->
+<section class="section section--cream" id="about">
+  <div class="wrap">
     <div class="about-grid">
-      <div class="about-text" data-reveal>
-        <p data-i18n="aboutP1">Children are growing up in a world where AI is everywhere — and often, the adults around them are just as confused. Stella &amp; Yakob was born from a simple belief: that even the hardest questions can be explored gently, with wonder and honesty.</p>
+      <div class="about-text" data-reveal="left">
+        <span class="kicker" data-i18n="aboutKicker">About</span>
+        <h2 class="section-title" data-i18n="aboutTitle">Why this book?</h2>
+        <p data-i18n="aboutP1">Children are growing up in a world where AI is everywhere — and often, the adults around them are just as confused. Stella & Yakob was born from a simple belief: that even the hardest questions can be explored gently, with wonder and honesty.</p>
         <p data-i18n="aboutP2">The book doesn't preach or simplify. It acknowledges that there are no easy answers. But it gives children — and the grown-ups who read to them — a language for curiosity, discernment, and the irreplaceable things that make us human.</p>
         <p class="about-sig">— Paul Fleury</p>
       </div>
-
-      <div class="about-specs" data-reveal>
-        <h3 data-i18n="specsTitle">Book Specifications</h3>
-        <div class="spec-row">
-          <span class="spec-label" data-i18n="specFormat">Format</span>
-          <span class="spec-value" data-i18n="specFormatVal">8.5″ × 8.5″ square</span>
-        </div>
-        <div class="spec-row">
-          <span class="spec-label" data-i18n="specPages">Pages</span>
-          <span class="spec-value" data-i18n="specPagesVal">46 pages (cover + 45 story pages)</span>
-        </div>
-        <div class="spec-row">
-          <span class="spec-label" data-i18n="specRes">Resolution</span>
-          <span class="spec-value" data-i18n="specResVal">300 DPI — print-ready</span>
-        </div>
-        <div class="spec-row">
-          <span class="spec-label" data-i18n="specPrint">Print compatibility</span>
-          <span class="spec-value" data-i18n="specPrintVal">KDP, IngramSpark, BookBaby</span>
-        </div>
-        <div class="spec-row">
-          <span class="spec-label" data-i18n="specLangs">Languages</span>
-          <span class="spec-value" data-i18n="specLangsVal">FR · EN · ES · PT · DE · AR · HE · ZH · JA · HI · RU · TR · WO · DA · SV · NO · PL</span>
-        </div>
-        <div class="spec-row">
-          <span class="spec-label" data-i18n="specIllu">Illustrations</span>
-          <span class="spec-value" data-i18n="specIlluVal">45 hand-sketched illustrations, AI-refined</span>
-        </div>
-        <div class="spec-row">
-          <span class="spec-label" data-i18n="specAge">Age range</span>
-          <span class="spec-value" data-i18n="specAgeVal">5–10 years</span>
+      <div data-reveal="right">
+        <div class="specs-box">
+          <h3 data-i18n="specsTitle">Book Specifications</h3>
+          <dl class="specs-list">
+            <div><dt data-i18n="specFormat">Format</dt><dd data-i18n="specFormatVal">8.5″ × 8.5″ square</dd></div>
+            <div><dt data-i18n="specPages">Pages</dt><dd data-i18n="specPagesVal">46 pages</dd></div>
+            <div><dt data-i18n="specRes">Resolution</dt><dd data-i18n="specResVal">300 DPI — print-ready</dd></div>
+            <div><dt data-i18n="specPrint">Print</dt><dd data-i18n="specPrintVal">KDP, IngramSpark</dd></div>
+            <div><dt data-i18n="specLangs">Languages</dt><dd data-i18n="specLangsVal">FR · EN · ES · PT · DE · AR · HE · ZH · JA · HI · RU · TR · WO · DA · SV · NO · PL · NE</dd></div>
+            <div><dt data-i18n="specIllu">Illustrations</dt><dd data-i18n="specIlluVal">45 hand-sketched</dd></div>
+            <div><dt data-i18n="specAge">Age range</dt><dd data-i18n="specAgeVal">5–10 years</dd></div>
+          </dl>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     9. OPEN SOURCE
-     ═══════════════════════════════════════════════════════════ -->
-<section class="open-section" id="open-source">
-  <div class="container">
-    <div data-reveal>
-      <p class="section-kicker" data-i18n="openKicker">Open Source</p>
-      <h2 class="section-title underline-flourish" style="display:inline-block" data-i18n-html="openTitle">Built in the open.<br>Free to share.</h2>
-    </div>
-
-    <p class="open-body" data-reveal data-i18n="openBody">Every sketch, script, and page of this book is open source — licensed under CC BY-NC-SA 4.0. Browse the source, fork it, translate it into a new language, or use the pipeline to build your own book.</p>
-
-    <div class="gh-card" data-reveal>
-      <div class="gh-card-header">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg>
-        <h3>pfleury/stella-and-yakob</h3>
+<!-- ── OPEN SOURCE — white bg ────────────────────────────────── -->
+<section class="section" id="opensource">
+  <div class="wrap">
+    <div class="open-inner">
+      <div data-reveal="up">
+        <span class="kicker" data-i18n="openKicker">Open Source</span>
+        <h2 class="section-title" data-i18n-html="openTitle">Built in the open.<br>Free to share.</h2>
+        <p class="section-lead" style="margin-top:1rem" data-i18n="openBody">Every sketch, script, and page is open source — licensed under CC BY-NC-SA 4.0. Browse the source, fork it, translate it, or build your own book.</p>
       </div>
-      <p class="gh-card-desc" data-i18n="openGhDesc">45 hand-sketched illustrations, AI-refined · 17 languages · 46-page PDFs · v4.0</p>
-      <div class="gh-card-actions">
-        <a href="https://github.com/pfleury/stella-and-yakob" target="_blank" rel="noopener noreferrer" class="btn-primary" data-i18n="openViewGh">View on GitHub →</a>
-        <span class="gh-badge" data-i18n="openRelease">Latest Release</span> <span class="gh-badge">v4.0</span>
+      <div class="gh-card" style="margin-top:2.5rem" data-reveal="scale">
+        <div class="gh-main">
+          <div class="gh-name">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            paulfxyz/stella-and-yakob
+          </div>
+          <p class="gh-desc" data-i18n="openGhDesc">45 illustrations · 18 languages · 46-page PDFs · v4.2</p>
+          <div class="gh-btns">
+            <a href="https://github.com/paulfxyz/stella-and-yakob" target="_blank" rel="noopener" class="btn btn-amber" style="font-size:0.875rem" data-i18n="openViewGh">View on GitHub →</a>
+            <a href="https://github.com/paulfxyz/stella-and-yakob/releases/latest" target="_blank" rel="noopener" class="btn btn-ghost" style="font-size:0.875rem" data-i18n="openRelease">Latest Release</a>
+          </div>
+        </div>
+        <div class="gh-license">
+          <span class="gh-license-label">License</span>
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" class="gh-license-link">CC BY-NC-SA 4.0</a>
+        </div>
       </div>
-      <p class="gh-license">CC BY-NC-SA 4.0</p>
-    </div>
 
-    <div class="dl-table-wrap" data-reveal>
-      <h3 data-i18n="openDlTitle">Direct download links</h3>
-      <table class="dl-table">
-        <thead>
-          <tr><th>Language</th><th>PDF</th><th>ZIP</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>🇬🇧 English</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_en.pdf?v=7" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/en" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇫🇷 Français</td><td><a href="https://sandy.page/assets/pdf/stella_et_yakob_fr.pdf?v=7" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/fr" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇪🇸 Español</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_es.pdf?v=7" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/es" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇵🇹 Português</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_pt.pdf?v=7" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/pt" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇩🇪 Deutsch</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_de.pdf?v=7" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/de" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇸🇦 العربية</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_ar.pdf?v=7" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/ar" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇮🇱 עברית</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_he.pdf?v=7" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/he" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇨🇳 中文</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_zh.pdf?v=7" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/zh" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇯🇵 日本語</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_ja.pdf?v=7" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/ja" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇮🇳 हिन्दी</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_hi.pdf?v=7" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/hi" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇷🇺 Русский</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_ru.pdf?v=7" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/ru" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇹🇷 Türkçe</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_tr.pdf?v=7" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/tr" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇸🇳 Wolof</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_wo.pdf?v=7" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/wo" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇩🇰 Dansk</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_da.pdf?v=8" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/da" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇸🇪 Svenska</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_sv.pdf?v=8" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/sv" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇳🇴 Norsk</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_no.pdf?v=8" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/no" target="_blank">ZIP ↓</a></td></tr>
-          <tr><td>🇵🇱 Polski</td><td><a href="https://sandy.page/assets/pdf/stella_and_yakob_pl.pdf?v=8" target="_blank">PDF ↓</a></td><td><a href="https://sandy.page/dl/pl" target="_blank">ZIP ↓</a></td></tr>
-        </tbody>
-      </table>
+      <h3 style="font-family:var(--ff-display);font-size:var(--t-xl);margin:2.5rem 0 1rem;text-align:left" data-i18n="openDlTitle">Direct download links</h3>
+      <div class="dl-table-wrap" data-reveal="up">
+        <table class="dl-table">
+          <thead><tr><th>Language</th><th>PDF shortlink</th><th>ZIP shortlink</th></tr></thead>
+          <tbody>
+            <tr><td>🇫🇷 Français</td><td><a href="https://sandy.page/dl/pdf/fr">sandy.page/dl/pdf/fr</a></td><td><a href="https://sandy.page/dl/zip/fr">sandy.page/dl/zip/fr</a></td></tr>
+            <tr><td>🇬🇧 English</td><td><a href="https://sandy.page/dl/pdf/en">sandy.page/dl/pdf/en</a></td><td><a href="https://sandy.page/dl/zip/en">sandy.page/dl/zip/en</a></td></tr>
+            <tr><td>🇪🇸 Español</td><td><a href="https://sandy.page/dl/pdf/es">sandy.page/dl/pdf/es</a></td><td><a href="https://sandy.page/dl/zip/es">sandy.page/dl/zip/es</a></td></tr>
+            <tr><td>🇵🇹 Português</td><td><a href="https://sandy.page/dl/pdf/pt">sandy.page/dl/pdf/pt</a></td><td><a href="https://sandy.page/dl/zip/pt">sandy.page/dl/zip/pt</a></td></tr>
+            <tr><td>🇩🇪 Deutsch</td><td><a href="https://sandy.page/dl/pdf/de">sandy.page/dl/pdf/de</a></td><td><a href="https://sandy.page/dl/zip/de">sandy.page/dl/zip/de</a></td></tr>
+            <tr><td>🇸🇦 العربية</td><td><a href="https://sandy.page/dl/pdf/ar">sandy.page/dl/pdf/ar</a></td><td><a href="https://sandy.page/dl/zip/ar">sandy.page/dl/zip/ar</a></td></tr>
+            <tr><td>🇮🇱 עברית</td><td><a href="https://sandy.page/dl/pdf/he">sandy.page/dl/pdf/he</a></td><td><a href="https://sandy.page/dl/zip/he">sandy.page/dl/zip/he</a></td></tr>
+            <tr><td>🇨🇳 中文</td><td><a href="https://sandy.page/dl/pdf/zh">sandy.page/dl/pdf/zh</a></td><td><a href="https://sandy.page/dl/zip/zh">sandy.page/dl/zip/zh</a></td></tr>
+            <tr><td>🇯🇵 日本語</td><td><a href="https://sandy.page/dl/pdf/ja">sandy.page/dl/pdf/ja</a></td><td><a href="https://sandy.page/dl/zip/ja">sandy.page/dl/zip/ja</a></td></tr>
+            <tr><td>🇮🇳 हिन्दी</td><td><a href="https://sandy.page/dl/pdf/hi">sandy.page/dl/pdf/hi</a></td><td><a href="https://sandy.page/dl/zip/hi">sandy.page/dl/zip/hi</a></td></tr>
+            <tr><td>🇷🇺 Русский</td><td><a href="https://sandy.page/dl/pdf/ru">sandy.page/dl/pdf/ru</a></td><td><a href="https://sandy.page/dl/zip/ru">sandy.page/dl/zip/ru</a></td></tr>
+            <tr><td>🇹🇷 Türkçe</td><td><a href="https://sandy.page/dl/pdf/tr">sandy.page/dl/pdf/tr</a></td><td><a href="https://sandy.page/dl/zip/tr">sandy.page/dl/zip/tr</a></td></tr>
+            <tr><td>🇸🇳 Wolof</td><td><a href="https://sandy.page/dl/pdf/wo">sandy.page/dl/pdf/wo</a></td><td><a href="https://sandy.page/dl/zip/wo">sandy.page/dl/zip/wo</a></td></tr>
+            <tr><td>🇩🇰 Dansk</td><td><a href="https://sandy.page/dl/pdf/da">sandy.page/dl/pdf/da</a></td><td><a href="https://sandy.page/dl/zip/da">sandy.page/dl/zip/da</a></td></tr>
+            <tr><td>🇸🇪 Svenska</td><td><a href="https://sandy.page/dl/pdf/sv">sandy.page/dl/pdf/sv</a></td><td><a href="https://sandy.page/dl/zip/sv">sandy.page/dl/zip/sv</a></td></tr>
+            <tr><td>🇳🇴 Norsk</td><td><a href="https://sandy.page/dl/pdf/no">sandy.page/dl/pdf/no</a></td><td><a href="https://sandy.page/dl/zip/no">sandy.page/dl/zip/no</a></td></tr>
+            <tr><td>🇵🇱 Polski</td><td><a href="https://sandy.page/dl/pdf/pl">sandy.page/dl/pdf/pl</a></td><td><a href="https://sandy.page/dl/zip/pl">sandy.page/dl/zip/pl</a></td></tr>
+            <tr><td>🇳🇵 नेपाली</td><td><a href="https://sandy.page/dl/pdf/ne">sandy.page/dl/pdf/ne</a></td><td><a href="https://sandy.page/dl/zip/ne">sandy.page/dl/zip/ne</a></td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     10. FOOTER
-     ═══════════════════════════════════════════════════════════ -->
+<!-- ── FOOTER ────────────────────────────────────────────────── -->
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-inner">
-      <a href="#" class="footer-logo">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="20" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="15" cy="12" r="3.5" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="25" cy="12" r="3.5" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="15" cy="12" r="1.5" fill="currentColor"/>
-          <circle cx="25" cy="12" r="1.5" fill="currentColor"/>
-          <path d="M18 17l2 2.5 2-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M12 26c-3 2-4 6-4 10h24c0-4-1-8-4-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        <span>Stella &amp; Yakob</span>
-      </a>
-
-      <ul class="footer-nav">
-        <li><a href="#story" data-i18n="navStory">The Story</a></li>
-        <li><a href="#preview" data-i18n="navPreview">Preview</a></li>
-        <li><a href="#editions" data-i18n="navEditions">Editions</a></li>
-        <li><a href="#about" data-i18n="navAbout">About</a></li>
-      </ul>
-
-      <p class="footer-copy" data-i18n="footerCopy">© 2026 Paul Fleury — Made with ❤️ + AI</p>
-
-      <p class="footer-pplx">
-        <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
-      </p>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <svg viewBox="0 0 40 40" width="22" height="22" fill="none"><ellipse cx="20" cy="22" rx="11" ry="10" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><circle cx="15.5" cy="20" r="2.5" fill="currentColor" opacity="0.5"/><circle cx="24.5" cy="20" r="2.5" fill="currentColor" opacity="0.5"/></svg>
+      Stella &amp; Yakob
     </div>
+    <div class="footer-links">
+      <a href="https://github.com/paulfxyz/stella-and-yakob" target="_blank" rel="noopener">GitHub</a>
+      <a href="#editions">Download</a>
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>
+      <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+    </div>
+    <p class="footer-copy" data-i18n="footerCopy">© 2026 Paul Fleury — Made with ❤️ + AI</p>
   </div>
 </footer>
 
-<!-- ═══════════════════════════════════════════════════════════
-     PDF MODAL
-     ═══════════════════════════════════════════════════════════ -->
-<div id="pdf-modal" role="dialog" aria-modal="true" aria-label="PDF Viewer">
+<!-- ── PDF MODAL ─────────────────────────────────────────────── -->
+<div id="pdf-modal">
   <div class="pdf-toolbar">
-    <span id="pdf-title">Stella &amp; Yakob</span>
-    <div class="pdf-toolbar-right">
-      <a id="pdf-dl" href="#" download>⬇ <span data-i18n="pdfDownload">Download</span></a>
-      <button class="pdf-close" onclick="closePdfModal()" aria-label="Close">✕</button>
+    <span class="pdf-title" id="pdf-title">Stella &amp; Yakob</span>
+    <div class="pdf-tools">
+      <a class="pdf-dl-btn" id="pdf-dl" href="#" download>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span data-i18n="pdfDownload">Download</span>
+      </a>
+      <button class="pdf-close-btn" onclick="closePdfModal()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </div>
   </div>
-  <div id="pdf-wrap">
-    <canvas id="pdf-canvas"></canvas>
-    <div id="pdf-loading" style="display:none"></div>
+  <div class="pdf-viewer">
+    <button class="pdf-nav-btn" onclick="pdfPrev()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div id="pdf-canvas-wrap">
+      <canvas id="pdf-canvas"></canvas>
+      <div id="pdf-loading" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:rgba(255,255,255,0.5);">
+        <div style="width:32px;height:32px;border:2px solid rgba(255,255,255,0.15);border-top-color:#b57a1a;border-radius:50%;animation:spin 0.75s linear infinite;"></div>
+        Loading…
+      </div>
+    </div>
+    <button class="pdf-nav-btn" onclick="pdfNext()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
   </div>
-  <div class="pdf-nav">
-    <button class="pdf-nav-btn" id="pdf-prev" onclick="pdfPrev()" aria-label="Previous page">←</button>
-    <span id="pdf-info">Page 1 of 1</span>
-    <input type="range" id="pdf-scrub" min="1" max="1" value="1" oninput="pdfScrub(this.value)">
-    <button class="pdf-nav-btn" id="pdf-next" onclick="pdfNext()" aria-label="Next page">→</button>
+  <div class="pdf-footer">
+    <span id="pdf-info">— / —</span>
+    <input id="pdf-scrub" type="range" min="1" max="46" value="1" oninput="pdfScrub(this.value)">
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════
-     JAVASCRIPT
-     ═══════════════════════════════════════════════════════════ -->
 <script>
+  // ── Add js-ready (our new guard class) ───────────────────────
+  document.documentElement.classList.add('js-ready');
+
+  // ── Stars in hero ────────────────────────────────────────────
+  (function() {
+    var c = document.getElementById('hero-stars');
+    if (!c) return;
+    var ctx = c.getContext('2d');
+    function resize() { c.width = c.offsetWidth; c.height = c.offsetHeight; drawStars(); }
+    function drawStars() {
+      ctx.clearRect(0,0,c.width,c.height);
+      for (var i=0; i<80; i++) {
+        var x=Math.random()*c.width, y=Math.random()*c.height*0.85;
+        var r=Math.random()*1.5+0.3;
+        var a=Math.random()*0.7+0.1;
+        ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2);
+        ctx.fillStyle='rgba(255,248,220,'+a+')'; ctx.fill();
+      }
+    }
+    resize();
+    window.addEventListener('resize', resize);
+    // Twinkle
+    setInterval(function() {
+      ctx.clearRect(0,0,c.width,c.height);
+      for (var i=0; i<80; i++) {
+        var x=Math.random()*c.width, y=Math.random()*c.height*0.85;
+        var r=Math.random()*1.5+0.3, a=Math.random()*0.7+0.1;
+        ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2);
+        ctx.fillStyle='rgba(255,248,220,'+a+')'; ctx.fill();
+      }
+    }, 3000);
+  })();
+
+  // ── Hero parallax ────────────────────────────────────────────
+  (function() {
+    var stella = document.getElementById('char-stella');
+    var yakob  = document.getElementById('char-yakob');
+    var cover  = document.getElementById('hero-cover');
+    document.addEventListener('mousemove', function(e) {
+      var cx=window.innerWidth/2, cy=window.innerHeight/2;
+      var dx=(e.clientX-cx)/cx, dy=(e.clientY-cy)/cy;
+      if (stella) stella.style.transform='translate('+(dx*10)+'px,'+(dy*6)+'px)';
+      if (yakob)  yakob.style.transform='translate('+(dx*-8)+'px,'+(dy*-5)+'px)';
+      if (cover)  cover.style.transform='rotate(-4deg) translate('+(dx*5)+'px,'+(dy*3)+'px)';
+    }, {passive:true});
+  })();
+
+  // ── Scroll progress bar ──────────────────────────────────────
+  (function() {
+    var prog = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', function() {
+      var s = document.documentElement;
+      prog.style.width = (s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';
+    }, {passive:true});
+  })();
+
+  // ── Sticky header ────────────────────────────────────────────
+  (function() {
+    var hdr = document.getElementById('site-header');
+    window.addEventListener('scroll', function() {
+      hdr.style.boxShadow = window.scrollY > 20 ? '0 1px 12px rgba(0,0,0,0.08)' : '';
+    }, {passive:true});
+  })();
+
+  // ── Scroll reveal (IntersectionObserver) ─────────────────────
+  (function() {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('[data-reveal],[data-stagger]').forEach(function(el) { io.observe(el); });
+  })();
+
+  // ── Theme toggle ─────────────────────────────────────────────
+  (function() {
+    var btn = document.getElementById('theme-btn');
+    var html = document.documentElement;
+    var d = 'light';
+    html.setAttribute('data-theme', d);
+    var moon = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    var sun  = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+    if (btn) {
+      btn.innerHTML = moon;
+      btn.addEventListener('click', function() {
+        d = d==='light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', d);
+        btn.innerHTML = d==='dark' ? sun : moon;
+        btn.setAttribute('aria-label', 'Switch to '+(d==='dark'?'light':'dark')+' mode');
+      });
+    }
+  })();
+
+  // ── Language switcher ────────────────────────────────────────
+  var currentLang = 'en';
+
+  
     // ── Add js-loaded class immediately ────────────────────────
     document.documentElement.classList.add('js-loaded');
 
     // ── Current language ───────────────────────────────────────
-    var currentLang = 'en';
-
-    // ── Translations ────────────────────────────────────────
+      // ── Translations ────────────────────────────────────────
 const TRANSLATIONS = {
       en: {
         lang: 'en', htmlLang: 'en',
@@ -674,7 +576,7 @@ const TRANSLATIONS = {
         feat1Title: "45 illustrated pages", feat1Body: "Minimal loose watercolour — soft brushstrokes, warm amber tones, lots of white paper showing.",
         feat2Title: "A twist & a lesson", feat2Body: "The Silver Fox twist (pages 17–22) teaches children to question dazzling shortcuts and trust their own judgement.",
         feat3Title: "Real themes, gently told", feat3Body: "AI, automation, ethics, and the irreplaceable superpowers of being human — curiosity, kindness, courage, creativity.",
-        feat4Title: "13 languages", feat4Body: "Available in thirteen languages. Print-ready at 300 DPI, 8.5″ square.",
+        feat4Title: "18 languages", feat4Body: "Available in eighteen languages. Print-ready at 300 DPI, 8.5″ square.",
         previewKicker: "Inside the Book", previewTitle: "A few pages", previewLead: "Eight moments from Stella and Yakob's journey together.",
         charsKicker: "Characters", charsTitle: "Who you'll meet",
         stellaDesc: "A small girl with a short dark brown bob, a pale blue dress, rosy cheeks and big expressive eyes. Curious, brave, and wonderfully human.",
@@ -960,7 +862,7 @@ const TRANSLATIONS = {
       const t = document.querySelector('[data-theme-toggle]');
       const r = document.documentElement;
       // Always start light — user can toggle to dark
-      let d = localStorage.getItem('stella-theme') || 'light';
+      let d = 'light';
       r.setAttribute('data-theme', d);
       const sunSVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
       const moonSVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
@@ -969,7 +871,7 @@ const TRANSLATIONS = {
         t.addEventListener('click', () => {
           d = d === 'dark' ? 'light' : 'dark';
           r.setAttribute('data-theme', d);
-          localStorage.setItem('stella-theme', d);
+          // persist theme
           t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
           t.innerHTML = d === 'dark' ? sunSVG : moonSVG;
         });
@@ -1394,7 +1296,46 @@ const TRANSLATIONS = {
       };
     })();
 
-</script>
 
+
+  // ── Page flipper ─────────────────────────────────────────────
+  (function() {
+    var track = document.getElementById('flipper-track');
+    var pages = Array.from(track.querySelectorAll('.flip-page'));
+    var dotsEl = document.getElementById('flip-dots');
+    var prev = document.getElementById('flip-prev');
+    var next = document.getElementById('flip-next');
+    var cur = 0;
+    pages.forEach(function(_, i) {
+      var d = document.createElement('button');
+      d.setAttribute('role','tab'); d.setAttribute('aria-label','Page '+(i+1));
+      d.classList.toggle('active', i===0);
+      d.addEventListener('click', function() { goTo(i); });
+      dotsEl.appendChild(d);
+    });
+    pages[0].classList.add('active');
+    function goTo(i) {
+      pages[cur].classList.remove('active'); dotsEl.children[cur].classList.remove('active');
+      cur = (i+pages.length)%pages.length;
+      pages[cur].classList.add('active'); dotsEl.children[cur].classList.add('active');
+    }
+    prev.addEventListener('click', function() { goTo(cur-1); });
+    next.addEventListener('click', function() { goTo(cur+1); });
+    var tx=0;
+    track.addEventListener('touchstart', function(e){ tx=e.touches[0].clientX; }, {passive:true});
+    track.addEventListener('touchend', function(e){
+      if (Math.abs(e.changedTouches[0].clientX-tx)>50) goTo(e.changedTouches[0].clientX<tx?cur+1:cur-1);
+    });
+  })();
+
+  // ── Edition cards → open PDF modal ───────────────────────────
+  document.querySelectorAll('.ed-card').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      var pdf = el.dataset.pdf, lang = el.dataset.lang, dl = el.dataset.dl;
+      if (pdf) window.openPdfModal(pdf, lang, dl);
+    });
+  });
+</script>
 </body>
 </html>
