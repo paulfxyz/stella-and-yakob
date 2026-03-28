@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>A children's book about AI, curiosity, and what makes us human</strong><br>
-  45 pages · 13 languages · Print-ready · Open Source · <strong>v4.0</strong>
+  45 pages · 13 languages · Print-ready · Open Source · <strong>v4.2</strong>
 </p>
 
 <p align="center">
@@ -32,7 +32,7 @@ Then **Yakob** appears: a large, wise owl with warm brown feathers and amber eye
 
 ---
 
-## Download — All 17 Languages {#download}
+## Download — All 18 Languages {#download}
 
 | Language | PDF | ZIP |
 |----------|-----|-----|
