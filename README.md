@@ -399,3 +399,19 @@ Every page began as a hand-drawn sketch. AI refined the sketches into finished w
 ---
 
 *Made with ❤️ + AI — Paul Fleury, 2026*
+
+---
+
+## Disclaimer — 100% Vibe Coding
+
+Let's be honest: I am not a software engineer, not a professional artist, not a coder. I'm a former hacker turned entrepreneur who happens to have a very good relationship with AI — specifically tools like [Claude](https://claude.ai) (Anthropic) and [Perplexity Computer](https://www.perplexity.ai/computer).
+
+This entire project — the book, the illustrations, the multi-language pipeline, the website, the PDF generation scripts, the GitHub repository structure — was built through **pure vibe coding**. I described what I wanted, the AI figured out how to build it, and I kept pushing until it looked right. No IDE, no local dev environment, no Stack Overflow. Just conversation.
+
+I do not pretend this code is clean, optimal, or professionally written. Some of it was rewritten four times in a single night. That's fine. The goal was never perfect code — it was a children's book that exists in 18 languages and can be read by anyone, anywhere, for free.
+
+If you're a real engineer reading this and cringing at the codebase: fair. But it works, it ships, and a child somewhere might learn something from it. That's the point.
+
+> *"The best code is the code that gets the thing done."* — probably nobody famous, but it sounds right.
+
+— Paul Fleury, 2026
