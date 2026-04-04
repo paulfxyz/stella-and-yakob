@@ -1173,35 +1173,7 @@ const TRANSLATIONS = {
 
 
 
-  // ── Page flipper ─────────────────────────────────────────────
-  (function() {
-    var track = document.getElementById('flipper-track');
-    var pages = Array.from(track.querySelectorAll('.flip-page'));
-    var dotsEl = document.getElementById('flip-dots');
-    var prev = document.getElementById('flip-prev');
-    var next = document.getElementById('flip-next');
-    var cur = 0;
-    pages.forEach(function(_, i) {
-      var d = document.createElement('button');
-      d.setAttribute('role','tab'); d.setAttribute('aria-label','Page '+(i+1));
-      d.classList.toggle('active', i===0);
-      d.addEventListener('click', function() { goTo(i); });
-      dotsEl.appendChild(d);
-    });
-    pages[0].classList.add('active');
-    function goTo(i) {
-      pages[cur].classList.remove('active'); dotsEl.children[cur].classList.remove('active');
-      cur = (i+pages.length)%pages.length;
-      pages[cur].classList.add('active'); dotsEl.children[cur].classList.add('active');
-    }
-    prev.addEventListener('click', function() { goTo(cur-1); });
-    next.addEventListener('click', function() { goTo(cur+1); });
-    var tx=0;
-    track.addEventListener('touchstart', function(e){ tx=e.touches[0].clientX; }, {passive:true});
-    track.addEventListener('touchend', function(e){
-      if (Math.abs(e.changedTouches[0].clientX-tx)>50) goTo(e.changedTouches[0].clientX<tx?cur+1:cur-1);
-    });
-  })();
+
 
   // ── Edition cards → open PDF modal ───────────────────────────
   document.querySelectorAll('.ed-card').forEach(function(el) {
