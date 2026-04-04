@@ -7,6 +7,36 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [5.0.0] — 2026-04-04
+
+### 🎨 v5.0 — Complete Illustration Overhaul + New Compositor
+
+#### Illustrations — Brand New Watercolour Set (all 45 pages)
+- All 45 story illustrations regenerated from scratch using GPT-Image-1.5 (OpenAI)
+- Style reference: page 7 (the book's most minimal, most poetic illustration) used as img2img anchor for every single generation
+- Consistent visual language throughout: wet-on-wet loose watercolour, warm cream paper, intimate small figures, generous negative space, amber-gold palette
+- Previous illustrations had major inconsistencies (some pages dark/moody, others light; varying styles suggesting different artists)
+- New set: every page reads as the same artist, same hand, same day in the studio
+
+#### New Compositor (compose_v4.py)
+- Rebuilt from scratch with proper layout constants
+- MARGIN_TOP: 60px cream above illustration — illustration never touches edge
+- GAP_BELOW_ILL: 48px breathing room between illustration and separator
+- Separator line: elegant 2px amber-cream rule
+- GAP_ABOVE_TEXT: 40px before first text line
+- Font system: Lora Regular for narrative, Lora Italic for dialogue/poetic lines
+- Per-language font overrides: Amiri (Arabic), NotoSerifHebrew (Hebrew), NotoSerifCJK (Chinese/Japanese), TiroDevanagari (Hindi, Nepali)
+- Fallback logic: uses new_p{N}.png first, falls back to v2_p{N}.png — zero crashes
+- All 18 languages composed identically
+
+#### Technical
+- Image generation: GPT-Image-1.5 via Perplexity Computer API (img2img mode, 4:3 landscape, 2400×1792 → scaled to 2550×2550 in compositor)
+- Rate limit mitigation: batches of 5–8 images with sleep intervals between bursts
+- All 45 × 18 = 810 page compositions completed
+- All 18 PDFs rebuilt at 300 DPI, 8.5″ square
+
+---
+
 ## [4.2.0] — 2026-03-28
 
 ### 🇳🇵 v4.2 — Nepali (नेपाली) Edition

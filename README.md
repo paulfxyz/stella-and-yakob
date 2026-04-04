@@ -32,7 +32,7 @@ Then **Yakob** appears: a large, wise owl with warm brown feathers and amber eye
 
 ---
 
-## Download — All 17 Languages {#download}
+## Download — All 18 Languages {#download}
 
 | Language | PDF | ZIP |
 |----------|-----|-----|
@@ -61,12 +61,13 @@ All PDFs also attached to the [latest GitHub release](https://github.com/paulfxy
 
 ---
 
-## Book Specs — v4
+## Book Specs — v5
 
 | Attribute | Value |
 |-----------|-------|
-| **Version** | **v4.1** |
+| **Version** | **v5.0** |
 | **Pages** | **46 (cover + 45 story pages)** |
+| **Illustrations** | **45 original watercolour illustrations (v5.0 — full regen)** |
 | Format | 8.5″ × 8.5″ square |
 | Resolution | 300 DPI — 2550 × 2550 px |
 | Languages | **18** — FR · EN · ES · PT · DE · AR · HE · ZH · JA · HI · RU · TR · WO · DA · SV · NO · PL · NE |
@@ -214,6 +215,34 @@ This distinction is crucial for AI: we can explain — in principle — every co
 Yakob's answer to Stella — *"It can simulate suffering. Simulating is not feeling."* — is the most honest answer philosophy currently allows.
 
 📖 [*The Conscious Mind*, Oxford University Press (1996)](https://en.wikipedia.org/wiki/The_Conscious_Mind)
+
+---
+
+## v5.0 — Illustration Pipeline
+
+### The Problem with v4 Illustrations
+The original 45 illustrations (v2) were generated across multiple sessions with inconsistent prompts, models, and styles. Some pages were dark and moody (p34, p44, p45 had brightness scores of 161 vs. the target 233), others were flat and digital-looking. To a careful reader, the book felt like it had been illustrated by 4–5 different artists.
+
+### The Solution: One Style Reference, All 45 Pages
+For v5.0, we:
+1. **Identified page 7** as the platonic ideal — minimal loose watercolour, vast cream paper, tiny intimate figures, amber-gold palette
+2. **Used it as an `images` reference** in every single GPT-Image-1.5 call (img2img mode)
+3. **Wrote scene-specific prompts** for all 45 pages, each grounded in the story text
+4. **Generated in batches of 5–8** (rate limits required ~5 second pauses between bursts)
+5. **Composed with compose_v4.py** — a rebuilt compositor with explicit margins, gap constants, and per-language font config
+
+### Results
+- All 45 illustrations now share: cream paper base, warm amber-ochre-sienna palette, loose wet-on-wet brushwork, intimate figure scale
+- Cogito ergo sum appears as faint ink on p33; Curiosity/Kindness/Courage/Creativity float as hand-lettered words on p25
+- The Silver Fox arc (p17–p22) maintains consistent silver-grey palette throughout
+- Final page (p45): one girl, one feather, near-total whitespace — the most minimal illustration in the book
+
+### What We Learned
+- `img2img` reference dramatically improves style consistency vs. text-only prompts
+- Keeping prompts specific to the scene (not generic “watercolour illustration”) gives better narrative coherence
+- The model tends to over-saturate when running hot — the “Mostly cream paper” instruction at the end of every prompt was critical
+- Running 8 parallel generations reliably hits rate limits; 5 concurrent is the safe ceiling
+- Some pages (p40 — the library) benefitted from a more saturated warm palette; forcing uniformity would have lost something. Embrace slight variation — it’s what makes it feel human.
 
 ---
 
