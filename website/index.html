@@ -234,17 +234,14 @@
     <div class="section-header" data-reveal="up">
       <span class="kicker" data-i18n="previewKicker">Inside the Book</span>
       <h2 class="section-title" data-i18n="previewTitle">A few pages</h2>
-      <p class="section-lead" data-i18n="previewLead">Ten moments from Stella and Yakob's journey.</p>
+      <p class="section-lead" data-i18n="previewLead">Eight moments from Stella and Yakob's journey.</p>
     </div>
 
     <div class="flipper-wrap" data-reveal="scale">
       <div class="flipper-track" id="flipper-track">
+
         <figure class="flip-page active" tabindex="0">
-          <img src="assets/pages/page-03.jpg" alt="Page 3" loading="eager">
-          <figcaption>p.3 &nbsp;·&nbsp; <em>Stella alone in the quiet garden. Something has changed.</em></figcaption>
-        </figure>
-        <figure class="flip-page" tabindex="0">
-          <img src="assets/pages/page-04.jpg" alt="Page 4" loading="lazy">
+          <img src="assets/pages/page-04.jpg" alt="Page 4" loading="eager">
           <figcaption>p.4 &nbsp;·&nbsp; <em>On the highest branch — a large warm owl with amber eyes.</em></figcaption>
         </figure>
         <figure class="flip-page" tabindex="0">
@@ -267,10 +264,7 @@
           <img src="assets/pages/page-25.jpg" alt="Page 25" loading="lazy">
           <figcaption>p.25 &nbsp;·&nbsp; <em>Curiosity. Kindness. Courage. Creativity.</em></figcaption>
         </figure>
-        <figure class="flip-page" tabindex="0">
-          <img src="assets/pages/page-33.jpg" alt="Page 33" loading="lazy">
-          <figcaption>p.33 &nbsp;·&nbsp; <em>"I think, therefore I am." A faint voice from the past.</em></figcaption>
-        </figure>
+
         <figure class="flip-page" tabindex="0">
           <img src="assets/pages/page-39.jpg" alt="Page 39" loading="lazy">
           <figcaption>p.39 &nbsp;·&nbsp; <em>Yakob closes his eyes. Stella waits. The garden is still.</em></figcaption>
@@ -1110,15 +1104,6 @@ const TRANSLATIONS = {
       });
     })();
 
-    // ── Scroll-reveal ─────────────────────────────────────────────
-    (function(){
-      const els = document.querySelectorAll('.feature-card, .character-card, .edition-card, .story-text, .story-features, .about-text, .about-specs');
-      const obs = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); }});
-      }, { threshold: 0.12 });
-      els.forEach(el => { el.classList.add('reveal'); obs.observe(el); });
-    })();
-
     (function(){
       // ── Language detection: cookie → browser OS language → 'en' ──
       const SUPPORTED = ['en','fr','es','pt','de','ar','he','zh','ja','hi','ru','tr','wo','da','sv','no','pl','ne'];
@@ -1150,159 +1135,6 @@ const TRANSLATIONS = {
         _origSetLang(code);
         setBrowserCookieLang(code);
       };
-    })();
-
-    // ── Apple-style scroll engine ──────────────────────────────────
-    (function() {
-      'use strict';
-
-      // 1. Progress bar
-      var prog = document.getElementById('scroll-progress');
-      if (prog) {
-        window.addEventListener('scroll', function() {
-          var s = document.documentElement;
-          var pct = s.scrollTop / (s.scrollHeight - s.clientHeight) * 100;
-          prog.style.width = Math.min(pct, 100) + '%';
-        }, { passive: true });
-      }
-
-      // 2. data-reveal IntersectionObserver
-      var revealEls = document.querySelectorAll('[data-reveal]');
-      if (revealEls.length) {
-        var revObs = new IntersectionObserver(function(entries) {
-          entries.forEach(function(e) {
-            if (e.isIntersecting) {
-              e.target.classList.add('is-visible');
-              revObs.unobserve(e.target);
-            }
-          });
-        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-        revealEls.forEach(function(el) { revObs.observe(el); });
-      }
-
-      // 3. data-stagger IntersectionObserver
-      var staggerEls = document.querySelectorAll('[data-stagger]');
-      if (staggerEls.length) {
-        var stagObs = new IntersectionObserver(function(entries) {
-          entries.forEach(function(e) {
-            if (e.isIntersecting) {
-              e.target.classList.add('is-visible');
-              stagObs.unobserve(e.target);
-            }
-          });
-        }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
-        staggerEls.forEach(function(el) { stagObs.observe(el); });
-      }
-
-      // 4. Parallax — hero characters on mousemove
-      var stage = document.getElementById('hero');
-      var stella = document.getElementById('char-stella');
-      var yakob  = document.getElementById('char-yakob');
-      var cover  = document.getElementById('hero-cover');
-      if (stage && stella && yakob) {
-        document.addEventListener('mousemove', function(ev) {
-          var cx = window.innerWidth  / 2;
-          var cy = window.innerHeight / 2;
-          var dx = (ev.clientX - cx) / cx;
-          var dy = (ev.clientY - cy) / cy;
-          stella.style.transform = 'translate(' + (dx * 12) + 'px,' + (dy * 8) + 'px)';
-          yakob.style.transform  = 'translate(' + (dx * -10) + 'px,' + (dy * -6) + 'px)';
-          if (cover) cover.style.transform = 'rotate(-5deg) translate(' + (dx * 6) + 'px,' + (dy * 4) + 'px)';
-        }, { passive: true });
-      }
-
-      // 5. Scroll parallax on story panels (Apple-style depth)
-      var panels = document.querySelectorAll('[data-parallax]');
-      if (panels.length) {
-        window.addEventListener('scroll', function() {
-          var sy = window.scrollY;
-          panels.forEach(function(el) {
-            var speed = parseFloat(el.dataset.parallax) || 0.15;
-            var rect = el.getBoundingClientRect();
-            var cy = rect.top + rect.height / 2;
-            var dy = (window.innerHeight / 2 - cy) * speed;
-            el.style.transform = 'translateY(' + dy + 'px)';
-          });
-        }, { passive: true });
-      }
-
-      // 6. Counter animation (hero stats)
-      var counters = document.querySelectorAll('[data-count]');
-      if (counters.length) {
-        var cntObs = new IntersectionObserver(function(entries) {
-          entries.forEach(function(e) {
-            if (!e.isIntersecting) return;
-            var el  = e.target;
-            var end = parseInt(el.dataset.count, 10);
-            var dur = 1200;
-            var start = performance.now();
-            function tick(now) {
-              var t = Math.min((now - start) / dur, 1);
-              var ease = 1 - Math.pow(1 - t, 4);
-              el.textContent = Math.round(ease * end);
-              if (t < 1) requestAnimationFrame(tick);
-              else el.textContent = end;
-            }
-            requestAnimationFrame(tick);
-            cntObs.unobserve(el);
-          });
-        }, { threshold: 0.5 });
-        counters.forEach(function(el) { cntObs.observe(el); });
-      }
-
-      // 7. Underline flourish (section titles)
-      var flourishes = document.querySelectorAll('.underline-flourish');
-      if (flourishes.length) {
-        var flObs = new IntersectionObserver(function(entries) {
-          entries.forEach(function(e) {
-            if (e.isIntersecting) {
-              e.target.classList.add('is-visible');
-              flObs.unobserve(e.target);
-            }
-          });
-        }, { threshold: 0.5 });
-        flourishes.forEach(function(el) { flObs.observe(el); });
-      }
-
-      // 8. Magnetic CTA buttons
-      document.querySelectorAll('.btn-primary').forEach(function(btn) {
-        btn.addEventListener('mousemove', function(e) {
-          var r = btn.getBoundingClientRect();
-          var dx = e.clientX - r.left - r.width  / 2;
-          var dy = e.clientY - r.top  - r.height / 2;
-          btn.style.transform = 'translate(' + dx * 0.22 + 'px,' + dy * 0.22 + 'px) translateY(-2px)';
-        });
-        btn.addEventListener('mouseleave', function() {
-          btn.style.transform = '';
-        });
-      });
-
-      // 9. Smooth section fade-in for story-panel elements
-      var panelImgs = document.querySelectorAll('.story-panel-char');
-      if (panelImgs.length) {
-        var piObs = new IntersectionObserver(function(entries) {
-          entries.forEach(function(e) {
-            if (e.isIntersecting) {
-              e.target.classList.add('revealed');
-              piObs.unobserve(e.target);
-            }
-          });
-        }, { threshold: 0.15 });
-        panelImgs.forEach(function(el) { piObs.observe(el); });
-      }
-
-      // 10. Scroll-driven scale on flipper section (Apple depth card effect)
-      var flipperSection = document.querySelector('.flipper-section');
-      var flipTrack = document.getElementById('flipper-track');
-      if (flipperSection && flipTrack) {
-        window.addEventListener('scroll', function() {
-          var rect = flipperSection.getBoundingClientRect();
-          var progress = 1 - (rect.top + rect.height * 0.5) / window.innerHeight;
-          var scale = 0.90 + Math.min(Math.max(progress, 0), 1) * 0.10;
-          flipTrack.style.transform = 'scale(' + scale + ')';
-        }, { passive: true });
-      }
-
     })();
 
 
