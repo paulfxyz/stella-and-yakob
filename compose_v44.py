@@ -288,29 +288,22 @@ def make_qr_page():
     if not os.path.exists(qr_src):
         qr_src = f"{WS}/qr_sandy.png"  # fallback
 
-    qr_size = 680
+    qr_size = 820
     if os.path.exists(qr_src):
         qr = Image.open(qr_src).convert("RGBA")
         qr_r = qr.resize((qr_size, qr_size), Image.LANCZOS)
         x_qr = (PX - qr_size) // 2
-        y_qr = 300
+        y_qr = 260
         pg.paste(qr_r, (x_qr, y_qr), qr_r)
-        url_y = y_qr + qr_size + 55
+        url_y = y_qr + qr_size + 60
     else:
         url_y = PX // 2
 
-    # URL — sandy.page/book
-    url    = "sandy.page/book"
-    tw     = font_url.getbbox(url)[2] - font_url.getbbox(url)[0]
-    draw.text(((PX - tw)//2, url_y), url, font=font_url, fill=(181, 122, 26))
-
-    # Tagline
-    tag = "Read, download & share — free for everyone"
-    tag_tw = font_url.getbbox(tag)[2] - font_url.getbbox(tag)[0]
-    font_tag = font_url  # reuse same font (already loaded)
-    # Use a slightly smaller version via font_quote_attr
-    tag_tw2 = font_quote_attr.getbbox(tag)[2] - font_quote_attr.getbbox(tag)[0]
-    draw.text(((PX - tag_tw2)//2, url_y + 90), tag, font=font_quote_attr, fill=MUTED_INK)
+    # URL — sandy.page/book (larger font)
+    font_url_lg = _load(reg_path, 80)
+    url = "sandy.page/book"
+    tw  = font_url_lg.getbbox(url)[2] - font_url_lg.getbbox(url)[0]
+    draw.text(((PX - tw)//2, url_y), url, font=font_url_lg, fill=(181, 122, 26))
 
     # Stella (left) and Yakob (right) as character cutouts
     stella_src = f"{WS}/stella-website-deploy/assets/char_stella.png"
