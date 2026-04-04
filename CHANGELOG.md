@@ -7,6 +7,28 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [4.3.0] — 2026-04-04
+
+### 🎨 v4.3 — New Illustrations (v5 watercolour set) + Preview Redesign
+
+#### Illustrations — Complete v5 Watercolour Set
+- All 45 story illustrations regenerated in a coherent minimal loose watercolour style
+- Style reference: page 7 used as img2img anchor across all generations
+- Every illustration: 1536×1024 px, consistent separator at y=1701 on all composed pages
+- New compositor (compose_v4.py): proper margins, gap, separator line, italic text detection
+
+#### Website
+- "Inside the Book" flipper section redesigned with 10 new showcase pages (p3, p4, p7, p15, p17, p23, p25, p33, p39, p45)
+- Preview images updated to show new watercolour illustrations
+- PDF cache busted (?v=10) so readers see new illustrations immediately
+
+#### PDFs
+- All 18 language PDFs fully recomposed with v5 illustrations
+- Cover page now letterboxed correctly — title and author name fully visible
+- All pages: identical illustration height, separator position, text layout
+
+---
+
 ## [5.0.0] — 2026-04-04
 
 ### 🎨 v5.0 — Complete Illustration Overhaul + New Compositor

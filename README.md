@@ -12,7 +12,7 @@
 <p align="center">
   <a href="https://sandy.page">🌐 Website</a> ·
   <a href="https://sandy.page/dl/pdf/en">📥 Download English PDF</a> ·
-  <a href="https://github.com/paulfxyz/stella-and-yakob/releases/latest">🚀 v4.2 Release</a> ·
+  <a href="https://github.com/paulfxyz/stella-and-yakob/releases/latest">🚀 v4.3 Release</a> ·
   <a href="#download">All 18 languages ↓</a>
 </p>
 
