@@ -103,6 +103,34 @@ All PDFs also attached to the [latest GitHub release](https://github.com/paulfxy
 
 ---
 
+## The Spirit of Le Petit Prince
+
+> *« On ne voit bien qu'avec le cœur. L'essentiel est invisible pour les yeux. »*
+>
+> — Antoine de Saint-Exupéry, *Le Petit Prince* (1943)
+
+I have been obsessed with Le Petit Prince since I was a child. Not because it is a children's book — though it is. But because it is one of the most quietly devastating pieces of philosophy ever written, disguised as a story about a boy and a fox and a rose.
+
+Antoine de Saint-Exupéry was not an author in any ordinary sense. He was a pioneer aviator, a war correspondent, a man who flew mail planes over the Sahara and the Andes in the 1930s, who knew what it meant to be completely alone in the dark, to depend entirely on instruments — on machines — and yet to understand that machines would never tell him anything about what actually mattered.
+
+He disappeared over the Mediterranean in 1944 on a reconnaissance mission. He was 44. He left behind one small book that has sold over 200 million copies in 300 languages.
+
+What obsesses me about Saint-Exupéry is his central conviction: that the most important things in life are invisible to purely rational, mechanical analysis. You cannot measure love. You cannot optimise wonder. You cannot calculate the value of a rose tamed by a child. The fox's secret — *one sees clearly only with the heart* — is a direct rebuke to every system, algorithm, and efficiency metric that modernity has built.
+
+**Stella & Yakob is my attempt to carry that torch into the age of artificial intelligence.**
+
+We live in an era when the Saint-Exupéry question — *what is irreplaceable about being human?* — has never been more urgent or more contested. The machines are extraordinary now. They can write, draw, compose, diagnose, calculate. They can, in some sense, "see." But can they love a rose? Can they be changed by a goodbye?
+
+Stella is not a Little Prince. But she is cut from the same cloth: a child who wanders through a world that frightens adults, who asks the questions grown-ups have stopped asking, who learns — through Yakob and despite the Silver Fox — that curiosity, kindness, courage and creativity are not features to be optimised. They are the thing itself.
+
+I guided the AI to illustrate this story. I described scenes it could not have imagined without my intention behind the words. Every image in this book started from that tension: a human vision, expressed through a machine, attempting to reach something Saint-Exupéry would have recognised — the essential thing that is invisible to the eyes.
+
+Whether we succeeded is for you to say.
+
+*— Paul Fleury, 2026*
+
+---
+
 ## Philosophical & Scientific References
 
 Each scene is anchored in a real philosophical idea — making this a book for adults reading to children as much as for the children themselves.
