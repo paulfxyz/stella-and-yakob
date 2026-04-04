@@ -61,7 +61,7 @@ All PDFs also attached to the [latest GitHub release](https://github.com/paulfxy
 
 ---
 
-## Book Specs — v4.3.3
+## Book Specs — v4.3
 
 | Attribute | Value |
 |-----------|-------|
