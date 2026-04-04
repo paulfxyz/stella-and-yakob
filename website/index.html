@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
 <!--
    Stella & Yakob — Made with ❤️ + AI
@@ -75,9 +75,6 @@
           <div class="lang-option" data-lang="ne" role="option"><span class="flag">🇳🇵</span> नेपाली <span class="code">NE</span></div>
         </div>
       </div>
-      <button class="theme-btn" id="theme-btn" data-theme-toggle aria-label="Toggle theme">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
     </div>
   </div>
 </header>
@@ -598,25 +595,6 @@
     document.querySelectorAll('[data-reveal],[data-stagger]').forEach(function(el) { io.observe(el); });
   })();
 
-  // ── Theme toggle ─────────────────────────────────────────────
-  (function() {
-    var btn = document.getElementById('theme-btn');
-    var html = document.documentElement;
-    var d = 'light';
-    html.setAttribute('data-theme', d);
-    var moon = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-    var sun  = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
-    if (btn) {
-      btn.innerHTML = moon;
-      btn.addEventListener('click', function() {
-        d = d==='light' ? 'dark' : 'light';
-        html.setAttribute('data-theme', d);
-        btn.innerHTML = d==='dark' ? sun : moon;
-        btn.setAttribute('aria-label', 'Switch to '+(d==='dark'?'light':'dark')+' mode');
-      });
-    }
-  })();
-
   // ── Language switcher ────────────────────────────────────────
   var currentLang = 'en';
 
@@ -926,27 +904,6 @@ const TRANSLATIONS = {
         setLang(opt.dataset.lang);
         closeMenu();
       });
-    })();
-
-    // ── Theme toggle — always defaults to LIGHT ─────────────────
-    (function(){
-      const t = document.querySelector('[data-theme-toggle]');
-      const r = document.documentElement;
-      // Always start light — user can toggle to dark
-      let d = 'light';
-      r.setAttribute('data-theme', d);
-      const sunSVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
-      const moonSVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-      if (t) {
-        t.innerHTML = d === 'dark' ? sunSVG : moonSVG;
-        t.addEventListener('click', () => {
-          d = d === 'dark' ? 'light' : 'dark';
-          r.setAttribute('data-theme', d);
-          // persist theme
-          t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
-          t.innerHTML = d === 'dark' ? sunSVG : moonSVG;
-        });
-      }
     })();
 
     // ── Sticky header ─────────────────────────────────────────────
