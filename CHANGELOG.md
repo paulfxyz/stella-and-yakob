@@ -1,3 +1,27 @@
+## [4.5.0] — 2026-04-04
+
+### ✨ v4.5 — QR Page Redesign + sandy.page/book
+
+#### QR Page (Page 49) — Fully Redesigned
+- QR code now points to **sandy.page/book** (was sandy.page)
+- Warm amber QR code on cream background (`qr_book.png`)
+- Stella & Yakob character illustrations flank the QR code at bottom
+- Amber URL text: `sandy.page/book`
+- Tagline: *"Read, download & share — free for everyone"*
+- Thin separator line above characters
+
+#### Dedication Page (Page 2) — Improved
+- Balloon watercolour art scaled to 42% of page width (much larger, more prominent)
+- Separator line between art and quote
+- Better vertical spacing
+
+#### Infrastructure
+- `.htaccess`: `/book` redirect → sandy.page/ (all devices)
+- PDF cache buster bumped to `?v=12`
+- 49 pages per PDF (unchanged structure)
+
+---
+
 ## [4.4.0] — 2026-04-04
 
 ### ✨ v4.4 — Dedication Page, THE END, QR Page + Text Audit
