@@ -61,7 +61,7 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [4.2.0] — 2026-03-28
 
-### 🇳🇵 v4.2 — Nepali (नेपाली) Edition
+### 🇳🇵 v4.3 — Nepali (नेपाली) Edition
 
 #### New Language
 - **Nepali (नेपाली):** full 45-page GPT-4o + Claude 3.5 refinement translation
@@ -79,7 +79,7 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [4.1.0] — 2026-03-28
 
-### 🌍 v4.1 — 4 new languages (DA/SV/NO/PL) + Disney landing page redesign
+### 🌍 v4.3 — 4 new languages (DA/SV/NO/PL) + Disney landing page redesign
 
 #### New Languages (17 total)
 - **Danish (Dansk):** full 45-page GPT-4o + Claude refinement translation, composed pages, PDF, ZIP
