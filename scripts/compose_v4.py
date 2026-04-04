@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-compose_v4.py — Definitive compositor for Stella & Yakob v4.3
+compose_v4.py — Definitive compositor for Stella & Yakob v4.4
 ==============================================================
 Format : 8.5 × 8.5 in  @  300 DPI  =  2550 × 2550 px
 Layout :
