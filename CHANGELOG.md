@@ -1,3 +1,25 @@
+## [4.4.0] — 2026-04-04
+
+### ✨ v4.4 — Dedication Page, THE END, QR Page + Text Audit
+
+#### New Pages (49 total: was 46)
+- **Page 2 — Dedication:** Saint-Exupéry quote *« On ne voit bien qu'avec le cœur. L'essentiel est invisible pour les yeux. »* — translated into all 18 languages. Accompanied by a tiny minimal watercolour: a boy on a hilltop, a single red balloon drifting upward into cream paper sky.
+- **Page 48 — THE END** (translated: FIN, ENDE, KONIEC, etc.)
+- **Page 49 — QR Code:** sandy.page rounded QR code + URL — invites readers to download all editions
+
+#### Text Audit (compose_v44.py)
+- Uniform font size: 68pt for ALL story page lines (no size drift between pages)
+- Strict italic rule: only dialogue/quoted speech lines (starting with `"`, `«`, `—`) use Lora Italic; all narration uses Lora Regular
+- Fixed-height LINE_H calculated once from font_reg bounding box — no per-font variation
+- RTL (Arabic, Hebrew): right-aligned in safe margins, same size as LTR
+
+#### Assets
+- `dedication_art.png` — new minimal watercolour (GPT-Image-1.5, img2img from p07)
+- `qr_sandy.png` — rounded QR code for sandy.page
+- `quote_translations.json` — Saint-Exupéry quote in 18 languages
+
+---
+
 # Changelog
 
 All notable changes to *Stella & Yakob* are documented here.

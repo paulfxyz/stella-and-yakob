@@ -13,3 +13,5 @@ Thumbs.db
 __pycache__/
 *.pyc
 *.pyo
+releases/**/*.pdf
+*.pdf
