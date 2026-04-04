@@ -114,13 +114,35 @@ PAGES = mod.PAGES
 print(f"Loaded {len(PAGES)} pages for '{LANG}'")
 
 # ── Illustration loader ────────────────────────────────────────────────────────
+# Canonical illustration dimensions (landscape, all new illustrations)
+ILL_CANONICAL_W = 1536
+ILL_CANONICAL_H = 1024
+
 def load_illustration(page_num):
-    """Try new_p{N}.png first, fall back to v2_p{N}.png."""
+    """Try new_p{N}.png first, fall back to v2_p{N}.png.
+    Always normalises to landscape orientation."""
     new_path = os.path.join(ILL_DIR_NEW, f"new_p{page_num:02d}.png")
     old_path = os.path.join(ILL_DIR_OLD, f"v2_p{page_num:02d}.png")
     for path in (new_path, old_path):
         if os.path.exists(path):
-            return Image.open(path).convert("RGBA"), path
+            img = Image.open(path).convert("RGBA")
+            iw, ih = img.size
+            # If portrait or square, rotate/pad to landscape
+            if ih > iw:
+                # Rotate 90° to make it landscape
+                img = img.rotate(-90, expand=True)
+                print(f"    [normalised p{page_num:02d}: rotated portrait {iw}x{ih} → {img.size}]")
+            elif ih == iw:
+                # Square: letterbox into 3:2 landscape canvas
+                canvas = Image.new("RGBA", (ILL_CANONICAL_W, ILL_CANONICAL_H), (251, 249, 244, 255))
+                scale = ILL_CANONICAL_H / ih
+                nw, nh = int(iw * scale), int(ih * scale)
+                img = img.resize((nw, nh), Image.LANCZOS)
+                x = (ILL_CANONICAL_W - nw) // 2
+                canvas.paste(img, (x, 0), img)
+                img = canvas
+                print(f"    [normalised p{page_num:02d}: letterboxed square {iw}x{ih} → 1536x1024]")
+            return img, path
     print(f"  WARNING: no illustration for page {page_num}")
     return None, None
 
