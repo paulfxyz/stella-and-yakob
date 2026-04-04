@@ -61,7 +61,7 @@ All PDFs also attached to the [latest GitHub release](https://github.com/paulfxy
 
 ---
 
-## Book Specs — v5
+## Book Specs — v4.3.3
 
 | Attribute | Value |
 |-----------|-------|
@@ -280,7 +280,7 @@ Hand-drawn sketches (Paul Fleury)
     ↓
 img2img refinement (nano_banana_pro via Perplexity Computer)
     ↓
-Text (Python dicts — 45 pages × 13 languages)
+Text (Python dicts — 45 pages × 18 languages)
     ↓
 Page compositor (Pillow — 2550×2550, 1904px ill zone, 646px text zone)
     ↓  
@@ -343,7 +343,7 @@ During a refactor, the `.lang-dropdown` div was moved outside `.lang-switcher`, 
 Single-model translation produces fluent but sometimes literal results. Solution: GPT-4o for initial translation (speed + breadth) → Claude 3.5 Sonnet for native-speaker refinement (idiom, register, warmth). For Wolof: Mistral Large first (better coverage of African languages), then GPT-4o review.
 
 **9. Disk space management**
-Each language ×45 pages ×300DPI = ~6MB per page = ~270MB per language. 13 languages = ~3.5GB of composed pages. Plus PDFs, git history, ZIPs → disk filled during build. Solution: remove local git clone (4GB .git history), work with shallow clones, commit only text files when possible.
+Each language ×45 pages ×300DPI = ~6MB per page = ~270MB per language. 18 languages = ~3.5GB of composed pages. Plus PDFs, git history, ZIPs → disk filled during build. Solution: remove local git clone (4GB .git history), work with shallow clones, commit only text files when possible.
 
 **10. Website deployment size**
 Bundling 13 PDFs (~600MB) into the Perplexity static host caused timeouts. Solution: serve PDFs from sandy.page only, website data-pdf attributes use absolute `https://sandy.page/assets/pdf/` URLs. Perplexity deploy size: 3.2MB.
@@ -365,7 +365,7 @@ Bundling 13 PDFs (~600MB) into the Perplexity static host caused timeouts. Solut
 
 ```
 stella-and-yakob/
-├── releases/                    # Print-ready PDFs (46 pages, all 13 languages)
+├── releases/                    # Print-ready PDFs (46 pages, all 18 languages)
 │   ├── fr/stella_et_yakob_fr.pdf
 │   ├── en/stella_and_yakob_en.pdf
 │   ├── es/ · pt/ · de/ · ar/ · he/ · zh/ · ja/ · hi/ · ru/ · tr/ · wo/
@@ -385,7 +385,7 @@ stella-and-yakob/
 │
 ├── scripts/
 │   ├── compose_book_square.py
-│   ├── book_text_fr_v3.py … book_text_wo_v3.py   # text in 13 languages
+│   ├── book_text_fr_v3.py … book_text_ne_v3.py   # text in 18 languages
 │
 ├── fonts/
 │   └── Lora.ttf · Lora-Bold.ttf · Lora-Italic.ttf
