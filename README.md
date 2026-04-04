@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>A children's book about AI, curiosity, and what makes us human</strong><br>
-  45 pages · 13 languages · Print-ready · Open Source · <strong>v4.0</strong>
+  45 pages · <strong>18 languages</strong> · Print-ready · Open Source · <strong>v4.3</strong>
 </p>
 
 <p align="center">
@@ -65,9 +65,9 @@ All PDFs also attached to the [latest GitHub release](https://github.com/paulfxy
 
 | Attribute | Value |
 |-----------|-------|
-| **Version** | **v5.0** |
+| **Version** | **v4.3** |
 | **Pages** | **46 (cover + 45 story pages)** |
-| **Illustrations** | **45 original watercolour illustrations (v5.0 — full regen)** |
+| **Illustrations** | **45 original watercolour illustrations (v4.3 — full watercolour regen)** |
 | Format | 8.5″ × 8.5″ square |
 | Resolution | 300 DPI — 2550 × 2550 px |
 | Languages | **18** — FR · EN · ES · PT · DE · AR · HE · ZH · JA · HI · RU · TR · WO · DA · SV · NO · PL · NE |
@@ -218,18 +218,18 @@ Yakob's answer to Stella — *"It can simulate suffering. Simulating is not feel
 
 ---
 
-## v5.0 — Illustration Pipeline
+## v4.3 — Illustration Pipeline
 
 ### The Problem with v4 Illustrations
 The original 45 illustrations (v2) were generated across multiple sessions with inconsistent prompts, models, and styles. Some pages were dark and moody (p34, p44, p45 had brightness scores of 161 vs. the target 233), others were flat and digital-looking. To a careful reader, the book felt like it had been illustrated by 4–5 different artists.
 
 ### The Solution: One Style Reference, All 45 Pages
-For v5.0, we:
+For v4.3, we:
 1. **Identified page 7** as the platonic ideal — minimal loose watercolour, vast cream paper, tiny intimate figures, amber-gold palette
 2. **Used it as an `images` reference** in every single GPT-Image-1.5 call (img2img mode)
 3. **Wrote scene-specific prompts** for all 45 pages, each grounded in the story text
 4. **Generated in batches of 5–8** (rate limits required ~5 second pauses between bursts)
-5. **Composed with compose_v4.py** — a rebuilt compositor with explicit margins, gap constants, and per-language font config
+5. **Composed with compose_v4.py** — rebuilt compositor with proper margins, gap, separator line, and per-language font config
 
 ### Results
 - All 45 illustrations now share: cream paper base, warm amber-ochre-sienna palette, loose wet-on-wet brushwork, intimate figure scale
@@ -419,7 +419,7 @@ The compositor handles layout, font selection, and RTL automatically.
 
 ## About
 
-*Stella & Yakob v4.0* — conceived, written, and illustrated by **Paul Fleury**, 2026.
+*Stella & Yakob v4.3* — conceived, written, and illustrated by **Paul Fleury**, 2026.
 
 Every page began as a hand-drawn sketch. AI refined the sketches into finished watercolors. The pipeline was orchestrated using [Perplexity Computer](https://www.perplexity.ai/computer), with models from Anthropic (Claude), OpenAI (GPT-4o), Google (Gemini), Mistral, and others via [OpenRouter.ai](https://openrouter.ai).
 
